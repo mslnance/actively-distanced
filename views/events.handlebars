@@ -1,2 +1,7 @@
-{{#each}}
-{{/each}}
+<ul>
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post }}
+    </li>
+    {{/each}}
+</ul>

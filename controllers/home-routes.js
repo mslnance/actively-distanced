@@ -30,7 +30,7 @@ router.post('/profile', upload.single('photo'), function (req, res, next) {
             // return res.status(200).json({
             //     data: result.url
             // })
-            return res.redirect('/events')
+            return res.redirect('events')
         })
         .catch((err) => console.log(err))
 });
