@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Tech News</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Login Example - Semantic</title>
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/rest.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/site.css">
+
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/grid.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/header.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/image.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/divider.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/segment.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets//form.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/input.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/button.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/list.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/message.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/icon.css">
+  </head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="/">Home</a>
+                {{#if loggedIn}}
+                <a href="/dashboard">+ Activity</a>
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                <a href="/my-activity">My Activities</a>
+                <a href="/login">Login</a>
+                {{/if}}
+            </nav>
+            <h1>
+                <a href="/"><i class="fas fa-laptop-code"></i> Actively Distanced</a>
+            </h1>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+        <footer>
+            {{!-- <h2>Thanks for posting!</h2> --}}
+        </footer>
+    </div>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+</body>
 
 </html>
