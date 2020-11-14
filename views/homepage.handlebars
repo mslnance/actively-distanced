@@ -1,0 +1,16 @@
+<h1>Create a post</h1>
+
+<form action="/profile" method="post" enctype="multipart/form-data">
+    <label for="title">Title</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="description">Description</label><br>
+    <input type="text" id="description" name="description"><br>
+    <label for="date">Choose a date for your event:</label>
+    <input type="date" id="date" name="date"><br>
+    <label for="time">Choose a time for your event:</label>
+    <input type="time" id="time" name="time" min="08:00" max="20:00" required><br>
+    <input type="file" name="photo" /><br>
+    <input type="submit" value="Submit">
+</form>
+
+{{!-- <img src='' /> --}}
