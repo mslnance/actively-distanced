@@ -1,2 +1,14 @@
-{{#each}}
-{{/each}}
+<ul>
+    {{#each posts as |post|}}
+    <li>
+        {{!-- {{> post-info post }} --}}
+        <div>
+            <h1>{{dataValues.title}}</h1><br>
+            <p>{{dataValues.description}}</p><br>
+            <p>{{dataValues.date}}</p><br>
+            <p>{{dataValues.time}}</p><br>
+            <img src={{dataValues.image_url}} />
+        </div>
+    </li>
+    {{/each}}
+</ul>
