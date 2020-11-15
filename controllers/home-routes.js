@@ -12,6 +12,14 @@ router.get('/', (req, res) => {
     res.render('homepage');
 });
 
+router.get('/events', (req, res) => {
+    Post.findAll({})
+        .then((posts) => {
+            console.log(posts[0].dataValues.title);
+            res.render('events', { posts });
+        })
+});
+
 router.post('/profile', upload.single('photo'), function (req, res, next) {
     // req.file is the `avatar` file
     // req.body will hold the text fields, if there were any
@@ -30,7 +38,7 @@ router.post('/profile', upload.single('photo'), function (req, res, next) {
             // return res.status(200).json({
             //     data: result.url
             // })
-            return res.redirect('events')
+            return res.redirect('/events')
         })
         .catch((err) => console.log(err))
 });
