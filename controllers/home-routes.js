@@ -7,7 +7,6 @@ const dataURI = require('datauri');
 const Post = require('../models/Post');
 
 router.get('/', (req, res) => {
-    // res.render('homepage');
     Post.findAll({})
         .then((posts) => {
             res.render('homepage', { posts });
@@ -15,17 +14,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/events', (req, res) => {
-    // Post.findAll({})
-    //     .then((posts) => {
-    //         res.render('events', { posts });
-    //     })
     res.render('events');
 });
 
 router.post('/profile', upload.single('photo'), function (req, res, next) {
-    // req.file is the `avatar` file
-    // req.body will hold the text fields, if there were any
-    // let data = dataURI.format(path.extname(req.file.originalname).toString(), req.file.buffer);
     console.log(req.body);
     return cloudinary.uploader.upload(req.file.path)
         .then((result) => {
@@ -37,12 +29,18 @@ router.post('/profile', upload.single('photo'), function (req, res, next) {
                 image_url: result.url
             })
 
-            // return res.status(200).json({
-            //     data: result.url
-            // })
             return res.redirect('/')
         })
         .catch((err) => console.log(err))
+});
+
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('login');
 });
 
 module.exports = router;
