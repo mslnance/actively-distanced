@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const Post = require('../../models/Post');
 
-router.get('/events', (req, res) => {
+router.get('/create-post', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
