@@ -12,6 +12,14 @@ router.get('/', (req, res) => {
     res.render('homepage');
 });
 
+router.get('/events', (req, res) => {
+    Post.findAll({})
+        .then((posts) => {
+            console.log(posts[0].dataValues.title);
+            res.render('events', { posts });
+        })
+});
+
 router.post('/profile', upload.single('photo'), function (req, res, next) {
     // req.file is the `avatar` file
     // req.body will hold the text fields, if there were any
