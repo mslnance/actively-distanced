@@ -4,20 +4,22 @@ const upload = multer({ dest: 'uploads/' });
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({ cloud_name: 'actively-distanced', api_key: '459732884598213', api_secret: '69tQZU3yr0mFsxuNe2U2WCDR544' });
 const dataURI = require('datauri');
-const dURI = new dataURI();
-const path = require('path');
 const Post = require('../models/Post');
 
 router.get('/', (req, res) => {
-    res.render('homepage');
+    // res.render('homepage');
+    Post.findAll({})
+        .then((posts) => {
+            res.render('homepage', { posts });
+        })
 });
 
 router.get('/events', (req, res) => {
-    Post.findAll({})
-        .then((posts) => {
-            console.log(posts[0].dataValues.title);
-            res.render('events', { posts });
-        })
+    // Post.findAll({})
+    //     .then((posts) => {
+    //         res.render('events', { posts });
+    //     })
+    res.render('events');
 });
 
 router.post('/profile', upload.single('photo'), function (req, res, next) {
@@ -38,7 +40,7 @@ router.post('/profile', upload.single('photo'), function (req, res, next) {
             // return res.status(200).json({
             //     data: result.url
             // })
-            return res.redirect('/events')
+            return res.redirect('/')
         })
         .catch((err) => console.log(err))
 });
