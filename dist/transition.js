@@ -1,1 +1,0 @@
-// https://github.com/Semantic-Org/Semantic-UI/blob/master/dist/components/transition.js
