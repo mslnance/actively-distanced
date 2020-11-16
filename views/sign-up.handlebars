@@ -1,7 +1,26 @@
+<form class = "signup-form">
+    <div>
+        <p class="hide" id="taken">That username is already taken! Try again.</p>
+        <label for="username-signup">username:</label>
+        <input type="text" id="username-signup" />
+    </div>
+    <div>
+        <label for="password-signup">password:</label>
+        <input type="password" id="password-signup" />
+    </div>
+    <div>
+        <button type="submit">Sign Up</button>
+    </div>
+    <div>
+        <a href="/login">Login Instead</a>
+    </div>
+</form>
+<script src="/public/javascript/singup.js"></script>
+
 
 {{!-- Semantic-UI --}} 
 {{!-- reference link: https://github.com/Semantic-Org/Semantic-UI --}}
-  <script src="/assets/library/jquery.min.js"></script>
+  {{!-- <script src="/assets/library/jquery.min.js"></script>
   <script src="/dist/form.js"></script>
   <script src="/dist/transition.js"></script>
 
@@ -98,7 +117,7 @@
                     <input type="password" name="password" placeholder="Password">
                   </div>
                 </div>
-                <div class="ui fluid large teal submit button">Sign Up</div>
+                <div class="ui fluid large teal submit button">Log in</div>
               </div>
         
               <div class="ui error message"></div>
@@ -110,8 +129,8 @@
 
 
     <div class="ui message">
-      Already have an account? <a href="#">Sign In</a>
+      New to us? <a href="#">Sign Up</a>
     </div>
   </div>
-</div>
+</div> --}}
 
