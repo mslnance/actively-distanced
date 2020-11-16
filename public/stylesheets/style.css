@@ -1,45 +1,45 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*!
- * # Semantic UI 2.4.2 - Site
- * http://github.com/semantic-org/semantic-ui/
- *
- *
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */
+* # Semantic UI 2.4.2 - Site
+* http://github.com/semantic-org/semantic-ui/
+*
+*
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+*/
 
 
 /*******************************
-             Page
+           Page
 *******************************/
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 html,
 body {
-  height: 100%;
+height: 100%;
 }
 html {
-  font-size: 14px;
+font-size: 14px;
 }
 body {
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-  min-width: 320px;
-  background: #FFFFFF;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.4285em;
-  color: rgba(0, 0, 0, 0.87);
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+min-width: 320px;
+background: #FFFFFF;
+font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+font-size: 14px;
+line-height: 1.4285em;
+color: rgba(0, 0, 0, 0.87);
 
 }
 
 /*******************************
-             Headers
+           Headers
 *******************************/
 
 h1,
@@ -47,90 +47,90 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  line-height: 1.28571429em;
-  margin: calc(2rem -  0.14285714em ) 0em 1rem;
-  font-weight: bold;
-  padding: 0em;
+font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+line-height: 1.28571429em;
+margin: calc(2rem -  0.14285714em ) 0em 1rem;
+font-weight: bold;
+padding: 0em;
 }
 h1 {
-  min-height: 1rem;
-  font-size: 2rem;
+min-height: 1rem;
+font-size: 2rem;
 }
 h2 {
-  font-size: 1.71428571rem;
+font-size: 1.71428571rem;
 }
 h3 {
-  font-size: 1.28571429rem;
+font-size: 1.28571429rem;
 }
 h4 {
-  font-size: 1.07142857rem;
+font-size: 1.07142857rem;
 }
 h5 {
-  font-size: 1rem;
+font-size: 1rem;
 }
 h1:first-child,
 h2:first-child,
 h3:first-child,
 h4:first-child,
 h5:first-child {
-  margin-top: 0em;
+margin-top: 0em;
 }
 h1:last-child,
 h2:last-child,
 h3:last-child,
 h4:last-child,
 h5:last-child {
-  margin-bottom: 0em;
+margin-bottom: 0em;
 }
 
 
 /*******************************
-             Text
+           Text
 *******************************/
 
 p {
-  margin: 0em 0em 1em;
-  line-height: 1.4285em;
+margin: 0em 0em 1em;
+line-height: 1.4285em;
 }
 p:first-child {
-  margin-top: 0em;
+margin-top: 0em;
 }
 p:last-child {
-  margin-bottom: 0em;
+margin-bottom: 0em;
 }
 
 /*-------------------
-        Links
+      Links
 --------------------*/
 
 a {
-  color: #4183C4;
-  text-decoration: none;
+color: #4183C4;
+text-decoration: none;
 }
 a:hover {
-  color: #1e70bf;
-  text-decoration: none;
+color: #1e70bf;
+text-decoration: none;
 }
 
 /*--------------------
-        Field
+      Field
 ---------------------*/
 
 .ui.form .field {
-  clear: both;
-  margin: 0em 0em 1em;
+clear: both;
+margin: 0em 0em 1em;
 }
 .ui.form .field:last-child,
 .ui.form .fields:last-child .field {
-  margin-bottom: 0em;
+margin-bottom: 0em;
 }
 .ui.form .fields .field {
-  clear: both;
-  margin: 10em;
+clear: both;
+margin: 10em;
 }
 /*--------------------
-    Standard Inputs
+  Standard Inputs
 ---------------------*/
 
 .ui.form textarea,
@@ -146,14 +146,14 @@ a:hover {
 .ui.form input[type="text"],
 .ui.form input[type="file"],
 .ui.form input[type="url"] {
-  width: 100%;
-  vertical-align: top;
+width: 100%;
+vertical-align: top;
 }
 
 /* Set max height on unusual input */
 .ui.form ::-webkit-datetime-edit,
 .ui.form ::-webkit-inner-spin-button {
-  height: 1.21428571em;
+height: 1.21428571em;
 }
 .ui.form input:not([type]),
 .ui.form input[type="date"],
@@ -167,95 +167,96 @@ a:hover {
 .ui.form input[type="text"],
 .ui.form input[type="file"],
 .ui.form input[type="url"] {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  margin: 0em;
-  outline: none;
-  -webkit-appearance: none;
-  line-height: 1.21428571em;
-  padding: 0.67857143em 1em;
-  font-size: 1em;
-  background: #FFFFFF;
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  color: rgba(0, 0, 0, 0.87);
-  border-radius: 0.28571429rem;
-  -webkit-box-shadow: 0em 0em 0em 0em transparent inset;
-          box-shadow: 0em 0em 0em 0em transparent inset;
-  -webkit-transition: color 0.1s ease, border-color 0.1s ease;
-  transition: color 0.1s ease, border-color 0.1s ease;
+font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+margin: 0em;
+outline: none;
+-webkit-appearance: none;
+tap-highlight-color: rgba(255, 255, 255, 0);
+line-height: 1.21428571em;
+padding: 0.67857143em 1em;
+font-size: 1em;
+background: #FFFFFF;
+border: 1px solid rgba(34, 36, 38, 0.15);
+color: rgba(0, 0, 0, 0.87);
+border-radius: 0.28571429rem;
+-webkit-box-shadow: 0em 0em 0em 0em transparent inset;
+        box-shadow: 0em 0em 0em 0em transparent inset;
+-webkit-transition: color 0.1s ease, border-color 0.1s ease;
+transition: color 0.1s ease, border-color 0.1s ease;
 }
 
 
 
 
 /*--------------------
-       UI Input
+     UI Input
 ---------------------*/
 
 /* Block */
 .ui.form .field .ui.input,
 .ui.form .fields .field .ui.input,
 .ui.form .wide.field .ui.input {
-  width: 100%;
+width: 100%;
 }
 
 /* Inline  */
 .ui.form .inline.fields .field:not(.wide) .ui.input,
 .ui.form .inline.field:not(.wide) .ui.input {
-  width: auto;
-  vertical-align: middle;
+width: auto;
+vertical-align: middle;
 }
 
 /* Auto Input */
 .ui.form .fields .field .ui.input input,
 .ui.form .field .ui.input input {
-  width: auto;
+width: auto;
 }
 
 
 /*******************************
-            States
+          States
 *******************************/
 
 /*--------------------
-        Focus
+      Focus
 ---------------------*/
 
 /*--------------------------
-  Input w/ attached Button
+Input w/ attached Button
 ---------------------------*/
 
 .ui.form input.attached {
-  width: auto;
+width: auto;
 }
 
 
 /* Inverted UI */
 body .ui.inverted::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+background: rgba(255, 255, 255, 0.1);
 }
 body .ui.inverted::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
+background: rgba(255, 255, 255, 0.25);
 }
 body .ui.inverted::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255, 255, 255, 0.15);
+background: rgba(255, 255, 255, 0.15);
 }
 body .ui.inverted::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.35);
+background: rgba(255, 255, 255, 0.35);
 }
 
 /*!
- * # Semantic UI 2.4.2 - Reset
- * http://github.com/semantic-org/semantic-ui/
- *
- *
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */
+* # Semantic UI 2.4.2 - Reset
+* http://github.com/semantic-org/semantic-ui/
+*
+*
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+*/
 
 
 /*******************************
-             Reset
+           Reset
 *******************************/
 
 
@@ -263,12 +264,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+-webkit-box-sizing: inherit;
+        box-sizing: inherit;
 }
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 /* iPad Input Shadows */
@@ -276,402 +277,398 @@ input[type="text"],
 input[type="email"],
 input[type="search"],
 input[type="password"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  
+-webkit-appearance: none;
+-moz-appearance: none;
+
 /* mobile firefox too! */
 }
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
-   ========================================================================== */
+ ========================================================================== */
 /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
+* 1. Correct the line height in all browsers.
+* 2. Prevent adjustments of font size after orientation changes in
+*    IE on Windows Phone and in iOS.
+*/
 html {
-  line-height: 1.15;
-  
+line-height: 1.15;
+
 /* 1 */
-  -ms-text-size-adjust: 100%;
-  
+-ms-text-size-adjust: 100%;
+
 /* 2 */
-  -webkit-text-size-adjust: 100%;
-  
+-webkit-text-size-adjust: 100%;
+
 /* 2 */
 }
 
 /* Sections
-   ========================================================================== */
+ ========================================================================== */
 /**
- * Remove the margin in all browsers (opinionated).
- */
+* Remove the margin in all browsers (opinionated).
+*/
 body {
-  margin: 20px;
+margin: 20px;
 }
 /**
- * Add the correct display in IE 9-.
- */
+* Add the correct display in IE 9-.
+*/
 article,
 aside,
 footer,
 header,
 nav,
 section {
-  display: block;
+display: block;
 }
 /**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
+* Correct the font size and margin on `h1` elements within `section` and
+* `article` contexts in Chrome, Firefox, and Safari.
+*/
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+font-size: 2em;
+margin: 0.67em 0;
 }
 
 /* Grouping content
-   ========================================================================== */
+ ========================================================================== */
 /**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
+* Add the correct display in IE 9-.
+* 1. Add the correct display in IE.
+*/
 figcaption,
 figure,
 main {
-  
+
 /* 1 */
-  display: block;
+display: block;
 }
 /**
- * Add the correct margin in IE 8.
- */
+* Add the correct margin in IE 8.
+*/
 figure {
-  margin: 1em 40px;
+margin: 1em 40px;
 }
 /**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
+* 1. Add the correct box sizing in Firefox.
+* 2. Show the overflow in Edge and IE.
+*/
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  
+-webkit-box-sizing: content-box;
+        box-sizing: content-box;
+
 /* 1 */
-  height: 0;
-  
+height: 0;
+
 /* 1 */
-  overflow: visible;
-  
+overflow: visible;
+
 /* 2 */
 }
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
 pre {
-  font-family: monospace, monospace;
-  
+font-family: monospace, monospace;
+
 /* 1 */
-  font-size: 1em;
-  
+font-size: 1em;
+
 /* 2 */
 }
 
 /* Text-level semantics
-   ========================================================================== */
+ ========================================================================== */
 /**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
- */
+* 1. Remove the gray background on active links in IE 10.
+* 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+*/
 a {
-  background-color: transparent;
-  
+background-color: transparent;
+
 /* 1 */
-  -webkit-text-decoration-skip: objects;
-  
+-webkit-text-decoration-skip: objects;
+
 /* 2 */
 }
 /**
- * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
+* 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+*/
 abbr[title] {
-  border-bottom: none;
-  
+border-bottom: none;
+
 /* 1 */
-  text-decoration: underline;
-  
+text-decoration: underline;
+
 /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  
+-webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+
 /* 2 */
 }
 /**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
+* Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+*/
 b,
 strong {
-  font-weight: inherit;
+font-weight: inherit;
 }
 /**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
+* Add the correct font weight in Chrome, Edge, and Safari.
+*/
 b,
 strong {
-  font-weight: bolder;
+font-weight: bolder;
 }
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  
+font-family: monospace, monospace;
+
 /* 1 */
-  font-size: 1em;
-  
+font-size: 1em;
+
 /* 2 */
 }
 
 /**
- * Add the correct font size in all browsers.
- */
+* Add the correct font size in all browsers.
+*/
 small {
-  font-size: 80%;
+font-size: 80%;
 }
 /**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
+* Prevent `sub` and `sup` elements from affecting the line height in
+* all browsers.
+*/
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
 }
 sub {
-  bottom: -0.25em;
+bottom: -0.25em;
 }
 sup {
-  top: -0.5em;
+top: -0.5em;
 }
 
 /* Embedded content
-   ========================================================================== */
+ ========================================================================== */
 
 img {
-  border-style: none;
+border-style: none;
 }
 /**
- * Hide the overflow in IE.
- */
+* Hide the overflow in IE.
+*/
 svg:not(:root) {
-  overflow: hidden;
+overflow: hidden;
 }
 
 /*******************************
-            Button
+          Button
 *******************************/
 
 .ui.button {
-  cursor: pointer;
-  display: inline-block;
-  min-height: 1em;
-  outline: none;
-  border: none;
-  vertical-align: baseline;
-  background: #E0E1E2 none;
-  color: rgba(0, 0, 0, 0.6);
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  margin: 0em 0.25em 0em 0em;
-  padding: 0.78571429em 1.5em 0.78571429em;
-  text-transform: none;
-  text-shadow: none;
-  font-weight: bold;
-  line-height: 1em;
-  font-style: normal;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 0.28571429rem;
-  -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
-          box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  will-change: '';
-  -webkit-tap-highlight-color: transparent;
+cursor: pointer;
+display: inline-block;
+min-height: 1em;
+outline: none;
+border: none;
+vertical-align: baseline;
+background: #E0E1E2 none;
+color: rgba(0, 0, 0, 0.6);
+font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+margin: 0em 0.25em 0em 0em;
+padding: 0.78571429em 1.5em 0.78571429em;
+text-transform: none;
+text-shadow: none;
+font-weight: bold;
+line-height: 1em;
+font-style: normal;
+text-align: center;
+text-decoration: none;
+border-radius: 0.28571429rem;
+-webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+        box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+-webkit-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+        user-select: none;
+-webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+will-change: '';
+-webkit-tap-highlight-color: transparent;
 }
 
 
 /* icon  */
 i.icon:before {
-  background: none !important;
+background: none !important;
 }
 
 i.icon.usb:before {
-  content: "\f287";
+content: "\f287";
 }
 i.icon.user:before {
-  content: "\f007";
+content: "\f007";
 }
 i.icon.user.circle:before {
-  content: "\f2bd";
+content: "\f2bd";
 }
 i.icon.user.md:before {
-  content: "\f0f0";
+content: "\f0f0";
 }
 i.icon.user.plus:before {
-  content: "\f234";
+content: "\f234";
 }
 i.icon.user.secret:before {
-  content: "\f21b";
+content: "\f21b";
 }
 i.icon.user.times:before {
-  content: "\f235";
+content: "\f235";
 }
 i.icon.users:before {
-  content: "\f0c0";
+content: "\f0c0";
 }
 
 
 /* Fluid Labeled */
 .ui.fluid[class*="left labeled"].icon.button,
 .ui.fluid[class*="right labeled"].icon.button {
-  padding-left: 1.5em !important;
-  padding-right: 1.5em !important;
+padding-left: 1.5em !important;
+padding-right: 1.5em !important;
 }
 /*-------------------
-        Fluid
+      Fluid
 --------------------*/
 
 /* button */
 .ui.fluid.buttons,
 .ui.fluid.button {
-  width: 100%;
+width: 100%;
 }
 
 
 /*******************************
-         Site Overrides
+       Site Overrides
 *******************************/
 
 .ui.segment {
-  position: relative;
-  background: #DADADA;
-  /* -webkit-box-shadow: 0px 0px 2px 0 rgba(34, 36, 38, 0.15);
-          box-shadow: 0px 0px 2px 0 rgba(34, 36, 38, 0.15); */
-  margin: 1rem 1em;
-  padding: 1em 1em;
-  /* border-radius: 0.28571429rem;
-  border: 1px solid rgba(34, 36, 38, 0.15); */
+position: relative;
+background: #ffffff;
+/* -webkit-box-shadow: 0px 0px 2px 0 rgba(34, 36, 38, 0.15);
+        box-shadow: 0px 0px 2px 0 rgba(34, 36, 38, 0.15); */
+margin: 1rem 1em;
+padding: 1em 1em;
+/* border-radius: 0.28571429rem;
+border: 1px solid rgba(34, 36, 38, 0.15); */
 }
 .ui.segment:first-child {
-  margin-top: 1em;
+margin-top: 1em;
 }
 .ui.segment:last-child {
-  margin-bottom: 0em;
+margin-bottom: 0em;
 }
 
 /*******************************
-            Button
+          Button
 *******************************/
 
 /*--- Teal ---*/
 
-.ui.teal.buttons .button,
-.ui.teal.button {
-  background-color: #00B5AD;
-  color: #FFFFFF;
-  text-shadow: none;
-  background-image: none;
+.button,
+{
+background-color: #00B5AD;
+color: #FFFFFF;
+text-shadow: none;
+background-image: none;
 }
-.ui.teal.button {
-  -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
-          box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+.button {
+-webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+        box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
 }
-.ui.teal.buttons .button:hover,
-.ui.teal.button:hover {
-  background-color: #009c95;
-  color: #FFFFFF;
-  text-shadow: none;
+.buttons .button:hover,
+.button:hover {
+background-color: #009c95;
+color: #FFFFFF;
+text-shadow: none;
 }
-.ui.teal.buttons .button:focus,
-.ui.teal.button:focus {
-  background-color: #008c86;
-  color: #FFFFFF;
-  text-shadow: none;
+.button .button:focus,
+.button:focus {
+background-color: #008c86;
+color: #FFFFFF;
+text-shadow: none;
 }
-.ui.teal.buttons .button:active,
-.ui.teal.button:active {
-  background-color: #00827c;
-  color: #FFFFFF;
-  text-shadow: none;
+.button:active {
+background-color: #00827c;
+color: #FFFFFF;
+text-shadow: none;
 }
-.ui.teal.buttons .active.button,
-.ui.teal.buttons .active.button:active,
-.ui.teal.active.button,
-.ui.teal.button .active.button:active {
-  background-color: #009c95;
-  color: #FFFFFF;
-  text-shadow: none;
+.button .active.button:active {
+background-color: #009c95;
+color: #FFFFFF;
+text-shadow: none;
 }
 
 /*!
- * # Semantic UI 2.4.2 - Container
- * http://github.com/semantic-org/semantic-ui/
- *
- *
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */
- .ui.container{display:block;max-width:100%!important}@media only screen and (max-width:767px){.ui.container{width:auto!important;margin-left:1em!important;margin-right:1em!important}.ui.grid.container{width:auto!important}.ui.relaxed.grid.container{width:auto!important}.ui.very.relaxed.grid.container{width:auto!important}}@media only screen and (min-width:768px) and (max-width:991px){.ui.container{width:723px;margin-left:auto!important;margin-right:auto!important}.ui.grid.container{width:calc(723px + 2rem)!important}.ui.relaxed.grid.container{width:calc(723px + 3rem)!important}.ui.very.relaxed.grid.container{width:calc(723px + 5rem)!important}}@media only screen and (min-width:992px) and (max-width:1199px){.ui.container{width:933px;margin-left:auto!important;margin-right:auto!important}.ui.grid.container{width:calc(933px + 2rem)!important}.ui.relaxed.grid.container{width:calc(933px + 3rem)!important}.ui.very.relaxed.grid.container{width:calc(933px + 5rem)!important}}@media only screen and (min-width:1200px){.ui.container{width:1127px;margin-left:auto!important;margin-right:auto!important}.ui.grid.container{width:calc(1127px + 2rem)!important}.ui.relaxed.grid.container{width:calc(1127px + 3rem)!important}.ui.very.relaxed.grid.container{width:calc(1127px + 5rem)!important}}.ui.text.container{font-family:Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;max-width:700px!important;line-height:1.5}.ui.text.container{font-size:1.14285714rem}.ui.fluid.container{width:100%}.ui[class*="left aligned"].container{text-align:left}.ui[class*="center aligned"].container{text-align:center}.ui[class*="right aligned"].container{text-align:right}.ui.justified.container{text-align:justify;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}
+* # Semantic UI 2.4.2 - Container
+* http://github.com/semantic-org/semantic-ui/
+*
+*
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+*/
+.ui.container{display:block;max-width:100%!important}@media only screen and (max-width:767px){.ui.container{width:auto!important;margin-left:1em!important;margin-right:1em!important}.ui.grid.container{width:auto!important}.ui.relaxed.grid.container{width:auto!important}.ui.very.relaxed.grid.container{width:auto!important}}@media only screen and (min-width:768px) and (max-width:991px){.ui.container{width:723px;margin-left:auto!important;margin-right:auto!important}.ui.grid.container{width:calc(723px + 2rem)!important}.ui.relaxed.grid.container{width:calc(723px + 3rem)!important}.ui.very.relaxed.grid.container{width:calc(723px + 5rem)!important}}@media only screen and (min-width:992px) and (max-width:1199px){.ui.container{width:933px;margin-left:auto!important;margin-right:auto!important}.ui.grid.container{width:calc(933px + 2rem)!important}.ui.relaxed.grid.container{width:calc(933px + 3rem)!important}.ui.very.relaxed.grid.container{width:calc(933px + 5rem)!important}}@media only screen and (min-width:1200px){.ui.container{width:1127px;margin-left:auto!important;margin-right:auto!important}.ui.grid.container{width:calc(1127px + 2rem)!important}.ui.relaxed.grid.container{width:calc(1127px + 3rem)!important}.ui.very.relaxed.grid.container{width:calc(1127px + 5rem)!important}}.ui.text.container{font-family:Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;max-width:700px!important;line-height:1.5}.ui.text.container{font-size:1.14285714rem}.ui.fluid.container{width:100%}.ui[class*="left aligned"].container{text-align:left}.ui[class*="center aligned"].container{text-align:center}.ui[class*="right aligned"].container{text-align:right}.ui.justified.container{text-align:justify;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}
 
- /* Grid */
+/* Grid */
 
- /*******************************
-            Standard
+/*******************************
+          Standard
 *******************************/
 
 .ui.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  padding: 0em;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+-ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+-webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+padding: 0em;
 }
 
- /* Middle Aligned */
+/* Middle Aligned */
 .ui[class*="middle aligned"].grid > .column:not(.row),
 .ui[class*="middle aligned"].grid > .row > .column,
 .ui.grid > [class*="middle aligned"].row > .column,
 .ui.grid > [class*="middle aligned"].column:not(.row),
 .ui.grid > .row > [class*="middle aligned"].column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  vertical-align: middle;
-  -ms-flex-item-align: center !important;
-      align-self: center !important;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+vertical-align: middle;
+-ms-flex-item-align: center !important;
+    align-self: center !important;
 }
 
 /* Center Aligned */
@@ -680,140 +677,142 @@ i.icon.users:before {
 .ui.grid > [class*="center aligned"].row > .column,
 .ui.grid > [class*="center aligned"].column.column,
 .ui.grid > .row > [class*="center aligned"].column.column {
-  text-align: center;
-  -ms-flex-item-align: inherit;
-      align-self: inherit;
+text-align: center;
+-ms-flex-item-align: inherit;
+    align-self: inherit;
 }
 .ui[class*="center aligned"].grid {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
 }
 
 /* header */
 /*--- Teal ---*/
 
 .ui.teal.header {
-  color: #00B5AD !important;
+color: #00B5AD !important;
 }
 a.ui.teal.header:hover {
-  color: #009c95 !important;
+color: #009c95 !important;
 }
 .ui.teal.dividing.header {
-  border-bottom: 2px solid #00B5AD;
+border-bottom: 2px solid #00B5AD;
 }
 
 /*--------------
-     Content
+   Content
 ---------------*/
 
 .ui.header .content {
-  display: inline-block;
-  vertical-align: top;
+display: inline-block;
+vertical-align: top;
 }
 
 
 /*!
- * # Semantic UI 2.4.2 - Divider
- * http://github.com/semantic-org/semantic-ui/
- *
- *
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
- */.ui.divider{margin:1rem 0;line-height:1;height:0;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:rgba(0,0,0,.85);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.ui.divider:not(.vertical):not(.horizontal){border-top:1px solid rgba(34,36,38,.15);border-bottom:1px solid rgba(255,255,255,.1)}.ui.grid>.column+.divider,.ui.grid>.row>.column+.divider{left:auto}.ui.horizontal.divider{display:table;white-space:nowrap;height:auto;margin:'';line-height:1;text-align:center}.ui.horizontal.divider:after,.ui.horizontal.divider:before{content:'';display:table-cell;position:relative;top:50%;width:50%;background-repeat:no-repeat}.ui.horizontal.divider:before{background-position:right 1em top 50%}.ui.horizontal.divider:after{background-position:left 1em top 50%}.ui.vertical.divider{position:absolute;z-index:2;top:50%;left:50%;margin:0;padding:0;width:auto;height:50%;line-height:0;text-align:center;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.ui.vertical.divider:after,.ui.vertical.divider:before{position:absolute;left:50%;content:'';z-index:3;border-left:1px solid rgba(34,36,38,.15);border-right:1px solid rgba(255,255,255,.1);width:0%;height:calc(100% - 1rem)}.ui.vertical.divider:before{top:-100%}.ui.vertical.divider:after{top:auto;bottom:0}@media only screen and (max-width:767px){.ui.grid .stackable.row .ui.vertical.divider,.ui.stackable.grid .ui.vertical.divider{display:table;white-space:nowrap;height:auto;margin:'';overflow:hidden;line-height:1;text-align:center;position:static;top:0;left:0;-webkit-transform:none;transform:none}.ui.grid .stackable.row .ui.vertical.divider:after,.ui.grid .stackable.row .ui.vertical.divider:before,.ui.stackable.grid .ui.vertical.divider:after,.ui.stackable.grid .ui.vertical.divider:before{position:static;left:0;border-left:none;border-right:none;content:'';display:table-cell;position:relative;top:50%;width:50%;background-repeat:no-repeat}.ui.grid .stackable.row .ui.vertical.divider:before,.ui.stackable.grid .ui.vertical.divider:before{background-position:right 1em top 50%}.ui.grid .stackable.row .ui.vertical.divider:after,.ui.stackable.grid .ui.vertical.divider:after{background-position:left 1em top 50%}}.ui.divider>.icon{margin:0;font-size:1rem;height:1em;vertical-align:middle}.ui.hidden.divider{border-color:transparent!important}.ui.hidden.divider:after,.ui.hidden.divider:before{display:none}.ui.divider.inverted,.ui.horizontal.inverted.divider,.ui.vertical.inverted.divider{color:#fff}.ui.divider.inverted,.ui.divider.inverted:after,.ui.divider.inverted:before{border-top-color:rgba(34,36,38,.15)!important;border-left-color:rgba(34,36,38,.15)!important;border-bottom-color:rgba(255,255,255,.15)!important;border-right-color:rgba(255,255,255,.15)!important}.ui.fitted.divider{margin:0}.ui.clearing.divider{clear:both}.ui.section.divider{margin-top:2rem;margin-bottom:2rem}.ui.divider{font-size:1rem}.ui.horizontal.divider:after,.ui.horizontal.divider:before{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC)}@media only screen and (max-width:767px){.ui.grid .stackable.row .ui.vertical.divider:after,.ui.grid .stackable.row .ui.vertical.divider:before,.ui.stackable.grid .ui.vertical.divider:after,.ui.stackable.grid .ui.vertical.divider:before{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC)}}
+* # Semantic UI 2.4.2 - Divider
+* http://github.com/semantic-org/semantic-ui/
+*
+*
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+*/.ui.divider{margin:1rem 0;line-height:1;height:0;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:rgba(0,0,0,.85);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.ui.divider:not(.vertical):not(.horizontal){border-top:1px solid rgba(34,36,38,.15);border-bottom:1px solid rgba(255,255,255,.1)}.ui.grid>.column+.divider,.ui.grid>.row>.column+.divider{left:auto}.ui.horizontal.divider{display:table;white-space:nowrap;height:auto;margin:'';line-height:1;text-align:center}.ui.horizontal.divider:after,.ui.horizontal.divider:before{content:'';display:table-cell;position:relative;top:50%;width:50%;background-repeat:no-repeat}.ui.horizontal.divider:before{background-position:right 1em top 50%}.ui.horizontal.divider:after{background-position:left 1em top 50%}.ui.vertical.divider{position:absolute;z-index:2;top:50%;left:50%;margin:0;padding:0;width:auto;height:50%;line-height:0;text-align:center;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.ui.vertical.divider:after,.ui.vertical.divider:before{position:absolute;left:50%;content:'';z-index:3;border-left:1px solid rgba(34,36,38,.15);border-right:1px solid rgba(255,255,255,.1);width:0%;height:calc(100% - 1rem)}.ui.vertical.divider:before{top:-100%}.ui.vertical.divider:after{top:auto;bottom:0}@media only screen and (max-width:767px){.ui.grid .stackable.row .ui.vertical.divider,.ui.stackable.grid .ui.vertical.divider{display:table;white-space:nowrap;height:auto;margin:'';overflow:hidden;line-height:1;text-align:center;position:static;top:0;left:0;-webkit-transform:none;transform:none}.ui.grid .stackable.row .ui.vertical.divider:after,.ui.grid .stackable.row .ui.vertical.divider:before,.ui.stackable.grid .ui.vertical.divider:after,.ui.stackable.grid .ui.vertical.divider:before{position:static;left:0;border-left:none;border-right:none;content:'';display:table-cell;position:relative;top:50%;width:50%;background-repeat:no-repeat}.ui.grid .stackable.row .ui.vertical.divider:before,.ui.stackable.grid .ui.vertical.divider:before{background-position:right 1em top 50%}.ui.grid .stackable.row .ui.vertical.divider:after,.ui.stackable.grid .ui.vertical.divider:after{background-position:left 1em top 50%}}.ui.divider>.icon{margin:0;font-size:1rem;height:1em;vertical-align:middle}.ui.hidden.divider{border-color:transparent!important}.ui.hidden.divider:after,.ui.hidden.divider:before{display:none}.ui.divider.inverted,.ui.horizontal.inverted.divider,.ui.vertical.inverted.divider{color:#fff}.ui.divider.inverted,.ui.divider.inverted:after,.ui.divider.inverted:before{border-top-color:rgba(34,36,38,.15)!important;border-left-color:rgba(34,36,38,.15)!important;border-bottom-color:rgba(255,255,255,.15)!important;border-right-color:rgba(255,255,255,.15)!important}.ui.fitted.divider{margin:0}.ui.clearing.divider{clear:both}.ui.section.divider{margin-top:2rem;margin-bottom:2rem}.ui.divider{font-size:1rem}.ui.horizontal.divider:after,.ui.horizontal.divider:before{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC)}@media only screen and (max-width:767px){.ui.grid .stackable.row .ui.vertical.divider:after,.ui.grid .stackable.row .ui.vertical.divider:before,.ui.stackable.grid .ui.vertical.divider:after,.ui.stackable.grid .ui.vertical.divider:before{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC)}}
 
 /* form size  */
- .ui.form {
-  font-size: 1rem;
+.ui.form {
+font-size: 1rem;
 }
 .ui.large.form {
-  font-size: 1.14285714rem;
+font-size: 1.14285714rem;
 }
 
 /* Left Icon Input */
 .ui[class*="left icon"].input > i.icon {
-  right: auto;
-  left: 1px;
-  border-radius: 0.28571429rem 0em 0em 0.28571429rem;
+right: auto;
+left: 1px;
+border-radius: 0.28571429rem 0em 0em 0.28571429rem;
 }
 .ui[class*="left icon"].input > i.circular.icon {
-  right: auto;
-  left: 0.5em;
+right: auto;
+left: 0.5em;
 }
 .ui[class*="left icon"].input > input {
-  padding-left: 2.67142857em !important;
-  padding-right: 1em !important;
+padding-left: 2.67142857em !important;
+padding-right: 1em !important;
 }
 
 /*******************************
-             Icon
+           Icon
 *******************************/
 
 @font-face {
-  font-family: 'Icons';
-  src: url("./../themes/default/assets/fonts/icons.eot");
-  src: url("./../themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("./../themes/default/assets/fonts/icons.woff2") format('woff2'), url("./../themes/default/assets/fonts/icons.woff") format('woff'), url("./../themes/default/assets/fonts/icons.ttf") format('truetype'), url("./../themes/default/assets/fonts/icons.svg#icons") format('svg');
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
+font-family: 'Icons';
+src: url("./../themes/default/assets/fonts/icons.eot");
+src: url("./../themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("./../themes/default/assets/fonts/icons.woff2") format('woff2'), url("./../themes/default/assets/fonts/icons.woff") format('woff'), url("./../themes/default/assets/fonts/icons.ttf") format('truetype'), url("./../themes/default/assets/fonts/icons.svg#icons") format('svg');
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-decoration: inherit;
+text-transform: none;
 }
 i.icon {
-  display: inline-block;
-  opacity: 1;
-  margin: 0em 0.25rem 0em 0em;
-  width: 1.18em;
-  height: 1em;
-  font-family: 'Icons';
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-  text-align: center;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+display: inline-block;
+opacity: 1;
+margin: 0em 0.25rem 0em 0em;
+width: 1.18em;
+height: 1em;
+font-family: 'Icons';
+font-style: normal;
+font-weight: normal;
+text-decoration: inherit;
+text-align: center;
+speak: none;
+font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+-webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
 }
 i.icon:before {
-  background: none !important;
+background: none !important;
 }
 
-  i.icon.lock:before {
-    content: "\f023";
-  }
-  i.icon.lock.open:before {
-    content: "\f3c1";
+i.icon.lock:before {
+  content: "\f023";
+}
+i.icon.lock.open:before {
+  content: "\f3c1";
 }
 
 
 /*******************************
-            Message
+          Message
 *******************************/
 
 .ui.message {
-  position: relative;
-  min-height: 1em;
-  margin: 1em 0em;
-  background: #F8F8F9;
-  padding: 1em 1.5em;
-  line-height: 1.4285em;
-  color: rgba(0, 0, 0, 0.87);
-  -webkit-transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease, -webkit-box-shadow 0.1s ease;
-  border-radius: 0.28571429rem;
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset, 0px 0px 0px 0px rgba(0, 0, 0, 0);
-          box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset, 0px 0px 0px 0px rgba(0, 0, 0, 0);
+position: relative;
+min-height: 1em;
+margin: 1em 0em;
+background: #F8F8F9;
+padding: 1em 1.5em;
+line-height: 1.4285em;
+color: rgba(0, 0, 0, 0.87);
+-webkit-transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
+transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease, -webkit-box-shadow 0.1s ease;
+border-radius: 0.28571429rem;
+-webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset, 0px 0px 0px 0px rgba(0, 0, 0, 0);
+        box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset, 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 .ui.message:first-child {
-  margin-top: 0em;
+margin-top: 0em;
 }
 .ui.message:last-child {
-  margin-bottom: 0em;
+margin-bottom: 0em;
 }
 /*--------------
-     Content
+   Content
 ---------------*/

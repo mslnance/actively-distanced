@@ -1,26 +1,10 @@
-<form class = "signup-form">
-    <div>
-        <p class="hide" id="taken">That username is already taken! Try again.</p>
-        <label for="username-signup">username:</label>
-        <input type="text" id="username-signup" />
-    </div>
-    <div>
-        <label for="password-signup">password:</label>
-        <input type="password" id="password-signup" />
-    </div>
-    <div>
-        <button type="submit">Sign Up</button>
-    </div>
-    <div>
-        <a href="/login">Login Instead</a>
-    </div>
-</form>
+
 <script src="/public/javascript/singup.js"></script>
 
 
 {{!-- Semantic-UI --}} 
 {{!-- reference link: https://github.com/Semantic-Org/Semantic-UI --}}
-  {{!-- <script src="/assets/library/jquery.min.js"></script>
+<script src="/assets/library/jquery.min.js"></script>
   <script src="/dist/form.js"></script>
   <script src="/dist/transition.js"></script>
 
@@ -52,6 +36,24 @@
                 Sign-up to join safe & fun activities
               </div>
             </h2>
+            <form class = "signup-form">
+    <div>
+        <p class="hide" id="taken">That username is already taken! Try again.</p>
+        <label for="username-signup">username:</label>
+        <input type="text" id="username-signup" />
+    </div>
+    <div>
+        <label for="password-signup">password:</label>
+        <input type="password" id="password-signup" />
+    </div>
+    <div>
+        <button type="submit">Sign Up</button>
+    </div>
+    <div>
+        <a href="/login">Login Instead</a>
+    </div>
+</form>
+
             <form class="ui large form">
               <div class="ui stacked segment">
                 <div class="field">
@@ -81,5 +83,5 @@
       New to us? <a href="#">Sign Up</a>
     </div>
   </div>
-</div> --}}
+</div> 
 
