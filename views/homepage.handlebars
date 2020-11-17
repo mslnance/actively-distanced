@@ -1,25 +1,33 @@
 
-<link type="text/css" href="public/stylesheets/style.css" rel="stylesheet" />
 
+            <div class="postbox">
 
 <div class="col-lg-12">
 
     {{#each posts as |post|}}
-    <li>
         {{!-- {{> post-info post }} --}}
         <div class="cardbox">
-        <div class="cardbox-heading">
-            <div class="media m-0">
-                <div class="d-flex mr-3">
-                </div>
-                <div class="media-body">
+            <div class="cardbox-heading">
+                <div class="media m-0">
+                 <div class="media-body">
         <div>
-            <p class="m-0">{{username}}</p>
-            <h1>{{dataValues.title}}</h1><br>
-            <p>{{dataValues.description}}</p><br>
-            <p>{{dataValues.date}}</p><br>
-            <p>{{dataValues.time}}</p><br>
-            <img src={{dataValues.image_url}} />
+
+            <h3 class="ui teal image header">{{user_id}}</p>
+            <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
+            <h4 class="ui black image header">{{dataValues.description}}</h4><br>
+            <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
+            <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
+            <div class="cardbox-item">
+             <a href="#myModal" data-toggle="modal">
+		    <img class="img-responsive media" src="{{dataValues.image_url}}">
+		    </a> 
+            </div>
+
+            {{!-- <img class="media" src="{{dataValues.image_url}}"> --}}
+            {{!-- <img src={{dataValues.image_url}} alt="Girl in a jacket" style="width:500px;height:600px;"> --}}
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="cardbox-like">
         <ul>
@@ -27,16 +35,11 @@
             <li><a href="#myModal" data-toggle="modal" title="" class="com"><i class="fa fa-comments"></i></a> <span
                     class="span-last"> {{comments}} 126,400</span></li>
         </ul>
-    </div>
-    </li>
+        </div>
     {{/each}}
-
-                    <p class="m-0">{{username}}</p>
-                    <small><span>{{dataValues.date}}</span></small><br>
-                    <small><span>{{dataValues.description}}</span></small>
                 </div>
             </div>
-        </div>
+    </div>
         <div class="cardbox-item">
             <a href="#myModal" data-toggle="modal">
                 <img class="img-responsive" src="{{dataValues.image_url}}">
@@ -70,15 +73,7 @@
             </a>
         </div>
     </div>
-    <div class="cardbox-like">
-        <ul>
-            <li><a href="#"><i class="fa fa-heart"></i></a><span> 786,286</span></li>
-            <li><a href="#myModal" data-toggle="modal" title="" class="com"><i class="fa fa-comments"></i></a> <span
-                    class="span-last"> 126,400</span></li>
-        </ul>
-    </div>
 
-</div>
 
 <div class="trending-box hidden-xs hidden-md">
     <div class="row">
@@ -154,6 +149,17 @@
         </div>
     </div>
 </div>
+</div>
+<script>
+	$('#Slim,#Slim2').slimScroll({
+	        height:"auto",
+			position: 'right',
+			railVisible: true,
+			alwaysVisible: true,
+			size:"8px",
+		});		
+	</script>
+
 
 <script src="assets/jquery.min.js"></script>
 <script src="assets/bootstrap.min.js"></script>

@@ -17,6 +17,14 @@
            Page
 *******************************/
 
+.postbox{
+  margin: auto;
+  margin-top: 5px;
+  width: 100%;
+  padding: 20px;
+}
+
+
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 html,
 body {
@@ -1322,6 +1330,7 @@ a.navbar-brand:hover {
 .justify-content-between {
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
+    /* border-radius: 20px; */
 }
 .d-flex {
     display: -ms-flexbox !important;
@@ -1331,6 +1340,7 @@ a.navbar-brand:hover {
   margin: 0px 0px 0px 0px;
   height: 150px;
   border-top: 1px solid rgba(90, 90, 90, 0.12);
+  border-radius: 20px;
   background-color: #545654 ;
   box-shadow: 0 -5px 25px 0 rgba(123, 123, 123, 0.15);
   color: #90a4ae;
@@ -1481,8 +1491,8 @@ a.navbar-brand:hover {
   margin-right: 1rem !important;
 }
 .media img{
-  width: 48px !important;
-  height: 48px !important;
+  width: 600px !important;
+  height: 480px !important;
   padding: 2px;
   border: 2px solid #f4f4f4;
 } 
@@ -3160,6 +3170,7 @@ a.navbar-brand:hover {
  border-top-right-radius: 0;
 }
 
+
 /* ==========================================================================
    Custom Button Styles
    ========================================================================== */
@@ -3185,3 +3196,4 @@ a.navbar-brand:hover {
 	  width: 100%;
         }
 }
+
