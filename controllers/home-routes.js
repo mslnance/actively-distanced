@@ -13,8 +13,8 @@ router.get('/', (req, res) => {
         })
 });
 
-router.get('/events', (req, res) => {
-    res.render('events');
+router.get('/create-post', (req, res) => {
+    res.render('create-post');
 });
 
 router.post('/profile', upload.single('photo'), function (req, res, next) {
@@ -35,10 +35,10 @@ router.post('/profile', upload.single('photo'), function (req, res, next) {
 });
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    // }
 
     res.render('login');
 });
