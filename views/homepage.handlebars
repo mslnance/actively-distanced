@@ -3,13 +3,34 @@
 
 
 <div class="col-lg-12">
-    <!-- 1st post  starts here-->
-    <div class="cardbox">
+
+    {{#each posts as |post|}}
+    <li>
+        {{!-- {{> post-info post }} --}}
+        <div class="cardbox">
         <div class="cardbox-heading">
             <div class="media m-0">
                 <div class="d-flex mr-3">
                 </div>
                 <div class="media-body">
+        <div>
+            <p class="m-0">{{username}}</p>
+            <h1>{{dataValues.title}}</h1><br>
+            <p>{{dataValues.description}}</p><br>
+            <p>{{dataValues.date}}</p><br>
+            <p>{{dataValues.time}}</p><br>
+            <img src={{dataValues.image_url}} />
+        </div>
+        <div class="cardbox-like">
+        <ul>
+            <li><a href="#"><i class="fa fa-heart"></i></a><span> {{likes}} 786,286</span></li>
+            <li><a href="#myModal" data-toggle="modal" title="" class="com"><i class="fa fa-comments"></i></a> <span
+                    class="span-last"> {{comments}} 126,400</span></li>
+        </ul>
+    </div>
+    </li>
+    {{/each}}
+
                     <p class="m-0">{{username}}</p>
                     <small><span>{{dataValues.date}}</span></small><br>
                     <small><span>{{dataValues.description}}</span></small>
