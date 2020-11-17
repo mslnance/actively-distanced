@@ -9,25 +9,69 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <h1>
-                <a href="/">Actively Distanced</a>
-            </h1>
-            <nav>
-                {{#if loggedIn}}
+    <header>
+            <a class="navbar-brand" href="/homepage">Actively Distanced</a>
+     </header>
+
+<!-- Navi section -->
+<header class="tr-header">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+
+            <div class="navbar-left">
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </nav>
+</header>
+
+	 <!-- Navbar Second Section -->
+<section class="nav-sec">
+    <div class="d-flex justify-content-between">
+        <div class="p-2 nav-icon-lg mint-green">
+            <a class="nav-icon" href="/homepage"><em class="fa fa-home"></em>
+                <span> 🏠 </span>
+                <h3>Home</h3>
+            </a>
+        </div>
+        <div class="p-2 nav-icon-lg clean-black">
+            <a class="nav-icon" href="/create-post"><em class="fa fa-plus"></em>
+                  <span> + </span>
+                <h3>Add an activity</h3>
+            </a>
+        </div>
+        <div class="p-2 nav-icon-lg clean-black">
+            <a class="nav-icon" href="/myactivity"><i class="fa fa-heart"></i>
+                  <span> 💚 </span>
+                <h3>My activity</h3>
+            </a>
+        </div>
+        <div class="p-2 nav-icon-lg clean-black">
+            <a class="nav-icon" href="/logout"><em class="fa fa-minus"></em>
+                  <span> ⚪️ </span>
+                 {{#if loggedIn}}
                 <a href="/">All Activites</a>
                 <button id="logout" class="btn-no-style">logout</button>
                 {{else}}
-                <a href="/login">login</a>
+                <h3 class="ui white image header" a href="/login">login</h3></a>
                 {{/if}}
-            </nav>
-        </header>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <div class="wrapper">
+        
         <main>
             {{{ body }}}
         </main>
         <footer>
-            Have fun with safe activities!
+          <center><h4 class="ui teal image header">Have fun with safe activities! </h4> </center> 
         </footer>
     </div>
 

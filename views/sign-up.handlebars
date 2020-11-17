@@ -1,30 +1,16 @@
-
-<script src="/public/javascript/singup.js"></script>
-
-
-{{!-- Semantic-UI --}} 
-{{!-- reference link: https://github.com/Semantic-Org/Semantic-UI --}}
-<script src="/assets/library/jquery.min.js"></script>
-  <script src="/dist/form.js"></script>
-  <script src="/dist/transition.js"></script>
-
-
-</head>
-<body>
-
-<!-- <h1 class="ui center aligned header">Responsive Elements</h1>
-
-
-<h3 class="ui center aligned header">Responsive Vertical Divider</h3> -->
-
-  <div class="ui stackable two column very relaxed grid container" style="position:relative;">
+ <div class="ui stackable two column very relaxed grid container" style="position:relative;">
     <div class="column">
-      <!-- <div class="ui segment"><img src="assets/images/Login-view.png" alt="login-view" style="width:345px;height:400px;"> -->
-      <div class="ui segment"><img src="assets/images/Login-view2.png" alt="login-view" style="width:360px;height:500px;">
+        <h2 class="ui teal image header">
+      <div class="ui segment">
+          <img src="assets/images/Login-view2.png" class-"style="width:360px;height:500px;" />
+
       </div>
+      </h2>
     </div>
     
-    <!-- login  -->
+    <div class="container">
+    </div>
+    <!-- signup  -->
     <div class="column">
       <div class="ui segment">
 
@@ -32,56 +18,29 @@
           <div class="column">
             <h2 class="ui teal image header">
               <!-- <img src="assets/images/logo.png" class="image"> -->
-              <div class="content">
-                Sign-up to join safe & fun activities
+              <div class="content-1">
+                Log-in to your account
               </div>
             </h2>
-            <form class = "signup-form">
-    <div>
-        <p class="hide" id="taken">That username is already taken! Try again.</p>
-        <label for="username-signup">username:</label>
-        <input type="text" id="username-signup" />
-    </div>
-    <div>
-        <label for="password-signup">password:</label>
-        <input type="password" id="password-signup" />
-    </div>
-    <div>
-        <button type="submit">Sign Up</button>
-    </div>
-    <div>
-        <a href="/login">Login Instead</a>
-    </div>
-</form>
-
-            <form class="ui large form">
+            <form class="ui large form signup-form">
               <div class="ui stacked segment">
                 <div class="field">
                   <div class="ui left icon input">
-                    <i class="user icon"></i>
+                    <label for="username-login">username:</label>
                     <input type="text" name="email" placeholder="E-mail address">
                   </div>
                 </div>
                 <div class="field">
                   <div class="ui left icon input">
-                    <i class="lock icon"></i>
+                    <label for="password-login">password:</label>
                     <input type="password" name="password" placeholder="Password">
                   </div>
                 </div>
-                <div class="ui fluid large teal submit button">Log in</div>
+                <div class="button">Login</div>
               </div>
-        
-              <div class="ui error message"></div>
-        
+          <a class="btn btn-dark " href="/login" role="button">Already have an account? Click Here.</a>
+
             </form>
       </div>
     </div>
   </div>
-
-
-    <div class="ui message">
-      New to us? <a href="#">Sign Up</a>
-    </div>
-  </div>
-</div> 
-
