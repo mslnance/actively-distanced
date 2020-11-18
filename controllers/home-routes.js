@@ -4,12 +4,12 @@ const upload = multer({ dest: 'uploads/' });
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({ cloud_name: 'actively-distanced', api_key: '459732884598213', api_secret: '69tQZU3yr0mFsxuNe2U2WCDR544' });
 const dataURI = require('datauri');
-const Post = require('../models/Post');
+const Activity = require('../models/Activity');
 
 router.get('/', (req, res) => {
-    Post.findAll({})
-        .then((posts) => {
-            res.render('homepage', { posts });
+    Activity.findAll({})
+        .then((activity) => {
+            res.render('homepage', { activity });
         })
 });
 
@@ -21,7 +21,7 @@ router.post('/profile', upload.single('photo'), function (req, res, next) {
     console.log(req.body);
     return cloudinary.uploader.upload(req.file.path)
         .then((result) => {
-            Post.create({
+            Activity.create({
                 title: req.body.title,
                 description: req.body.description,
                 date: req.body.date,
