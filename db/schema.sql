@@ -2,50 +2,70 @@ DROP DATABASE IF EXISTS actively_distanced_db;
 
 CREATE DATABASE actively_distanced_db;
 
-CREATE TABLE `users` (
-  `id` int PRIMARY KEY,
-  `email_address` varchar(255) UNIQUE NOT NULL,
-  `password` varchar(255),
-  `date_created` datetime NOT NULL
-);
+USE actively_distanced_db;
 
-CREATE TABLE `activity` (
-  `id` int PRIMARY KEY,
-  `user_id` varchar(255) NOT NULL,
-  `title` varchar(255),
-  `photo` varchar(255),
-  `caption` varchar(255) NOT NULL,
-  `location` int NOT NULL,
-  `group_size` int,
-  `activity_date` datetime,
-  `activity_time` datetime,
-  `activity_link` varchar(255),
-  `type_id` int,
-  `date_created` datetime NOT NULL
-);
-
-CREATE TABLE `comments` (
-  `id` int PRIMARY KEY,
-  `activity_id` int NOT NULL,
-  `comment` varchar(255) NOT NULL,
-  `date_created` datetime NOT NULL
-);
-
-CREATE TABLE `likes` (
-  `id` int PRIMARY KEY,
-  `activity_id` int NOT NULL,
-  `date_created` datetime
+CREATE TABLE `user` (
+     `id` INT PRIMARY KEY AUTO_INCREMENT,
+     `username` VARCHAR(255) UNIQUE NOT NULL,
+     `password` varchar(255) not null      
 );
 
 CREATE TABLE `activity_type` (
-  `id` int PRIMARY KEY,
-  `type` int NOT NULL
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `type` varchar(255) NOT NULL
 );
 
-ALTER TABLE `activity` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+CREATE TABLE `POST`(
+`id` int PRIMARY KEY AUTO_INCREMENT,
+`title` varchar(255),
+`description` varchar(255),
+`date` varchar(255),
+`time` varchar(255),
+`image_url` varchar(255),
+`created_at` datetime,
+`updated_at` datetime
+);
 
-ALTER TABLE `activity` ADD FOREIGN KEY (`id`) REFERENCES `likes` (`activity_id`);
+CREATE TABLE `activity` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `title` varchar(255),
+  `image_url` varchar(255),
+  `description` varchar(255),
+  `location` varchar(255),
+  `group_size` varchar(255),
+  `date` varchar(255),
+  `time` varchar(255),
+  `activity_type_id` int NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime
+);
 
-ALTER TABLE `comments` ADD FOREIGN KEY (`activity_id`) REFERENCES `activity` (`id`);
+CREATE TABLE `comment` (
+  `id` int PRIMARY KEY  AUTO_INCREMENT,
+  `comment_text` varchar(255) NOT NULL,
+  `user_id` int NOT NULL,
+  `post_id` int NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime 
+);
 
-ALTER TABLE `activity_type` ADD FOREIGN KEY (`id`) REFERENCES `activity` (`type_id`);
+CREATE TABLE `like` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `user_id` int NOT NULL, 
+  `activity_id` int NOT NULL,
+  `created_at` datetime,
+  `updated_at` datetime
+);
+
+ALTER TABLE `activity` ADD FOREIGN KEY (`user_id`) REFERENCES `user`(`id`);
+
+ALTER TABLE `activity` ADD FOREIGN KEY (`activity_type_id`) REFERENCES `activity_type`(`id`);
+
+ALTER TABLE `comment` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+ALTER TABLE `comment` ADD FOREIGN KEY (`post_id`) REFERENCES `post` (`id`);
+
+ALTER TABLE `like` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+ALTER TABLE  `like` ADD FOREIGN KEY (`activity_id`) REFERENCES `activity` (`id`)
