@@ -178,7 +178,6 @@ font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 margin: 0em;
 outline: none;
 -webkit-appearance: none;
-tap-highlight-color: rgba(255, 255, 255, 0);
 line-height: 1.21428571em;
 padding: 0.67857143em 1em;
 font-size: 1em;
@@ -778,8 +777,6 @@ font-style: normal;
 font-weight: normal;
 text-decoration: inherit;
 text-align: center;
-speak: none;
-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 -webkit-font-smoothing: antialiased;
 -webkit-backface-visibility: hidden;
@@ -866,7 +863,6 @@ margin-bottom: 0em;
   font-family: 'Abhaya Libre', serif;
   font-size: 32px;
     background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1517,8 +1513,7 @@ a.navbar-brand:hover {
     position: relative;
     display: block;
 }
-.cardbox .cardbox-item img{
-}
+
 .img-responsive{
     display: block;
     max-width: 100%;
@@ -3195,5 +3190,5 @@ a.navbar-brand:hover {
 	  height: 130vh;
 	  width: 100%;
         }
-}
-
+      }
+    }
