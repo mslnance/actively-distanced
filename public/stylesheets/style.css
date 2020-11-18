@@ -1513,14 +1513,14 @@ a.navbar-brand:hover {
   color: #aaa;
 }
 
-.cardbox {
+/* .cardbox {
   border-radius: 3px;
-  background-color: #0fc19e
+  background-color: #0fc19e;
   box-shadow: 0 5px 25px 0 rgba(85, 85, 85, 0.15);
   margin-bottom: 20px;
   padding: 0px !important;
   border-radius: 20px;
-}
+} */
 
 .cardbox .cardbox-item {
     position: relative;
