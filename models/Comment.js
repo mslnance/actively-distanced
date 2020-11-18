@@ -19,14 +19,17 @@ Comment.init(
       }
     },
     user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+            model: 'user',
+            key: 'id'
       }
     },
     activity_id: {
       type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
       references: {
         model: 'activity',
         key: 'id'
