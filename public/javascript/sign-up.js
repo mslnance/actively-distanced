@@ -17,7 +17,7 @@ async function signupFormHandler(event) {
 
         if (response.ok) {
             //   takenUsername.classList.add('hide');
-            document.location.replace('/');
+            document.location.replace('/login');
         } else {
             // get all users and compare username
             const getUsers = await fetch('/api/users').then(

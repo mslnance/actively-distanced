@@ -5,9 +5,17 @@ const cloudinary = require('cloudinary').v2;
 cloudinary.config({ cloud_name: 'actively-distanced', api_key: '459732884598213', api_secret: '69tQZU3yr0mFsxuNe2U2WCDR544' });
 const dataURI = require('datauri');
 const Post = require('../models/Post');
+const User = require('../models/User');
 
 router.get('/', (req, res) => {
-    Post.findAll({})
+    Post.findAll({
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
         .then((posts) => {
             res.render('homepage', { posts });
         })

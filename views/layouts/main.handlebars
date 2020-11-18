@@ -26,6 +26,7 @@
                     <h3>Home</h3>
                 </a>
             </div>
+            {{#if loggedIn}}
             <div class="p-2 nav-icon-lg dark-black">
                 <a class="nav-icon" href="/create-post"><em class="fa fa-plus"></em>
                     <span> + </span>
@@ -39,11 +40,19 @@
                 </a>
             </div>
             <div class="p-2 nav-icon-lg dark-black">
+                <a class="nav-icon" href="/logout"><i class="fa fa-minus"></i>
+                    <span> ⚪️ </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            {{else}}
+            <div class="p-2 nav-icon-lg dark-black">
                 <a class="nav-icon" href="/login"><i class="fa fa-minus"></i>
                     <span> ⚪️ </span>
                     <h3>Login</h3>
                 </a>
             </div>
+            {{/if}}
         </div>
     </section>
 
