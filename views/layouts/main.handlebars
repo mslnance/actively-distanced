@@ -6,12 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actively Distanced</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
-    <main>
-        {{{body}}}
-    </main>
+    <header>
+        <nav class="navbar navbar-default">
+            <a class="navbar-brand" href="/">Actively Distanced</a>
+        </nav>
+    </header>
+
+
+    <!-- Navbar Section -->
+    <section class="nav-sec">
+        <div class="d-flex justify-content-between">
+            <div class="p-2 nav-icon-lg mint-green">
+                <a class="nav-icon" href="/"><em class="fa fa-home"></em>
+                    <span> 🏠 </span>
+                    <h3>Home</h3>
+                </a>
+            </div>
+            <div class="p-2 nav-icon-lg dark-black">
+                <a class="nav-icon" href="/create-post"><em class="fa fa-plus"></em>
+                    <span> + </span>
+                    <h3>Add an activity</h3>
+                </a>
+            </div>
+            <div class="p-2 nav-icon-lg dark-black">
+                <a class="nav-icon" href="/myactivity"><i class="fa fa-heart"></i>
+                    <span> 💚 </span>
+                    <h3>My activities</h3>
+                </a>
+            </div>
+            <div class="p-2 nav-icon-lg dark-black">
+                <a class="nav-icon" href="/login"><i class="fa fa-minus"></i>
+                    <span> ⚪️ </span>
+                    <h3>Login</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="wrapper">
+
+        <main>
+            {{{ body }}}
+        </main>
+        <footer>
+            <center>
+                <h4 class="ui teal image header">Have fun with safe activities! </h4>
+            </center>
+        </footer>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
