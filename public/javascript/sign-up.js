@@ -35,4 +35,10 @@ async function signupFormHandler(event) {
   }
 }
 
+app.get('/sign-up', (req, res) => {
+    res.render('sign-up', {layout: 'main2'}) 
+})
+
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);

@@ -36,4 +36,8 @@ async function loginFormHandler(event) {
     }
 }
 
+// app.get('/login', (req, res) => {
+//     res.render('login', {layout: 'main2'}) 
+// })
+
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
