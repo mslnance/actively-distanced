@@ -1,22 +1,64 @@
-<div class="ui middle aligned center aligned grid">
-    <div class="column">
-        <h1 class="ui teal image header">Create a post</h1>
+{{!-- <br>
+<h2 class="ui teal image header">Create an activity</h2>
+<br>
 
-        <div action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
-            <form action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
-                <div class="ui stacked segment">
-                    <label for="title">Title</label><br>
-                    <input type="text" id="title" name="title"><br>
-                    <label for="description">Description</label><br>
-                    <input type="text" id="description" name="description"><br>
-                    <label for="date">Choose a date for your event:</label>
-                    <input type="date" id="date" name="date"><br>
-                    <label for="time">Choose a time for your event:</label>
-                    <input type="time" id="time" name="time" min="08:00" max="20:00" required><br>
-                    <input type="file" name="photo" /><br>
-                    <input type="submit" value="Submit" class="ui fluid large teal submit button">
-                </div>
-            </form>
+
+  <form class="new-post-form">
+        <div>
+            <h3 class="ui teal image header" label for="post-title">Title</label> </h3>
+            <textarea name="title" type="text" name="post-title" id="post-title" cols="30" rows="2"></textarea>
         </div>
+
+<h3 class="ui teal image header" label for="photo">Photo</label> </h3>
+<input type="file" name="photo" /><br>
+
+        <div>
+          <br>
+            <h3 class="ui teal image header" label for="post-body">Write a description</label></h3>
+            <textarea name="post-body" id="post-body" cols="30" rows="10"></textarea>
+        </div>
+
+  <div>
+    <h3 class="ui teal image header" label for="location">Location</label> </h3>
+    <textarea name="location" id="location" cols="30" rows="2"></textarea>
+   </div>
+
+<h3 class="ui teal image header" label for="quantity">Group Size</label>
+<input type="number" id="quantity" name="quantity">
+
+<h3 class="ui teal image header" label for="date">Choose a date for your event</label>
+<input type="date" id="date" name="date"><br>
+<h3 class="ui teal image header" label for="time">Choose a time for your event</label>
+<input type="time" id="time" name="time" min="08:00" max="20:00" required><br>
+
+<h3 class="ui teal image header" label for="post-body">Link (virtual activity</label></h3>
+<textarea name="post-body" id="post-body" cols="30" rows="5"></textarea>
+
+</div>
+  <input type="submit" value="Share" class="ui fluid large teal submit button">
+</div>	
+</form>
+<script src="/javascript/add-post.js"></script> --}}
+
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h1 class="ui teal image header">Create a post</h1>
+
+    <div action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
+      <form action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
+        <div class="ui stacked segment">
+          <label for="title">Title</label><br>
+          <input type="text" id="title" name="title"><br>
+          <label for="description">Description</label><br>
+          <input type="text" id="description" name="description"><br>
+          <label for="date">Choose a date for your event:</label>
+          <input type="date" id="date" name="date"><br>
+          <label for="time">Choose a time for your event:</label>
+          <input type="time" id="time" name="time" min="08:00" max="20:00" required><br>
+          <input type="file" name="photo" /><br>
+          <input type="submit" value="Submit" class="ui fluid large teal submit button">
+        </div>
+      </form>
     </div>
+  </div>
 </div>
