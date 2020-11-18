@@ -1,145 +1,153 @@
 <div class="postbox">
-<div class="col-lg-12">
+    <div class="col-lg-12">
 
-    {{#each posts as |post|}}
+        {{#each posts as |post|}}
         {{!-- {{> post-info post }} --}}
         <div class="cardbox">
             <div class="cardbox-heading">
                 <div class="media m-0">
-                 <div class="media-body">
-            <div>
-            <h3 class="ui teal image header">{{user_id}}</h3></p>
-            <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
-            <h4 class="ui black image header">{{dataValues.description}}</h4><br>
-            <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
-            <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
-            <div class="cardbox-item">
-            <a href="#myModal" data-toggle="modal">
-		    <img class="img-responsive media" src="{{dataValues.image_url}}">
-		    </a> 
-            </div>
-            </div>
-                    </div>
-                </div>
-            </div>
-        <div class="cardbox-like">
-        <ul>
-            <li><a href="#"><i class="fa fa-heart"></i></a><span> {{likes}} likes 786,286</span></li>
-            <li><a href="#myModal" data-toggle="modal" title="" class="com">
-                <span class="span-last"> {{comments}} comments 130,15</span>
-            <i class="fa fa-comments">
-            </i></a> 
-            </li>
-        </ul>
-        </div>
-</div>
-    {{/each}}
-
-<div class="trending-box hidden-xs hidden-md">
-    <div class="row">
-        <div class="col-lg-12">
-            <a href="photo_stories.html">
-                <h4>Ourdoor Actvities</h4>
-            </a>
-        </div>
-
-    </div>
-</div>
-<div class="trending-box hidden-xs hidden-md">
-    <div class="row">
-        <div class="col-lg-12">
-            <a href="photo_stories.html">
-                <h4>Virtual Actvities</h4>
-            </a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-
-
- 
-<div class="container">
-
-  <!-- Trigger the modal with a button -->
-              <a href="#myModal" data-toggle="modal">
-		    <img class="img-responsive media" src="{{dataValues.image_url}}">
-		    </a> 
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-          <h4 class="modal-title">{{dataValues.title}}</h4>
-        {{!-- </div> --}}
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-
-                <div class="row">
-        <div class="modal-body">
-          <div class="col-md-8 modal-image">
-            <img class="img-responsive media" src="{{dataValues.image_url}}">
-           </div>
-          	<div class="col-md-4 modal-meta">
-                <div class="modal-meta-top"> 
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        <span aria-hidden="true">×</span><span class="sr-only">Close</span>
-                    </button>
-                        <div class="img-poster clearfix">
-                            <h3 class="ui teal image header">{{user_id}} </h3><br>
+                    <div class="media-body">
+                        <div>
+                            <h3 class="ui teal image header">{{user_id}}</h3>
+                            </p>
                             <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
                             <h4 class="ui black image header">{{dataValues.description}}</h4><br>
                             <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
                             <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
-                            <h3 class="ui teal image header">{{dataValues.date}}</h3><br>
-                        </div>
-                            <ul class="img-comment-list">
-                            <li>
-                                <div class="comment-text">
-                                    <a href=" {{routes}}"> <h4 class="ui teal image header"> user_id {{user_id}} </h4></a>
-                                    <p>{{comment_text}} placeholder comments...</p>
-                                        <div class="date sub-text">{{dataValues.title}}</div>
-                                </div>
-                            </li>
-                            </ul>
-                            <div class="modal-meta-bottom">
-                                <ul>
-                                    <li><a class="modal-like" href="#"><i class="fa fa-heart"></i></a><span
-                                            class="modal-one"> {{likes}}</span> |
-                                        <a class="modal-comment" href="#"><i class="fa fa-comments"></i></a><span>
-                                            {{comments}}</span> </li>
-
-                                    <div class="comment-body">
-                                        <input class="form-control input-lg" type="text" placeholder="Write your comment...">
-                                            <div class="button"><h5><center>Send</center></h5></div>
-                                    </div>
-
-                                    </li>
-                                </ul>
+                            <div class="cardbox-item">
+                                <a href="#myModal" data-toggle="modal">
+                                    <img class="img-responsive media" src="{{dataValues.image_url}}">
+                                </a>
                             </div>
-           
-         	 </div>
-             </div>
-          </div>
-          </div>
-          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cardbox-like">
+                <ul>
+                    <li><a href="#"><i class="fa fa-heart"></i></a><span> {{likes}} likes 786,286</span></li>
+                    <li><a href="#myModal" data-toggle="modal" title="" class="com">
+                            <span class="span-last"> {{comments}} comments 130,15</span>
+                            <i class="fa fa-comments">
+                            </i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      
-    </div>
-  </div>
- 
-<script>
-$(document).ready(function(){
-  $("#myBtn").click(function(){
-    $("#myModal").modal({keyboard: true});
-  });
-  $("#myBtn2").click(function(){
-    $("#myModal2").modal({keyboard: false});
-  });
-});
-</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        {{/each}}
 
+        <div class="trending-box hidden-xs hidden-md">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="photo_stories.html">
+                        <h4>Ourdoor Actvities</h4>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="trending-box hidden-xs hidden-md">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="photo_stories.html">
+                        <h4>Virtual Actvities</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+
+    <!-- Trigger the modal with a button -->
+    <a href="#myModal" data-toggle="modal">
+        <img class="img-responsive media" src="{{dataValues.image_url}}">
+    </a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <h4 class="modal-title">{{dataValues.title}}</h4>
+            {{!-- </div> --}}
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="modal-body">
+                                <div class="col-md-8 modal-image">
+                                    <img class="img-responsive media" src="{{dataValues.image_url}}">
+                                </div>
+                                <div class="col-md-4 modal-meta">
+                                    <div class="modal-meta-top">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                        </button>
+                                        <div class="img-poster clearfix">
+                                            <h3 class="ui teal image header">{{user_id}} </h3><br>
+                                            <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
+                                            <h4 class="ui black image header">{{dataValues.description}}</h4><br>
+                                            <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
+                                            <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
+                                            <h3 class="ui teal image header">{{dataValues.date}}</h3><br>
+                                        </div>
+                                        <ul class="img-comment-list">
+                                            <li>
+                                                <div class="comment-text">
+                                                    <a href=" {{routes}}">
+                                                        <h4 class="ui teal image header"> user_id {{user_id}} </h4>
+                                                    </a>
+                                                    <p>{{comment_text}} placeholder comments...</p>
+                                                    <div class="date sub-text">{{dataValues.title}}</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="modal-meta-bottom">
+                                            <ul>
+                                                <li><a class="modal-like" href="#"><i class="fa fa-heart"></i></a><span
+                                                        class="modal-one"> {{likes}}</span> |
+                                                    <a class="modal-comment" href="#"><i
+                                                            class="fa fa-comments"></i></a><span>
+                                                        {{comments}}</span> </li>
+
+                                                <div class="comment-body">
+                                                    <input class="form-control input-lg" type="text"
+                                                        placeholder="Write your comment...">
+                                                    <div class="button">
+                                                        <h5>
+                                                            <center>Send</center>
+                                                        </h5>
+                                                    </div>
+                                                </div>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#myBtn").click(function () {
+            $("#myModal").modal({ keyboard: true });
+        });
+        $("#myBtn2").click(function () {
+            $("#myModal2").modal({ keyboard: false });
+        });
+    });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
