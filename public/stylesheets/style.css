@@ -20,7 +20,7 @@
 .postbox{
   margin: auto;
   margin-top: 5px;
-  width: 85%;
+  width: 98%;
   padding: 20px;
 }
 
@@ -493,7 +493,7 @@ min-height: 1em;
 outline: none;
 border: none;
 vertical-align: baseline;
-background: #E0E1E2 none;
+background: black none;
 color: rgba(0, 0, 0, 0.6);
 font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 margin: 0em 0.25em 0em 0em;
@@ -598,7 +598,7 @@ margin-bottom: 0em;
 
 .button
 {
-background-color: #00B5AD;
+background-color: #fff;
 color: #FFFFFF;
 text-shadow: none;
 background-image: none;
@@ -611,24 +611,24 @@ padding: 12px 22px;
 }
 .buttons .button:hover,
 .button:hover {
-background-color: #009c95;
-color: #FFFFFF;
+background-color: #B9D6E0;
+color: grey;
 text-shadow: none;
 }
 .button .button:focus,
 .button:focus {
 background-color: #008c86;
-color: #FFFFFF;
+color: grey;
 text-shadow: none;
 }
 .button:active {
 background-color: #00827c;
-color: #FFFFFF;
+color:grey;
 text-shadow: none;
 }
 .button .active.button:active {
 background-color: #009c95;
-color: #FFFFFF;
+color: grey;
 text-shadow: none;
 }
 
@@ -707,6 +707,13 @@ color: #009c95 !important;
 }
 .ui.teal.dividing.header {
 border-bottom: 0px solid #00B5AD;
+}
+.ui.radiant.header {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 20px;
+    background: linear-gradient(to right, #C15858 0%, #3C55FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*--------------
@@ -825,9 +832,6 @@ margin-bottom: 0em;
 ---------------*/
 
 
-
-/* Fluffs */
-
 /* ==========================================================================
    Fluffs - Ultimate Bootstrap Social Network UI Kit
    ========================================================================== */
@@ -856,13 +860,14 @@ margin-bottom: 0em;
     margin-bottom: 0;
     border-radius: 0;
     border: 0;
-    background-color: #fff;
+    background-color: #f4f4f4;;
   box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2);
 }
 .navbar-brand {
   font-family: 'Abhaya Libre', serif;
   font-size: 32px;
     background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1326,23 +1331,21 @@ a.navbar-brand:hover {
 .justify-content-between {
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
-    /* border-radius: 20px; */
 }
 .d-flex {
     display: -ms-flexbox !important;
     display: flex !important;
 }
 .nav-sec {
-  margin: 0px 0px 0px 0px;
-  height: 150px;
-  border-top: 1px solid rgba(90, 90, 90, 0.12);
-  border-radius: 20px;
-  background-color: #545654 ;
+  height: 100px;
+  border-top: 0px;
+  background-color: #B9D6E0;
   box-shadow: 0 -5px 25px 0 rgba(123, 123, 123, 0.15);
-  color: #90a4ae;
+  color: #B9D6E0;;
 }
+
 .nav-sec a:hover{
-  color: #f4f4f4 !important;
+  color: #B9D6E0;
 }
 
 .fh {
@@ -1351,7 +1354,7 @@ a.navbar-brand:hover {
 
 .nav-icon {
   display: block;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 10px 6px 10px 6px;
   border-bottom: 2px solid transparent;
   font-size: 2rem;
@@ -1385,18 +1388,19 @@ a.navbar-brand:hover {
   width: 317px !important;
 }
 
-
-.dark-black {
+.clean-black {
   background-color: #545654;
 }
 
-.mint-green {
-  background-color: #0fc19e;
+.dark-black {
+  background-color: #4e514e;
+}
+
+.mint-blue {
+  background-color: #B9D6E0;
 }
 
 @media(max-width:768px) {
-
-
 	.nav-sec {
 	  height: 100px;
 	}
@@ -1424,10 +1428,10 @@ a.navbar-brand:hover {
   background: #f4f4f4;	
   padding: 40px 0px;
 }   
-.cardbox {
-  border-radius: 3px;
-  background-color: #fff;
-  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
+.homecardbox {
+  border-radius: 20px;
+  background-color: #B9D6E0;
+  box-shadow: 0 5px 25px 0 rgba(163, 155, 155, 0.322);
   margin-bottom: 20px;
   padding: 0px !important;
 }
@@ -1487,7 +1491,7 @@ a.navbar-brand:hover {
   margin-right: 1rem !important;
 }
 .media img{
-  width: 600px !important;
+  width: 1080px !important;
   height: 480px !important;
   padding: 2px;
   border: 2px solid #f4f4f4;
@@ -1509,11 +1513,21 @@ a.navbar-brand:hover {
   color: #aaa;
 }
 
+.cardbox {
+  border-radius: 3px;
+  background-color: #0fc19e
+  box-shadow: 0 5px 25px 0 rgba(85, 85, 85, 0.15);
+  margin-bottom: 20px;
+  padding: 0px !important;
+  border-radius: 20px;
+}
+
 .cardbox .cardbox-item {
     position: relative;
     display: block;
 }
-
+.cardbox .cardbox-item img{
+}
 .img-responsive{
     display: block;
     max-width: 100%;
@@ -1529,8 +1543,8 @@ a.navbar-brand:hover {
  padding: 10px !important;
  font-size: 0px;	
  text-align: center; 
- border-bottom: 2px solid #f4f4f4;
 }
+
 .cardbox-base li {
   list-style: none;
   display: inline-block;
@@ -1538,20 +1552,21 @@ a.navbar-brand:hover {
   padding: 0px 0px 0px 0px !important;
 }
 .cardbox-base li a{
-  margin: 0px !important;
+  margin: 10px !important;
   padding: 0px !important;
 }
 .cardbox-base li a img{
   width: 32px;
   height: 32px;
-  margin: 0px !important;
+  margin: 10px !important;
   border: 2px solid #fff;
 }
 
 .cardbox-like ul{
   padding: 0px 0px 10px 20px !important;
   font-size: 0px;	
-  text-align: left;
+  text-align: auto;
+  
 }
 .cardbox-like li:first-child {
   display: inline-block;
@@ -1565,7 +1580,7 @@ a.navbar-brand:hover {
   margin-left: 15px;
 }
 .cardbox-like li a {
-  color: #e16a70;
+  color: #000;
   font-size: 14px;
   float: left;
   padding-top: 6px;
@@ -1573,17 +1588,17 @@ a.navbar-brand:hover {
 }
 .cardbox-like li a:hover {
   text-decoration: none;	
-  color: #e16a70 !important;
+  color: #ffffff !important;
 }
 .cardbox-like li span{
   font-family: 'Abhaya Libre', serif;	
   float: left;
-  color: #e16a70;
+  color: rgb(48, 14, 241);
   font-size: 18px;
   padding-top: 6px;	
 }
 .cardbox-like li span.span-last{
-  color: #b2b2b2;	
+  color: #000000;	
 }
 .cardbox-like li a.com {
     color: #b2b2b2;
@@ -1846,9 +1861,9 @@ a.navbar-brand:hover {
 }
 .story-body h4{
   font-family: 'Abhaya Libre', serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;  
-  line-height: 0.5;
+  line-height: 1;
 }
 .story-body p{
   font-family: 'Abhaya Libre', serif;
@@ -1899,8 +1914,8 @@ a.navbar-brand:hover {
  font-family: 'Abhaya Libre', serif;	
  color: #000000;
  font-size: 14px;
- font-weight: 400;
- margin-bottom: 0px;
+ font-weight: 700;
+ margin-bottom: 4px;
 }
 .suggestion-box .name-box span {
  font-family: 'Abhaya Libre', serif;
@@ -1956,160 +1971,6 @@ a.navbar-brand:hover {
 	}
 }
 
-
-/* ==========================================================================
-   Explore Page
-   ========================================================================== */ 	 
-.one-row h4{
-  font-family: 'Abhaya Libre', serif;
-  font-size: 14px;
-  color: #000000;
-  font-weight: 700;  
-}
-
-/* ------------------------------------------------------------------- */
-/* User Follow Section
----------------------------------------------------------------------- */
- .top-row{
- margin-bottom: 50px;	
-}	
-.tr-section {
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 0px;
-  margin-bottom: 30px;
-  overflow: hidden;
-  position: relative;
-}	
-.tr-section .tr-post {
-  position: relative;
-}
-.tr-section	.entry-header {
-  position: relative;
-  overflow: hidden;
-}
-.tr-section	.entry-header:before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-.tr-section .entry-thumbnail {
-  z-index: -1;
-}
-.tr-section .tr-post .entry-header img {
-  width: 100%;
-  height: 200px;
-}	
-.tr-section .tr-post .post-content {
-  font-size: 14px;
-  color: #88898a;
-  line-height: 24px;
-  margin-top: 20px;
-}
-.tr-section .post-content .author-post {
-  width: 55px;
-  margin-top: -45px;
-  margin-left: 15px;
-  margin-bottom: 5px;
-  position: relative;
-  z-index: 1;
-  float: center !important;
-}	
-.tr-section .post-content .author-post img {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #fff;
-}
-.tr-section .card-content{
-  padding: 0px 15px;	
-}
-.tr-section .card-content h4{
-  font-family: 'Abhaya Libre', serif;
-  font-size: 14px;
-  color: #88898a;
-  font-weight: 700;	  
-  line-height: 0;
-}
-.tr-section .card-content span{
-  font-family: 'Abhaya Libre', serif;
-  font-size: 14px;
-  color: #aaa;  
-  line-height: 0.4;
-}
-.tr-section .tr-post .post-content a.kafe-btn{
-  border-radius: 0px !important;	
-}
-.tr-section .tr-post .post-content a.kafe-btn-mint-small{
-  font-family: 'Abhaya Libre', serif !important;
-  font-size: 14px;
-}
-	
- 
- /* ------------------------------------------------------------------- */
-/* Explore Section
----------------------------------------------------------------------- */  
-.explorebox {
-  color: #fff;
-  height: 400px;
-  width: 100%;
-  
-  border-radius: 3px;
-  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
-  margin-bottom: 20px;
-  padding: 0px !important;
-}
-.explore-top{
-  padding: 5px;	
-}
-.explore-top .explore-like{
-  padding: 5px 0px 0px 5px;	
-  color: #e16a70 !important;
-}
-.explore-top .explore-circle{
-  padding: 5px;	
-  position: relative;
-  top: -28px;
-  color: #fff !important;
-}
-.explore-top i{
-  font-size: 16px;	
-  float: center !important;
-}
-.explore-top .explore-like span{
-  font-family: 'Abhaya Libre', serif;	
-  font-size: 16px;	
-  color: #f4f4f4;
-  padding-left: 2px;
-}
-.explore-body{
-  padding: 0px 9px 10px 9px;	
-}
-.explore-body img{
-  width: 33px;
-  height: 33px;  
-  border: 2px solid #fff;
-  position: relative;
-  top: 320px;
-}
-.explore-body h4{
-  font-family: 'Abhaya Libre', serif;
-  font-size: 14px;
-  color: #fff;  
-  line-height: 1;
-}
-.explore-body p{
-  font-family: 'Abhaya Libre', serif;
-  font-size: 12px;
-  color: #fff;  
-  line-height: 1;
-}   
-
-
 /* ==========================================================================
    Upload Page
    ========================================================================== */ 
@@ -2158,32 +2019,6 @@ a.navbar-brand:hover {
   font-size: 16px;
   color: #88898a;
   font-weight: 700;
-}
-
-/* ==========================================================================
-   Stories Page
-   ========================================================================== */ 
-.stories{
-  background: #f4f4f4;	
-  padding: 40px 0px;
-}
-.stories .row{
-  margin-bottom: 30px;	
-}
-.stories .storybox {
-  color: #fff;
-  height: 360px !important;
-  width: 100%;
-  
-  border-radius: 3px;
-  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
-  margin-bottom: 20px;
-  padding: 0px !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 /* ==========================================================================
@@ -2288,10 +2123,10 @@ a.navbar-brand:hover {
 
 @media (max-width: 768px){
 	.details .col-lg-3{
-	  float: left !important;
-        margin-bottom: 20px;	  
-        }
-        
+	  float: left !important
+      margin-bottom: 20px;	  
+	}
+}
 
 /* ==========================================================================
    Home Menu
@@ -2346,226 +2181,6 @@ a.navbar-brand:hover {
   text-decoration: none;
 }
 
-/* ==========================================================================
-   Profile Page Two
-   ========================================================================== */
-.profile-two{
-  background: #f4f4f4;	
-  padding: 0px 0px 20px 0px;
-}
-.sidebar .list{
- padding: 5px 5px 0px 5px;
- list-style: none;
- margin: 0 0px;
- overflow: hidden; 
- width: auto;
-}
-.sidebar .list a {
- color: #546e7a;
- position: relative;
- padding: 5px 10px;
-}
-.sidebar .user-info {
- position: relative;
- border-bottom: 1px solid #eee;
- text-align: center;
- padding-bottom: 15px;
- margin-bottom: 20px;
-}
-.sidebar .user-info a {
- display: inline-block !important;
-}
-.sidebar .user-info .image img {
- width: 180px;
- vertical-align: bottom !important;
- border: 3px solid #fff;
- box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2);
-}
-.sidebar .online-status.online {
- background: #00c292;
-}
-.sidebar .online-status {
- border: 4px solid #ffffff;
- border-radius: 100%;
- height: 15px;
- position: absolute;
- right: 12px;
- top: 23px;
- width: 15px;
-}
-.sidebar .user-info .detail{
-  margin-bottom: 0px;
-}
-.sidebar .user-info .detail h4 {
- font-family: 'Abhaya Libre', serif;	
- font-size: 20px;
- color: #000000;
- font-weight: 700;
- line-height: 0;
-}
-.sidebar .user-info .detail small {
- font-family: 'Abhaya Libre', serif;	
- font-size: 14px;
- color: #aaa;
- line-height: 0;
-}
-.sidebar .list .user-info a i {
- font-size: 16px;
- color: #848484;
- padding-top: 0px;
- margin-top: 0px;
-}
-.sidebar .list li small{
- font-family: 'Abhaya Libre', serif;	
- font-size: 16px;
- color: #88898a !important;
-}
-.sidebar .list li p{
- font-family: 'Abhaya Libre', serif;	
- font-size: 14px;
- color: #848484 !important;
-}
-.sidebar .list a em {
- width: 16px;
- font-size: 16px;
- position: relative;
- top: 4px;
-}
-
-.profile-two .col-lg-6{
- padding-top: 20px;	
-}
-.profile-two .col-lg-3{
- padding-top: 20px;	
-}
-.profile-two .explorebox{
-  height: 289px;	
-}
-
-/* ==========================================================================
-   Followers Page
-   ========================================================================== */
-.followers{
-  background: #f4f4f4;	
-  padding: 20px 0px 20px 0px;
-}
-
-.followers-box {
-  float: left; 
-  width: 100%;
-  background-color: #fff;
-  margin-bottom: 20px;
-  border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
-}
-.followers-box .followers-list {
-  float: left;
-  width: 100%;
-  padding: 17px 0 10px 0;
-}
-.followers-box .followers-body {
-  float: left;
-  width: 100%;
-  padding: 10px 20px 0px 20px;
-  margin-top: 10px;
- border-bottom: 2px solid #f4f4f4;
-}
-.followers-box .followers-body:last-child {
- border-bottom: none;
-}
-.followers-box .followers-body img {
-  width: 37px;
-  height: 37px;
-  float: left; 
-  padding: 2px;  
-  border: 2px solid #f4f4f4;
-}
-.followers-box .name-box {
-  float: left;
-  padding-left: 10px;
-  position: relative;
-  top: -12px;
-  padding-top: 0px !important;
-}
-.followers-box .name-box h4 {
- font-family: 'Abhaya Libre', serif;	
- color: #000000;
- font-size: 14px;
- font-weight: 700;
- margin-bottom: 4px;
-}
-.followers-box .name-box span {
- font-family: 'Abhaya Libre', serif;
- font-size: 14px;
- color: #aaa;
-}
-.followers-box .followers-body> span {
-  float: right;
-  margin-top: 4px;
-  position: relative;
-  top: -12px;
-}
-.followers-base ul{
- font-size: 0px;	
- text-align: center; 
-}
-.followers-base li {
-  list-style: none;
-  display: inline-block;
-}
-.followers-base li a{
-  margin: 0px !important;
-  padding: 0px !important;
-}
-.followers-box .followers-body > span a{
- font-family: 'Abhaya Libre', serif;	
- font-size: 14px;
-}
-.followers-box .followers-body .list-group .list-group-item {
-  font-size: .8125em;
-  margin: 0;
-  padding: 5px 10px;
-  color: #607188;
-  background-color: transparent;
-  overflow: hidden;
-  border: 0;
-  border-radius: 0;
-}
-.followers-box .followers-body .list-group-item img {
-    margin-left: -13px;
-    border: 2px solid #fff;
-    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.1) 1px 1px rgba(0,0,0,.1);
-    -khtml-box-shadow: 0 5px 10px rgba(0,0,0,.1) 1px 1px rgba(0,0,0,.1);
-    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.1) 1px 1px rgba(0,0,0,.1);
-    -ms-box-shadow: 0 5px 10px rgba(0,0,0,.1) 1px 1px rgba(0,0,0,.1);
-    -o-box-shadow: 0 5px 10px rgba(0,0,0,.1) 1px 1px rgba(0,0,0,.1);
-    box-shadow: 0 5px 10px rgba(0,0,0,.1) 1px 1px rgba(0,0,0,.1);
-    max-width: 40px !important;
-}
-.followers-box .followers-body .list-group .list-group-item span{
- font-family: 'Abhaya Libre', serif;	
- font-size: 14px;
- margin-left: 5px;
-}
-.btn-add-gray{    
-  border-radius: 50%;
-  background: transparent;    
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-    border: 2px dashed #8f9eb5;
-    color: #8f9eb5 !important;
- margin-left: 5px !important;	
-}
-@media (max-width: 768px){
-	.followers-box .followers-body> span {
-	  float: left !important;
-	  margin-top: 0px !important;
-	}
-	.followers-box .followers-body> span .kafe-btn-mint-small{
-	  width: 100% !important;
-	}
-}
 
 /* ==========================================================================
    Single Post Page
@@ -2573,371 +2188,6 @@ a.navbar-brand:hover {
 .single-post{
   background: #f4f4f4;	
   padding: 80px 0px 150px 0px;
-}
-
-/* ==========================================================================
-   Chat Page
-   ========================================================================== */
-.chat{
-  background: #f4f4f4;	
-  padding: 80px 0px 150px 0px;
-}
-.messages-box {
- float: left;
- width: 100%;
-}
-.no-pdd {
- padding: 0px !important;
-}
-.messages-container {
- float: left;
- width: 100%;
- background-color: #fff;
- border-left: 1px solid #e4e4e4;
- border-bottom: 1px solid #e4e4e4;
- border-right: 1px solid #e4e4e4;
-}
-.message-header {
- float: left;
- width: 100%;
- padding: 0px !important;
-}
-.message-title{
- padding: 0px 20px;
- border-bottom: 2px solid #f4f4f4;
-}
-.message-title h4{
- font-family: 'Abhaya Libre', serif;
- font-size: 20px;
- color: #000000;
- font-weight: 700;
-}
-.search-area {
- padding: 10px 20px 20px 20px;
-}
-.search-area .input-field {
- background: #f4f4f4;
- margin: 0;
- border-radius: 4px;
- overflow: hidden;
- padding: 0 20px;
- position: relative;
-}
-.search-area .input-field input {
- font-family: 'Abhaya Libre', serif;
- width: 80%; 
- margin: 0;
- border: 0;
- background: #f4f4f4;
- color: #848484 !important;
- padding: 10px 0px;
-}
-.search-area .input-field i {
- font-size: 18px;
- color: #848484 !important;
- float: right;
- position: relative;
- top: 10px;
- cursor: pointer;
-}
-
-
-.messages-list {
- float: left;
- width: 100%;
- padding: 0px !important;
-}
-.messages-list ul {
- float: left;
- width: 100%;
- padding: 0px !important;
- height: 700px !important;
- overflow-y: scroll;	
-}
-.messages-list ul li.active {
- background-color: #efefef;
-}
-.messages-list ul li {
- float: left;
- width: 100%;
- padding: 10px 10px 10px 20px;
- border-bottom: 2px solid #f4f4f4;
- cursor: pointer;
-}
-.messages-list ul li:last-child {
- border-bottom: none;
-}
-
-
-.user-message-details {
- float: left;
- position: relative;
- width: 100%;
-}
-.user-message-img {
- float: left;
- width: 40px;
- height: 40px;
- position: relative;
- top: 6px;
-}
-.user-message img {
- width: 100%;
-}
-.user-online {
- -webkit-border-radius: 100px;
- -moz-border-radius: 100px;
- -ms-border-radius: 100px;
- -o-border-radius: 100px;
- border-radius: 100px;
- background-color: #0fc19e;
- position: absolute;
- top: -3px;
- right: 0;
- width: 6px;
- height: 6px;
-}
-.user-message-info {
- position: relative;
- top: 0px;
- float: left;
- padding-left: 13px;
-}
-.user-message-info h4 {
- font-family: 'Abhaya Libre', serif;	
- color: #000000;
- font-size: 16px;
- font-weight: 700;
- line-height: 0;
-}
-.user-message-info p {
- font-family: 'Abhaya Libre', serif;	
- color: #848484;
- font-size: 14px;
- padding-bottom: 0px !important;
- margin-bottom: 0px !important;
-}
-.user-message-info span {
- font-family: 'Abhaya Libre', serif;
- color: #aaa;
- font-size: 13px;
- line-height: 0;
-}
-.message-notification {
- position: absolute;
- top: 2px;
- right: 0;
- width: 25px;
- height: 25px;
- 
- -webkit-border-radius: 100px;
- -moz-border-radius: 100px;
- -ms-border-radius: 100px;
- -o-border-radius: 100px;
- border-radius: 100px;
- 
- background-color: #0fc19e;
- text-align: center;
- line-height: 25px;
- font-family: 'Abhaya Libre', serif;
- font-size: 13px;
- color: #fff;
-}
-
-
-.pd-right-none {
- padding-right: 0;
-}
-.pd-left-none {
- padding-left: 0;
-}
-.conversation-box {
- float: left;
- width: 100%;
- background-color: #fff;
- position: relative;
- border-right: 1px solid #e4e4e4;
- border-bottom: 1px solid #e4e4e4;
-}
-.conversation-header {
- float: left;
- width: 100%;
- background-color: rgba(255,255,255,0.95);
- padding: 10px 0px 5px 20px;
- border-bottom: 1px solid #eaeaea;
- z-index: 0;
-}
-
-
-.conversation-container {
- float: left;
- width: 100%;
- height: 670px;
- overflow-y: scroll;
- padding: 20px 0px; 
-}
-.convo-box {
- float: left;
- width: 100%;
- position: relative;
- margin-bottom: 15.5px;
-}
-.convo-box.pull-right .convo-area {
- padding-left: 0;
- padding-right: 85px;
-}
-.convo-area {
- float: left;
- width: auto;
- padding-left: 85px;
-}
-.convo-message {
- float: left;
- -webkit-border-radius: 15px;
- -moz-border-radius: 15px;
- -ms-border-radius: 15px;
- -o-border-radius: 15px;
- border-radius: 15px;
- width: 100%;
-}
-.convo-message > p {
- float: right;
- width: 60%;
- background-color: #0fc19e;
- font-family: 'Abhaya Libre', serif;	
- color: #848484;
- font-size: 15px;
- line-height: 22px;
- padding: 10px 35px 10px 35px;
- color: #fff;
- -webkit-border-radius: 15px;
- -moz-border-radius: 15px;
- -ms-border-radius: 15px;
- -o-border-radius: 15px;
- border-radius: 15px;
-}
-.convo-box.pull-right .convo-area > span {
- float: right;
- width: auto;
-}
-.convo-area > span {
- color: #b2b2b2;
- font-family: 'Abhaya Libre', serif;	
- color: #aaa;
- font-size: 13px;
- float: left;
- width: 100%;
- margin-top: 7px;
-}
-.convo-box.pull-right .convo-img {
- left: auto;
- right: 20px;
- bottom: 25px;
-}
-.convo-img {
- position: absolute;
- bottom: 25px;
- left: 20px;
- width: 50px;
-}
-
-.convo-area.convo-left .convo-message > p {
- background-color: #f4f4f4;
- color: #686868;
- width: auto;
- padding: 10px 15px;
- float: left;
-}
-.convo-box.convo-left .convo-img {
- bottom: 13px;
-}
-
-
-.type_messages {
- border-top: 2px solid #f2f6f8;
- display: block;
- overflow: hidden;
- margin-bottom: 0px;
- padding: 8px 20px 5px 20px;
-}
-.type_messages .input-field {
- position: relative;
- margin: 0;
-}
-
-.type_messages .input-field textarea {
- margin: 0;
- outline: none;
- resize: none;
- border: 0;
- box-shadow: none;
- color: #beced7;
- width: 80%;
-}
-.type_messages .input-field .imoji {
- position: absolute;
- top: 2px;
- right: 0;
-}
-.type_messages .input-field .imoji li {
- display: inline-block;
- padding-left: 17px;
-}
-.type_messages .input-field .imoji li a {
- font-size: 25px;
- color: #0fc19e;
-}
-
-
-.message-send-area {
-    float: left;
-    width: 100%;
-    background-color: #f3f5f7;
-    padding: 25px 20px 15px 20px;
-    border: 1px solid #eeeeee;
-}
-.message-send-area form {
-    float: left;
-    width: 100%;
-}
-.mf-field {
-    float: left;
-    width: 100%;
-}
-.mf-field input {
-    float: left;
-    width: 80%;
-    background-color: #fff;
-    color: #b2b2b2;
-    font-size: 16px;
-    padding: 0 15px;
-    border: 1px solid #e6e6e6;
-    height: 45px;
-}
-.mf-field button {
-    float: left;
-    width: 17%;
-    background-color: #e44d3a;
-    height: 45px;
-    text-align: center;
-    color: #fff;
-    font-weight: 600;
-    border: 0;
-    margin-left: 15px;
-    cursor: pointer;
-}
-.message-send-area form > ul {
-    float: left;
-    width: 100%;
-    margin-top: 15px;
-}
-.message-send-area form > ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-.message-send-area form > ul li a {
-    color: #b2b2b2;
-    font-size: 18px;
 }
 
 /* ==========================================================================
@@ -3086,7 +2336,7 @@ a.navbar-brand:hover {
    Header Styles
    ========================================================================== */  
 .login {
-  background: linear-gradient( rgba(34,34,34,0.7), rgba(34,34,34,0.7) ), url('../../img/bg/10.jpg') no-repeat center center fixed;
+  background:#f4f4f4;
   background-size: cover;
   background-position: center center;
   -webkit-background-size: cover;
@@ -3104,7 +2354,7 @@ a.navbar-brand:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
+  color: #000000;
   margin-top: 100px;
 }
 .banner-content h1 {
@@ -3113,7 +2363,7 @@ a.navbar-brand:hover {
  font-family: 'Pacifico', serif;
  font-size: 3.5em;
  font-weight: 700;
- color:#fff;
+ color:#000000;
 }
 .banner-content .kafe-btn-mint {
  margin-bottom: 30px;
@@ -3129,7 +2379,7 @@ a.navbar-brand:hover {
 .form-signin .form-signin-heading {
  font-family: 'Abhaya Libre', serif;
  font-size: 24px;
- color: #fff;
+ color: #000000;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
@@ -3165,7 +2415,6 @@ a.navbar-brand:hover {
  border-top-right-radius: 0;
 }
 
-
 /* ==========================================================================
    Custom Button Styles
    ========================================================================== */
@@ -3174,14 +2423,14 @@ a.navbar-brand:hover {
  border-radius: 0;
  font-family: 'Abhaya Libre', serif;
  font-size: 15px !important;
- color: #fff;
+ color: grey;
  background-color: rgba(0,0,0,0.4);
  margin-bottom: 10px;
 }
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
-    color: #fff !important;
+    color: #grey !important;
     background-color: rgba(0,0,0,0.7);
 }
 
@@ -3189,6 +2438,5 @@ a.navbar-brand:hover {
 	.login {
 	  height: 130vh;
 	  width: 100%;
-        }
-      }
-    }
+	}
+}

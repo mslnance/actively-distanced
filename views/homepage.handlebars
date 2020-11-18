@@ -3,16 +3,17 @@
 
     {{#each posts as |post|}}
         {{!-- {{> post-info post }} --}}
-        <div class="cardbox">
+
+        <div class="homecardbox">
             <div class="cardbox-heading">
                 <div class="media m-0">
                  <div class="media-body">
             <div>
-            <h3 class="ui teal image header">{{user_id}}</h3></p>
-            <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
+            <h4 class="ui black image header">{{user_id}}</h4><br>
+            <h4 class="ui radiant image header">{{dataValues.title}}</h4><br>
             <h4 class="ui black image header">{{dataValues.description}}</h4><br>
-            <h5 class="ui teal image header">{{dataValues.date}}</h4>
-            <h5 class="ui teal image header">{{dataValues.time}}</h4><br>
+            <h5 class="ui black image header">{{dataValues.date}}</h4>
+            <h5 class="ui black image header">{{dataValues.time}}</h4>
             <div class="cardbox-item">
             <a href="#myModal" data-toggle="modal">
 		    <img class="img-responsive media" src="{{dataValues.image_url}}">
@@ -24,7 +25,10 @@
             </div>
         <div class="cardbox-like">
         <ul>
-            <li><a href="#"><i class="fa fa-heart"></i></a><span> {{likes}} likes 786,286</span></li>
+            <li><a href="#myModal" data-toggle="modal" title="" class="com">
+                <i class="fa fa-heart"></i>
+                <span> {{likes}} likes 786,286</span>
+            </li></a>
             <li><a href="#myModal" data-toggle="modal" title="" class="com">
                 <span class="span-last"> {{comments}} comments 130,15</span>
             <i class="fa fa-comments">
@@ -103,14 +107,14 @@
                             </ul>
                             <div class="modal-meta-bottom">
                                 <ul>
-                                    <li><a class="modal-like" href="#"><i class="fa fa-heart"></i></a><span
-                                            class="modal-one"> {{likes}}</span> |
+                                    <li><a class="modal-like" href="#"><i class="fa fa-heart"></i></a>
+                                    <span class="modal-one"> {{likes}}</span> |
                                         <a class="modal-comment" href="#"><i class="fa fa-comments"></i></a><span>
                                             {{comments}}</span> </li>
 
                                     <div class="comment-body">
                                         <input class="form-control input-lg" type="text" placeholder="Write your comment...">
-                                            <div class="button"><h5><center>Send</center></h5></div>
+                                           <button class="button" type="submit">Send</button>
                                     </div>
 
                                     </li>
