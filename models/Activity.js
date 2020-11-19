@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Sequelize } = require('sequelize');
 const sequelize = require('../config/connection');
 // create our Activity model
 class Activity extends Model {
@@ -13,7 +13,7 @@ class Activity extends Model {
           },
           attributes: [
             'id',
-            'post_url',
+            'image_url',
             'title',
             'created_at',
             [
@@ -70,18 +70,25 @@ Activity.init(
         },
         location: {
           type: DataTypes.STRING,
-          allowNull: false
+          allowNull: false,
+          defaultValue: 'Unknown'
         },
         group_size: {
           type: DataTypes.STRING,
           allowNull: true
         },
+        link: {
+          type: DataTypes.STRING,
+          allowNull: true
+        },
         date: {
-            type: DataTypes.STRING,
+            //type: DataTypes.STRING,
+            type: DataTypes.DATEONLY,
             allowNull: false
         },
         time: {
-            type: DataTypes.STRING,
+            //type: DataTypes.STRING,
+            type: DataTypes.TIME,
             allowNull: false
         },
         activity_type_id: {

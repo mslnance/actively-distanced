@@ -11,7 +11,7 @@ Activity_Type.init(
       autoIncrement: true
     },
    
-    comment_text: {
+    type: {
         type: DataTypes.STRING,
         allowNull: false,
     },
