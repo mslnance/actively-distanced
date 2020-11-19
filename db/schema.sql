@@ -50,7 +50,7 @@ CREATE TABLE `comment` (
   `updated_at` datetime 
 );
 
-CREATE TABLE `like` (
+CREATE TABLE `likes` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int NOT NULL, 
   `activity_id` int NOT NULL,
@@ -66,6 +66,6 @@ ALTER TABLE `comment` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 ALTER TABLE `comment` ADD FOREIGN KEY (`post_id`) REFERENCES `post` (`id`);
 
-ALTER TABLE `like` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+ALTER TABLE `likes` ADD FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
-ALTER TABLE  `like` ADD FOREIGN KEY (`activity_id`) REFERENCES `activity` (`id`)
+ALTER TABLE  `likes` ADD FOREIGN KEY (`activity_id`) REFERENCES `activity` (`id`);
