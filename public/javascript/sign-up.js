@@ -3,8 +3,8 @@ async function signupFormHandler(event) {
 
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    const takenUsername = document.querySelector('#taken');
-    
+    //   const takenUsername = document.querySelector('#taken');
+
     if (username && password) {
         const response = await fetch('/api/users', {
             method: 'post',
@@ -15,27 +15,22 @@ async function signupFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         });
 
-<<<<<<< HEAD
-        if(response.ok) {
-            takenUsername.classList.add('hide');
-=======
         if (response.ok) {
             //   takenUsername.classList.add('hide');
->>>>>>> develop
             document.location.replace('/login');
         } else {
             // get all users and compare username
             const getUsers = await fetch('/api/users').then(
-            function(response) {
-                response.json().then(function(data) {
-                    for (let i = 0; i < data.length; i++) {
-                        if(username === data[i].username) {
-                            takenUsername.classList.remove('hide');
-                            return;
+                function (response) {
+                    response.json().then(function (data) {
+                        for (let i = 0; i < data.length; i++) {
+                            if (username === data[i].username) {
+                                takenUsername.classList.remove('hide');
+                                return;
+                            }
                         }
-                    }
-                })
-            });
+                    })
+                });
         }
     }
 }

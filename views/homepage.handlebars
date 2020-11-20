@@ -3,66 +3,51 @@
 
         {{#each posts as |post|}}
         {{!-- {{> post-info post }} --}}
-        <center>
-            <div class="homecardbox">
-                <div class="cardbox-heading">
-                    <div class="media m-0">
-                        <div class="media-body">
-                            <div>
-                                <h4 class="ui black image header">{{user_id}}</h4><br>
-                                <h4 class="ui radiant image header">{{dataValues.title}}</h4><br>
-                                <h4 class="ui black image header">{{dataValues.description}}</h4><br>
-                                <h5 class="ui black image header">{{dataValues.date}}</h4>
-                                    <h5 class="ui black image header">{{dataValues.time}}</h4>
-                                        <div class="cardbox-item">
-                                            <a href="#myModal" data-toggle="modal">
-                                                <img class="img-responsive media" src="{{dataValues.image_url}}">
-                                            </a>
-                                        </div>
+        <div class="cardbox">
+            <div class="cardbox-heading">
+                <div class="media m-0">
+                    <div class="media-body">
+                        <div>
+                            <h3 class="ui teal image header">{{user_id}}</h3>
+                            </p>
+                            <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
+                            <h4 class="ui black image header">{{dataValues.description}}</h4><br>
+                            <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
+                            <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
+                            <div class="cardbox-item">
+                                <a href="#myModal" data-toggle="modal">
+                                    <img class="img-responsive media" src="{{dataValues.image_url}}">
+                                </a>
                             </div>
                             <h4 class="ui teal image header">By: {{dataValues.user.dataValues.username}}</h4><br>
                         </div>
                     </div>
                 </div>
-                            <form class="comment-form">
-                <div>
-                    <textarea name="comment-body"></textarea>
-                </div>
-                <div>
-                    <button type="submit">add comment</button>
-                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
-                </div>
-            </form>
-                <div class="cardbox-like">
-                    <ul>
-                        <li><a href="#myModal" data-toggle="modal" title="" class="com">
-                                <i class="fa fa-heart"></i>
-                                <span> {{likes}} likes 786,286</span>
-                        </li></a>
-                        <li><a href="#myModal" data-toggle="modal" title="" class="com">
-                                <span class="span-last"> {{comments}} comments 130,15</span>
-                                <i class="fa fa-comments"></i>
-                                            <form class="comment-form">
-                <div>
-                    <textarea name="comment-body"></textarea>
-                </div>
-                <div>
-                    <button type="submit">add comment</button>
-                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
-                </div>
-            </form>
-                        </li></a>
-                    </ul>
-                </div>
             </div>
-            {{/each}}
-            <div class="trending-box hidden-xs hidden-md">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <a href="outdoor">
-                            <h4>Ourdoor Actvities</h4>
-                        </a>
-                    </div>
+            <div class="cardbox-like">
+                <ul>
+                    <li><a href="#"><i class="fa fa-heart"></i></a><span> {{likes}} likes 786,286</span></li>
+                    <li><a href="#myModal" data-toggle="modal" title="" class="com">
+                            <span class="span-last">{{> comments post.comments}}</span>
+                            <i class="fa fa-comments">
+                            </i></a>
+                    </li>
+                </ul>
+            </div>
+            <form class="comment-form">
+                <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
+                <div>
+                    
+                    <textarea name="comment-body"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">add comment</button>
+                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+                </div>
+            </form>
+        </div>
+        {{/each}}
 
         <div class="trending-box hidden-xs hidden-md">
             <div class="row">
@@ -71,24 +56,28 @@
                         <h4>Outdoor Actvities</h4>
                     </a>
                 </div>
+
             </div>
-            <div class="trending-box hidden-xs hidden-md">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <a href="/virtual">
-                            <h4>Virtual Actvities</h4>
-                        </a>
-                    </div>
+        </div>
+        <div class="trending-box hidden-xs hidden-md">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="photo_stories.html">
+                        <h4>Virtual Actvities</h4>
+                    </a>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 
 <div class="container">
+
     <!-- Trigger the modal with a button -->
     <a href="#myModal" data-toggle="modal">
         <img class="img-responsive media" src="{{dataValues.image_url}}">
     </a>
+
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -128,16 +117,21 @@
                                         </ul>
                                         <div class="modal-meta-bottom">
                                             <ul>
-                                                <li><a class="modal-like" href="#"><i class="fa fa-heart"></i></a>
-                                                    <span class="modal-one"> {{likes}}</span>
+                                                <li>
+                                                    <a class="modal-like" href="#"><i class="fa fa-heart"></i></a><span
+                                                        class="modal-one"> {{likes}}</span> |
                                                     <a class="modal-comment" href="#"><i
-                                                            class="fa fa-comments"></i></a><span>{{comments}}</span>
-                                                </li>
+                                                            class="fa fa-comments"></i></a><span>
+                                                        {{comments}}</span> </li>
 
                                                 <div class="comment-body">
                                                     <input class="form-control input-lg" type="text"
                                                         placeholder="Write your comment...">
-                                                    <button class="button" type="submit">Send</button>
+                                                    <div class="button">
+                                                        <h5>
+                                                            <center>Send</center>
+                                                        </h5>
+                                                    </div>
                                                 </div>
                                                 </li>
                                             </ul>
@@ -151,17 +145,19 @@
             </div>
         </div>
     </div>
-    </center>
+</div>
 
-    <script>
-        $(document).ready(function () {
-            $("#myBtn").click(function () {
-                $("#myModal").modal({ keyboard: true });
-            });
-            $("#myBtn2").click(function () {
-                $("#myModal2").modal({ keyboard: false });
-            });
+<script>
+    $(document).ready(function () {
+        $("#myBtn").click(function () {
+            $("#myModal").modal({ keyboard: true });
         });
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        $("#myBtn2").click(function () {
+            $("#myModal2").modal({ keyboard: false });
+        });
+    });
+</script>
+
+<script src="public/javascript/comment.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
