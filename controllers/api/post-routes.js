@@ -4,6 +4,10 @@ const Activity = require('../../models/Activity');
 
 router.get('/create-post', (req, res) => {
     Activity.findAll({
+const { Post, User } = require('../../models');
+
+router.get('/', (req, res) => {
+    Post.findAll({
         attributes: [
             'id',
             'title',
@@ -12,6 +16,12 @@ router.get('/create-post', (req, res) => {
             'time',
             'image_url',
             [sequelize.literal('(')]
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
         ]
     })
         .then(dbUserData => res.json(dbUserData))
