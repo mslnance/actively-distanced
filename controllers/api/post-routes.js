@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
                     model: User,
                     attributes: ['username']
                 }
-            },
+            }
         ]
     })
         .then(dbUserData => res.json(dbUserData))

@@ -35,11 +35,12 @@
             </div> --}}
             <div class="comments">
                 <h1>Comments</h1>
+                {{#each comments as |comment|}}
                 <div>
-                    {{dataValues.comments}}
+                    {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
                 </div>
+                {{/each}}
             </div>
-            {{!-- comment box --}}
             <form class="comment-form" data-postId={{dataValues.id}}>
                 <div>
                     <textarea name="comment-body"></textarea>
@@ -50,6 +51,7 @@
                     {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
                 </div>
             </form>
+            {{!-- <button type="button" class="like-btn">like</button> --}}
         </div>
         {{/each}}
 
@@ -87,10 +89,12 @@
         <div class="modal-dialog">
             <h4 class="modal-title">{{dataValues.title}}</h4>
             {{!-- </div> --}}
+            {{!-- {{#each posts as |post|}} --}}
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row">
+                            {{#each posts as |post|}}
                             <div class="modal-body">
                                 <div class="col-md-8 modal-image">
                                     <img class="img-responsive media" src="{{dataValues.image_url}}">
@@ -143,6 +147,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {{/each}}
                         </div>
                     </div>
                 </div>
@@ -163,5 +168,6 @@
 </script>
 
 <script src="/javascript/comment.js"></script>
+{{!-- <script src="/javascript/likes.js"></script> --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
