@@ -87,10 +87,12 @@
         <div class="modal-dialog">
             <h4 class="modal-title">{{dataValues.title}}</h4>
             {{!-- </div> --}}
+            {{!-- {{#each posts as |post|}} --}}
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="row">
+                            {{#each posts as |post|}}
                             <div class="modal-body">
                                 <div class="col-md-8 modal-image">
                                     <img class="img-responsive media" src="{{dataValues.image_url}}">
@@ -143,6 +145,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {{/each}}
                         </div>
                     </div>
                 </div>
