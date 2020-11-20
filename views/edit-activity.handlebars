@@ -1,0 +1,17 @@
+<article>
+  <a href="/my-activities"> &larr; Back to my activites</a>
+  <h2>
+    Edit Activity
+  </h2>
+  <form class="edit-activity-form">
+    <div>
+      <input name="post-title" type="text" value="{{post.title}}" />
+      <span>({{format_url post.post_url}})</span>
+    </div>
+    <button type="submit">Save activity</button>
+    <button type="button" class="delete-post-btn">Delete activity</button>
+  </form>
+</article>
+
+<script src="/javascript/edit-activity.js"></script>
+<script src="/javascript/delete-activity.js"></script>
