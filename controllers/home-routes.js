@@ -26,7 +26,9 @@ router.get('/', (req, res) => {
             // else {
             res.render('homepage', {
                 posts,
+                //这里看起来少了 dataValues
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
+
             });
             // }
         })
