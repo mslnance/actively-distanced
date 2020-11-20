@@ -24,16 +24,26 @@
                     </div>
                 </div>
             </div>
-            <div class="cardbox-like">
+            {{!-- <div class="cardbox-like">
                 <ul>
                     <li><a href="#"><i class="fa fa-heart"></i></a><span> {{likes}} likes 786,286</span></li>
                     <li><a href="#myModal" data-toggle="modal" title="" class="com">
-                            <span class="span-last"> {{comments}} comments 130,15</span>
+                            <span class="span-last">{{> comments post.comments}}</span>
                             <i class="fa fa-comments">
                             </i></a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
+            <form class="comment-form">
+                <div>
+                    <textarea name="comment-body"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">add comment</button>
+                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+                </div>
+            </form>
         </div>
         {{/each}}
 
