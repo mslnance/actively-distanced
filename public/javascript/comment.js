@@ -4,9 +4,8 @@ async function commentFormHandler(event) {
     console.log('hitting front end logic');
 
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
-    const post_id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-    ];
+    const post_id = document.querySelector('.comment-form').getAttribute('data-postId');
+    console.log(post_id);
 
     if (comment_text) {
 
@@ -23,6 +22,7 @@ async function commentFormHandler(event) {
 
         if (response.ok) {
             document.location.reload();
+            // console.log(response);
         } else {
             alert(response.statusText);
         }

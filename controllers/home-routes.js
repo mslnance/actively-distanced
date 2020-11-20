@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['username']
+                attributes: ['username', 'id']
             },
             {
                 model: Comment,
@@ -25,12 +25,30 @@ router.get('/', (req, res) => {
         ]
     })
         .then((posts) => {
-            console.log(req.session.loggedIn);
+            console.log(posts);
+            // const comments = posts.map(comment => comment.get({ plain: true }));
+            // console.log('comments: ' + comments);
+            // const comments = post.comments.map(comment => comment.get({ plain: true }));
+
             res.render('homepage', {
                 posts,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
             });
         })
+        // .then(dbPostData => {
+        //     console.log('-------------');
+        //     console.log('db post data' + dbPostData);
+        //     const posts = dbPostData.map(post => post.get({ plain: true }));
+
+        //     res.render('homepage', {
+        //         posts,
+        //         loggedIn: req.session.loggedIn
+        //     });
+        // })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 router.get('/homepage', (req, res) => {
