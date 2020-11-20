@@ -8,8 +8,7 @@
                 <div class="media m-0">
                     <div class="media-body">
                         <div>
-                            <h3 class="ui teal image header">{{user_id}}</h3>
-                            </p>
+                            <h3 class="ui teal image header">{{dataValues.user.dataValues.id}}</h3>
                             <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
                             <h4 class="ui black image header">{{dataValues.description}}</h4><br>
                             <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
@@ -24,16 +23,33 @@
                     </div>
                 </div>
             </div>
-            <div class="cardbox-like">
+            {{!-- <div class="cardbox-like">
                 <ul>
                     <li><a href="#"><i class="fa fa-heart"></i></a><span> {{likes}} likes 786,286</span></li>
                     <li><a href="#myModal" data-toggle="modal" title="" class="com">
-                            <span class="span-last"> {{comments}} comments 130,15</span>
+                            <span class="span-last">{{> comments post.comments}}</span>
                             <i class="fa fa-comments">
                             </i></a>
                     </li>
                 </ul>
+            </div> --}}
+            <div class="comments">
+                <h1>Comments</h1>
+                <div>
+                    {{dataValues.comments}}
+                </div>
             </div>
+            {{!-- comment box --}}
+            <form class="comment-form" data-postId={{dataValues.id}}>
+                <div>
+                    <textarea name="comment-body"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">add comment</button>
+                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+                </div>
+            </form>
         </div>
         {{/each}}
 
@@ -59,9 +75,6 @@
     </div>
 </div>
 
-
-
-
 <div class="container">
 
     <!-- Trigger the modal with a button -->
@@ -77,7 +90,6 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
-
                         <div class="row">
                             <div class="modal-body">
                                 <div class="col-md-8 modal-image">
@@ -109,7 +121,8 @@
                                         </ul>
                                         <div class="modal-meta-bottom">
                                             <ul>
-                                                <li><a class="modal-like" href="#"><i class="fa fa-heart"></i></a><span
+                                                <li>
+                                                    <a class="modal-like" href="#"><i class="fa fa-heart"></i></a><span
                                                         class="modal-one"> {{likes}}</span> |
                                                     <a class="modal-comment" href="#"><i
                                                             class="fa fa-comments"></i></a><span>
@@ -124,7 +137,6 @@
                                                         </h5>
                                                     </div>
                                                 </div>
-
                                                 </li>
                                             </ul>
                                         </div>
@@ -139,7 +151,7 @@
     </div>
 </div>
 
-{{!-- <script>
+<script>
     $(document).ready(function () {
         $("#myBtn").click(function () {
             $("#myModal").modal({ keyboard: true });
@@ -148,6 +160,8 @@
             $("#myModal2").modal({ keyboard: false });
         });
     });
-</script> --}}
+</script>
+
+<script src="/javascript/comment.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
