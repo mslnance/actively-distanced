@@ -1,7 +1,23 @@
 const router = require('express').Router();
+<<<<<<< HEAD
 const session = require('express-session');
 const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+=======
+const { User, Post } = require('../../models');
+
+// get all users
+router.get('/', (req, res) => {
+    User.findAll({
+        attributes: { exclude: ['password'] }
+    })
+        .then(dbUserData => res.json(dbUserData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+>>>>>>> develop
 
 router.get('/', (req, res) => {
     User.findAll({
@@ -55,11 +71,19 @@ router.post('/', (req, res)=> {
         username: req.body.username,
         password: req.body.password
     })
+<<<<<<< HEAD
     .then(dbUserData => {
         req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
+=======
+        .then(dbUserData => {
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
+>>>>>>> develop
 
             res.json(dbUserData);
         });
@@ -96,6 +120,7 @@ router.post('/login', (req, res) => {
     });
 });
 
+<<<<<<< HEAD
 router.post('/logout', withAuth, (req, res) => {
     if(req.session.loggedIn) {
         req.session.destroy(() => {
@@ -144,5 +169,17 @@ router.delete('/:id',  withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
+=======
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    }
+    else {
+        res.status(404).end();
+    }
+});
+>>>>>>> develop
 
 module.exports = router;

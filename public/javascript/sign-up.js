@@ -15,8 +15,13 @@ async function signupFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         });
 
+<<<<<<< HEAD
         if(response.ok) {
             takenUsername.classList.add('hide');
+=======
+        if (response.ok) {
+            //   takenUsername.classList.add('hide');
+>>>>>>> develop
             document.location.replace('/login');
         } else {
             // get all users and compare username

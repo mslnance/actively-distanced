@@ -26,21 +26,44 @@
                     <h4>Home</h4>
                 </a>
             </div>
+<<<<<<< HEAD
             <div class="p-2 nav-icon-lg">
+=======
+            {{#if loggedIn}}
+            <div class="p-2 nav-icon-lg dark-black">
+>>>>>>> develop
                 <a class="nav-icon" href="/create-post"><em class="fa fa-plus"></em>
                     <h4>Add an activity</h4>
                 </a>
             </div>
+<<<<<<< HEAD
             <div class="p-2 nav-icon-lg">
                 <a class="nav-icon" href="/dashboard"><i class="fa fa-heart"></i>
                     <h4>My activities</h4>
                 </a>
             </div>
             <div class="p-2 nav-icon-lg ">
+=======
+            <div class="p-2 nav-icon-lg dark-black">
+                <a class="nav-icon" href="/my-activities"><i class="fa fa-heart"></i>
+                    <span> 💚 </span>
+                    <h3>My activities</h3>
+                </a>
+            </div>
+            <div class="p-2 nav-icon-lg dark-black">
+                <a class="nav-icon" href="/logout"><i class="fa fa-minus"></i>
+                    <span> ⚪️ </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            {{else}}
+            <div class="p-2 nav-icon-lg dark-black">
+>>>>>>> develop
                 <a class="nav-icon" href="/login"><i class="fa fa-minus"></i>
                     <h4>Login</h4>
                 </a>
             </div>
+            {{/if}}
         </div>
     </section>
 
