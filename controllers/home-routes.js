@@ -30,9 +30,7 @@ router.get('/', (req, res) => {
             res.render('homepage', {
                 posts,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
-
             });
-            // }
         })
         .catch(err => {
             console.log(err);
@@ -71,74 +69,6 @@ router.get('/homepage', (req, res) => {
         });
 });
 
-
-router.get('/outdoor', (req, res) => {
-    Post.findAll({
-        where: {
-            tag: "outdoor"
-        }, 
-        include: 
-        [
-            {
-                model: User,
-                attributes: ['username', 'id']
-            },
-            {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
-            }
-        ]
-    })
-        .then((posts) => {
-            // console.log(posts);
-
-            res.render('homepage', {
-                posts,
-                loggedIn: true // tell front end that you're logged in
-            });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
-
-router.get('/virtual', (req, res) => {
-    Post.findAll({
-        include: [
-            {
-                model: User,
-                attributes: ['username', 'id']
-            },
-            {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
-            }
-        ]
-    })
-        .then((posts) => {
-            // console.log(posts);
-
-            res.render('homepage', {
-                posts,
-                loggedIn: true // tell front end that you're logged in
-            });
-            // }
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
-
 router.get('/create-post', withAuth, (req, res) => {
     res.render('create-post', {
         loggedIn: req.session.loggedIn
@@ -166,7 +96,6 @@ router.post('/profile', upload.single('photo'), function (req, res, next) {
 router.get('/login', (req, res) => {
     console.log("hello");
     if (req.session.loggedIn) {
-        // res.render('homepage', { loggedIn: req.session.loggedIn });
         res.redirect('/');
         return;
     }

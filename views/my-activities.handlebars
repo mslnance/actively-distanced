@@ -20,18 +20,15 @@
 
 <div class="postbox">
     <div class="col-lg-12">
-
         {{#each posts as |post|}}
-        {{!-- {{> post-info post }} --}}
         <div class="cardbox">
             <div class="cardbox-heading">
                 <div class="media-profile m-0">
-                    {{!-- <div class="media-profile m-0"> --}}
                     <div class="d-flex mr-3">
                         <span class="emoji">🐼 </span>
                         <div class="media-body">
                             <p class="m-0">{{dataValues.user.dataValues.username}}</p>
-                            <small><span>🕒{{dataValues.date}} | {{dataValues.time}}</span></small>
+                            <small><span>🕒{{dataValues.time}} | {{dataValues.date}}</span></small>
                         </div>
                     </div>
                 </div>
@@ -39,16 +36,15 @@
             <div class="body-container">
                 <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
                 <h5 class="ui black image header">{{dataValues.description}}</h4><br>
-                <div class="cardbox-item">
-                    <a href="#myModal{{dataValues.id}}" data-toggle="modal">
-                        <img class="img-responsive media" src="{{dataValues.image_url}}">
-                    </a>
-                </div>
+                    <div class="cardbox-item">
+                        <a href="#myModal{{dataValues.id}}" data-toggle="modal">
+                            <img class="img-responsive media" src="{{dataValues.image_url}}">
+                        </a>
+                    </div>
             </div>
-            {{!-- <a href="/edit/{{dataValues.id}}" class="edit-link">Edit activity</a> --}}
-            <a href="/edit-activity/{{dataValues.id}}">Edit Activity</a> <br></h3>
+            <a href="/edit-activity/{{dataValues.id}}">Edit Activity</a>
             <div class="comments">
-                <h4 class="ui black image header"><label for="description">Comments</label></h4>
+                <h1 class="ui black image header">Comments</h1>
                 {{#each comments as |comment|}}
                 <div>
                     {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
@@ -57,95 +53,16 @@
             </div>
             <form class="comment-form" data-postId={{dataValues.id}}>
                 <div>
-                      <textarea id="comment" class="comment-area" name=“comment-body” placeholder="Name your activity for people to join...">
-                </textarea>
+                    <textarea name="comment-body" class="comment-area"></textarea>
                 </div>
 
                 <div>
-                     <button type="submit" class="ui fluid large teal submit button">add comment</button>
-                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+                    <button type="submit" class="ui fluid large teal submit button">add comment</button>
                 </div>
             </form>
             {{!-- <button type="button" class="like-btn">like</button> --}}
         </div>
-        <div class="modal fade" id="myModal{{dataValues.id}}" role="dialog">
-            <div class="modal-dialog">
-                <h4 class="modal-title">{{dataValues.title}}</h4>
-                {{!-- </div> --}}
-                {{!-- {{#each posts as |post|}} --}}
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="modal-body">
-                                    <div class="col-md-8 modal-image">
-                                        <img class="img-responsive media" src="{{dataValues.image_url}}">
-                                    </div>
-                                    <div class="col-md-4 modal-meta">
-                                        <div class="modal-meta-top">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                                <span aria-hidden="true">×</span><span class="sr-only">Close</span>
-                                            </button>
-                                    <div class="img-poster clearfix">
-                                        <div class="cardbox-heading">
-                                            <div class="media-profile m-0">
-                                            <div class="d-flex mr-3">
-                                                <span class="emoji">🐼 </span>
-                                                <div class="media-body">
-                                                <p class="m-0">{{dataValues.user.dataValues.username}}</p>
-                                                <small><span>🕒{{dataValues.date}} | {{dataValues.time}}</span></small>
-                                                </div>
-                                            </div>
-                                            </div>
-                                         </div>
-                                    
-                                                <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
-                                                <h4 class="ui black image header">{{dataValues.description}}</h4><br>
-                                                <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
-                                                <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
-                                                <h4 class="ui teal image header">{{dataValues.location}}</h4><br>
-                                                <h4 class="ui teal image header">{{dataValues.group}}</h4><br>
-                                            </div>
-            <ul class="img-comment-list">
-                 <li>
-                    <div class="comment-text">
-                        <a href=" {{routes}}">
-                            <h4 class="ui teal image header"> {{dataValues.username}} </h4>
-                         </a>
-                        {{#each comments as |comment|}}
-                        <div>
-                        {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
-                        </div>
-                        {{/each}}
-                    </div>
-                         <form class="comment-form" data-postId={{dataValues.id}}>
-                <div>
-                      <textarea id="comment" class="comment-area" name=“comment-body” placeholder="Name your activity for people to join...">
-                </textarea>
-                </div>
-
-                <div>
-                     <button type="submit" class="ui fluid large teal submit button">add comment</button>
-                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
-                </div>
-            </form>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         {{/each}}
-        <div class="container">
-            <!-- Trigger the modal with a button -->
-            <a href="#myModal" data-toggle="modal">
-                <img class="img-responsive media" src="{{dataValues.image_url}}">
-            </a>
-        </div>
     </div>
 </div>
 <div class="container">
@@ -156,17 +73,6 @@
     <!-- Modal -->
 </div>
 </div>
-
-<script>
-    $(document).ready(function () {
-        $("#myBtn").click(function () {
-            $("#myModal").modal({ keyboard: true });
-        });
-        $("#myBtn2").click(function () {
-            $("#myModal2").modal({ keyboard: false });
-        });
-    });
-</script>
 
 <script src="/javascript/comment.js"></script>
 {{!-- <script src="/javascript/likes.js"></script> --}}

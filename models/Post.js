@@ -16,12 +16,6 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-
-        // tag: {
-        //     type: DataTypes.STRING,
-        //     allowNull: true
-        // },
-
         description: {
             type: DataTypes.STRING,
             allowNull: false
