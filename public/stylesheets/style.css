@@ -714,7 +714,7 @@
   font-family: 'Abhaya Libre', serif;
   font-size: 20px;
     background: linear-gradient(to right, #C15858 0%, #3C55FF 100%);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
  }
   
@@ -867,7 +867,7 @@
   font-family: 'Abhaya Libre', serif;
   font-size: 32px;
     background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
  }
   
@@ -1499,111 +1499,6 @@
   padding: 2px;
   border: 2px solid #f4f4f4;
 } 
-<<<<<<< HEAD
-
-
- .media img{
-  width: 1080px !important;
-  height: 480px !important;
-  padding: 2px;
-  border: 2px solid #f4f4f4;
- }
- .media-body {
-  -ms-flex: 1;
-  flex: 1;
-  padding: .4rem !important;
- }
- 
- .media-body p{
-  font-family: 'Abhaya Libre', serif;
-  font-weight: 700 !important;
-  font-size: 14px;
-  color: black;
- }
- .media-body small span{
-  font-family: 'Abhaya Libre', serif;
-  font-size: 14px;
-  color: #000;
- }
-
- .cardbox {
-  border-radius: 20px;
-  background-color: #B9D6E0;
-  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
-  margin-bottom: 20px;
-  padding: 0px !important;
-}
-
- /* .cardbox {
-  border-radius: 3px;
-  background-color: #0fc19e
-  box-shadow: 0 5px 25px 0 rgba(85, 85, 85, 0.15);
-  margin-bottom: 20px;
-  padding: 0px !important;
-  border-radius: 20px;
- } */
-  
- .cardbox .cardbox-item {
-    position: relative;
-    display: block;
- }
- .cardbox .cardbox-item img{
- }
- .img-responsive{
-    display: block;
-    max-width: 100%;
-    height: auto;
- }
- .fw {
-    width: 100% !important;
-  height: auto;
- }
-  
- .cardbox-base ul{
- margin: 10px !important;
- padding: 10px !important;
- font-size: 0px; 
- text-align: center;
- }
-  
- .cardbox-base li {
-  list-style: none;
-  display: inline-block;
-  margin: 0px 0px 0px -8px !important;
-  padding: 0px 0px 0px 0px !important;
- }
- .cardbox-base li a{
-  margin: 10px !important;
-  padding: 0px !important;
- }
- .cardbox-base li a img{
-  width: 32px;
-  height: 32px;
-  margin: 10px !important;
-  border: 2px solid #fff;
- }
-  
- .cardbox-like ul{
-  padding: 0px 0px 10px 20px !important;
-  font-size: 0px;
-  text-align: auto;
-  }
- .cardbox-like li:first-child {
-  display: inline-block;
-  margin-right: 5px;
-  padding-right: 20px;
-  border-right: 2px solid #f4f4f4;
- }
- .cardbox-like li:last-child {
-  display: inline-block;
-  text-align: center;
-  margin-left: 15px;
- }
- .cardbox-like li a {
-  color: #000;
-  font-size: 14px;
-=======
-
 
  .media img{
   width: 1080px !important;
@@ -1704,7 +1599,109 @@
  .cardbox-like li a {
   color: #000;
   font-size: 14px;
->>>>>>> develop
+ }
+
+ .media img {
+  width: 1080px !important;
+  height: 480px !important;
+  padding: 2px;
+  border: 2px solid #f4f4f4;
+ }
+
+ .media-body {
+  -ms-flex: 1;
+  flex: 1;
+  padding: .4rem !important;
+ }
+ 
+ .media-body p{
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700 !important;
+  font-size: 14px;
+  color: black;
+ }
+ .media-body small span{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 14px;
+  color: #000;
+ }
+
+ .cardbox {
+  border-radius: 20px;
+  background-color: #B9D6E0;
+  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
+  margin-bottom: 20px;
+  padding: 0px !important;
+}
+
+ /* .cardbox {
+  border-radius: 3px;
+  background-color: #0fc19e
+  box-shadow: 0 5px 25px 0 rgba(85, 85, 85, 0.15);
+  margin-bottom: 20px;
+  padding: 0px !important;
+  border-radius: 20px;
+ } */
+  
+ .cardbox .cardbox-item {
+    position: relative;
+    display: block;
+ }
+
+ .img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+ .fw {
+    width: 100% !important;
+  height: auto;
+ }
+  
+ .cardbox-base ul{
+ margin: 10px !important;
+ padding: 10px !important;
+ font-size: 0px; 
+ text-align: center;
+ }
+  
+ .cardbox-base li {
+  list-style: none;
+  display: inline-block;
+  margin: 0px 0px 0px -8px !important;
+  padding: 0px 0px 0px 0px !important;
+ }
+ .cardbox-base li a{
+  margin: 10px !important;
+  padding: 0px !important;
+ }
+ .cardbox-base li a img{
+  width: 32px;
+  height: 32px;
+  margin: 10px !important;
+  border: 2px solid #fff;
+ }
+  
+ .cardbox-like ul{
+  padding: 0px 0px 10px 20px !important;
+  font-size: 0px;
+  text-align: auto;
+  }
+ .cardbox-like li:first-child {
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 20px;
+  border-right: 2px solid #f4f4f4;
+ }
+ .cardbox-like li:last-child {
+  display: inline-block;
+  text-align: center;
+  margin-left: 15px;
+ }
+ .cardbox-like li a {
+  color: #000;
+  font-size: 14px;
+
   float: left;
   padding-top: 6px;
   margin-right: 0px;
@@ -2279,7 +2276,7 @@ width: 100%;
   
  @media (max-width: 768px){
   .details .col-lg-3{
-    float: left !important
+    float: left !important;
       margin-bottom: 20px;   
   }
  }
@@ -2296,13 +2293,15 @@ width: 100%;
   background: #fff;
   padding: 15px 0;
    display: flex;
+ }
 
- .media img{
+ .media img {
   width: 1080px !important;
   height: 480px !important;
   padding: 2px;
   border: 2px solid #f4f4f4;
  }
+
  .media-body {
   -ms-flex: 1;
   flex: 1;
@@ -2342,8 +2341,7 @@ width: 100%;
     position: relative;
     display: block;
  }
- .cardbox .cardbox-item img{
- }
+
  .img-responsive{
     display: block;
     max-width: 100%;
@@ -2692,13 +2690,12 @@ width: 100%;
   margin-bottom: 20px;
   padding: 0px !important;
   display: flex;
->>>>>>> develop
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
  }
-<<<<<<< HEAD
  .home-menu ul {
   padding-left: 0;
   margin-top: 0;
@@ -2738,7 +2735,6 @@ width: 100%;
  /* ==========================================================================
    Single Post Page
    ========================================================================== */
-=======
  .story-body{
   padding: 5px;
   text-align: center;
@@ -2957,7 +2953,6 @@ width: 100%;
  }
  .user-profile .post-content {
   display: flex;
-<<<<<<< HEAD
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -2966,7 +2961,6 @@ width: 100%;
   margin-top: 20px;
  }
  .user-profile .post-content .author-post {
-=======
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -3053,7 +3047,6 @@ margin-bottom: 10px;
 @media (max-width: 768px){
 .login {
   height: 130vh;
->>>>>>> 7057e7c4715e64a0f2c4e945a9e20d26a45ac2d6
   width: 100%;
   margin-top: -105px;
   margin-bottom: 5px;
@@ -3102,7 +3095,7 @@ margin-bottom: 10px;
   
  @media (max-width: 768px){
   .details .col-lg-3{
-    float: left !important
+    float: left !important;
       margin-bottom: 20px;   
   }
  }
@@ -3163,7 +3156,6 @@ margin-bottom: 10px;
  /* ==========================================================================
    Single Post Page
    ========================================================================== */
->>>>>>> develop
  .single-post{
   background: #f4f4f4; 
   padding: 80px 0px 150px 0px;
@@ -3405,26 +3397,18 @@ margin-bottom: 10px;
  background-color: rgba(0,0,0,0.4);
  margin-bottom: 10px;
  }
+
  .btn-dark:hover,
  .btn-dark:focus,
  .btn-dark:active {
-    color: #grey !important;
+    color: grey !important;
     background-color: rgba(0,0,0,0.7);
  }
+}
   
- @media (max-width: 768px){
+ @media (max-width: 768px) {
   .login {
     height: 130vh;
     width: 100%;
   }
- }
-<<<<<<< HEAD
- 
- 
-=======
-
-<<<<<<< HEAD
- 
->>>>>>> develop
-=======
->>>>>>> develop
+}
