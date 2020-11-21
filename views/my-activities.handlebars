@@ -12,6 +12,20 @@
                         <div class="media-body">
                             <p class="m-0">{{dataValues.user.dataValues.username}}</p>
                             <small><span>{{dataValues.date}} | {{dataValues.time}}</span></small>
+                <div class="media m-0">
+                    <div class="media-body">
+                        <div>
+                            <h3 class="ui teal image header">{{dataValues.user.dataValues.id}}</h3>
+                            <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
+                            <h4 class="ui black image header">{{dataValues.description}}</h4><br>
+                            <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
+                            <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
+                            <div class="cardbox-item">
+                                <a href="#myModal" data-toggle="modal">
+                                    <img class="img-responsive media" src="{{dataValues.image_url}}">
+                                </a>
+                            </div>
+                            <h4 class="ui teal image header">By: {{dataValues.user.dataValues.username}}</h4><br>
                         </div>
                     </div>
                 </div>
@@ -45,6 +59,26 @@
                     <button type="submit" class="ui fluid large teal submit button">add comment</button>
             </div>
         </form>
+            <div class="comments">
+                <h1>Comments</h1>
+                {{#each comments as |comment|}}
+                <div>
+                    {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
+                </div>
+                {{/each}}
+            </div>
+            <form class="comment-form" data-postId={{dataValues.id}}>
+                <div>
+                    <textarea name="comment-body"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">add comment</button>
+                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+                </div>
+            </form>
+        </div>
+        {{/each}}
 
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
@@ -165,6 +199,31 @@
     });
 </script>
 
-<script src="public/javascript/comment.js"></script>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#myBtn").click(function () {
+            $("#myModal").modal({ keyboard: true });
+        });
+        $("#myBtn2").click(function () {
+            $("#myModal2").modal({ keyboard: false });
+        });
+    });
+</script>
+
+<script src="/javascript/comment.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
