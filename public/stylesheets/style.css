@@ -1499,6 +1499,7 @@
   padding: 2px;
   border: 2px solid #f4f4f4;
 } 
+<<<<<<< HEAD
 
 
  .media img{
@@ -1601,6 +1602,109 @@
  .cardbox-like li a {
   color: #000;
   font-size: 14px;
+=======
+
+
+ .media img{
+  width: 1080px !important;
+  height: 480px !important;
+  padding: 2px;
+  border: 2px solid #f4f4f4;
+ }
+ .media-body {
+  -ms-flex: 1;
+  flex: 1;
+  padding: .4rem !important;
+ }
+ 
+ .media-body p{
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700 !important;
+  font-size: 14px;
+  color: black;
+ }
+ .media-body small span{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 14px;
+  color: #000;
+ }
+
+ .cardbox {
+  border-radius: 20px;
+  background-color: #B9D6E0;
+  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
+  margin-bottom: 20px;
+  padding: 0px !important;
+}
+
+ /* .cardbox {
+  border-radius: 3px;
+  background-color: #0fc19e
+  box-shadow: 0 5px 25px 0 rgba(85, 85, 85, 0.15);
+  margin-bottom: 20px;
+  padding: 0px !important;
+  border-radius: 20px;
+ } */
+  
+ .cardbox .cardbox-item {
+    position: relative;
+    display: block;
+ }
+
+ .img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+ .fw {
+    width: 100% !important;
+  height: auto;
+ }
+  
+ .cardbox-base ul{
+ margin: 10px !important;
+ padding: 10px !important;
+ font-size: 0px; 
+ text-align: center;
+ }
+  
+ .cardbox-base li {
+  list-style: none;
+  display: inline-block;
+  margin: 0px 0px 0px -8px !important;
+  padding: 0px 0px 0px 0px !important;
+ }
+ .cardbox-base li a{
+  margin: 10px !important;
+  padding: 0px !important;
+ }
+ .cardbox-base li a img{
+  width: 32px;
+  height: 32px;
+  margin: 10px !important;
+  border: 2px solid #fff;
+ }
+  
+ .cardbox-like ul{
+  padding: 0px 0px 10px 20px !important;
+  font-size: 0px;
+  text-align: auto;
+  }
+ .cardbox-like li:first-child {
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 20px;
+  border-right: 2px solid #f4f4f4;
+ }
+ .cardbox-like li:last-child {
+  display: inline-block;
+  text-align: center;
+  margin-left: 15px;
+ }
+ .cardbox-like li a {
+  color: #000;
+  font-size: 14px;
+>>>>>>> develop
   float: left;
   padding-top: 6px;
   margin-right: 0px;
@@ -2370,166 +2474,6 @@ width: 100%;
 border-radius: 10px;
 background-color: rgba(192,192,192,0.3);
 width: 100%;
-<<<<<<< HEAD
-=======
-margin-top: -105px;
-margin-bottom: 5px;
-z-index: 1;
-float: center !important;
-}
-.user-profile .post-content .author-post img {
-width: 200px;
-height: 200px;
-border: 7px solid #fff;
-}
-
-.details{
-background: #f4f4f4; 
-padding: 0px 0px 20px 0px;
-}
-.details .details-box{
-background: #fff;
-padding: 15px; 
-}
-.details .content-box h4{
-font-family: 'Abhaya Libre', serif;
-font-size: 32px;
-color: #000000; 
-}
-.details .content-box i{
-font-size: 15px !important;
-background: #0fc19e; 
-color: #fff !important;
-border-radius: 50% !important;
-padding: 4px; 
-}
-.details .content-box p{
-font-family: 'Abhaya Libre', serif;
-font-size: 15px;
-color: #848484; 
-}
-.details .content-box p span.hashtag{
-color: #0fc19e !important;
-}
-.details .content-box small span{
-font-family: 'Abhaya Libre', serif;
-font-size: 15px;
-color: #aaa;
-}
-
-@media (max-width: 768px){
-.details .col-lg-3{
-  float: left !important;
-  margin-bottom: 20px;   
-}
-}
-
-/* ==========================================================================
-  Home Menu
-  ========================================================================== */
-
-.home-menu{
-  background-color: #f4f4f4;
-padding: 0px 0px 10px 0px;
-}
-.home-menu .menu-category{
-background: #fff;
-padding: 15px 0;
-  display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-}
-.home-menu ul {
-padding-left: 0;
-margin-top: 0;
-margin-bottom: 0;
-padding-top: 0;
-padding-bottom: 0;
-}
-.home-menu .menu-category li {
-font-family: 'Abhaya Libre', serif;
-display: inline-block;
-padding: 2px 5px;
-margin: 3px 15px;
-}
-.home-menu .menu-category li.current-menu-item a {
-background-color: #fff;
-color: #88898a;
-font-weight: 700;
-}
-.home-menu .menu-category li span{
-background-color: #0fc19e;
-padding: 3px;
-border-radius: 50%;
-color: #fff;
-}
-.home-menu .menu-category ul li a {
-font-family: 'Abhaya Libre', serif;
-font-size: 16px;
-color: #848484;
-}
-.home-menu .menu-category ul li a:hover {
-font-size: 16px;
-color: #0fc19e !important;
-text-decoration: none;
-}
-
-
-/* ==========================================================================
-  Single Post Page
-  ========================================================================== */
-.single-post{
-background: #f4f4f4; 
-padding: 80px 0px 150px 0px;
-}
-
-/* ==========================================================================
-  Media Queries for Chat Page
-  ========================================================================== */
-
-/* Desktop */
-@media (max-width: 1024px){
-}
-
-@media (max-width: 992px){
-.messages-box .col-lg-4{
-  padding: 0px 40px !important;
-}
-.messages-box .col-lg-8{
-  padding: 0px 40px !important;
-}
-}
-
-/* Tablets */
-@media (max-width: 800px){
-.messages-box .col-lg-4{
-  padding: 0px 40px !important;
-}
-.messages-box .col-lg-8{
-  padding: 0px 40px !important;
-}
-}
-
-@media (max-width: 768px){
-.messages-box .col-lg-4{
-  padding: 0px 40px !important;
-}
-.messages-box .col-lg-8{
-  padding: 0px 40px !important;
-}
-}
-
-/* Mobile phones */
-@media (max-width: 600px){
-.messages-box .col-lg-4{
-  padding: 0px 40px !important;
-}
-.messages-box .col-lg-8{
-  padding: 0px 40px !important;
-}
->>>>>>> 7057e7c4715e64a0f2c4e945a9e20d26a45ac2d6
 }
 #date {
   border-radius: 10px;
@@ -3479,5 +3423,8 @@ margin-bottom: 10px;
  
 =======
 
+<<<<<<< HEAD
  
+>>>>>>> develop
+=======
 >>>>>>> develop

@@ -1,11 +1,8 @@
 // import all models
 const Post = require('./Post');
 const User = require('./User');
-<<<<<<< HEAD
-=======
 const Comment = require('./Comment');
 // const Likes = require('./Likes');
->>>>>>> develop
 
 // create associations
 User.hasMany(Post, {
@@ -17,9 +14,6 @@ Post.belongsTo(User, {
     // onDelete: 'SET NULL'
 });
 
-<<<<<<< HEAD
-module.exports = { User, Post };
-=======
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: 'SET NULL'
@@ -58,4 +52,3 @@ Post.hasMany(Comment, {
 // });
 
 module.exports = { User, Post, Comment };
->>>>>>> develop
