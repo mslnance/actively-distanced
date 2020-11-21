@@ -1,24 +1,64 @@
+
 <div class="ui middle aligned center aligned grid">
   <div class="column">
-    <h1 class="ui teal image header">Create an activity</h1>
+    <h3 class="ui center aligned header" id="category-header">Create an activity</h3>
 
     <div action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
       <form action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
         <div class="ui stacked segment">
           <h4 class="ui teal image header"><label for="title">Title</label></h4><br>
-          <input type="text" id="title-bar" name="title" placeholder="Name your activity for people to join..." /><br>
+          <input type="text" id="title" name="title" placeholder="Name your activity for people to join..."><br>
 
           <h4 class="ui teal image header"><label for="description">Description</label></h4><br>
-          <input type="text" id="description-bar" name="description" placeholder="Describe your event..." /><br>
+          <input type="text" id="description" name="description" placeholder="Describe your event..."><br>
 
-          <h4 class="ui teal image header"><label for="time">Upload a photo</label></h4><br>
+          <h4 class="ui teal image header"><label for="photo">Upload a photo</label></h4><br>
           <input type="file" id="description-bar" name="photo" /><br>
 
           <h4 class="ui teal image header"><label for="date">Choose a date for your event:</label></h4>
           <input type="date" id="date" name="date"><br>
 
           <h4 class="ui teal image header"><label for="time">Choose a time for your event:</label></h4>
-          <input type="time" id="time" name="time" min="08:00" max="20:00" required><br>
+          <input type="time" id="time" name="time" min="08:00" max="23:00" required><br>
+
+          <h4 class="ui teal image header"><label for="url">Link (virtual activity)</label></h4><br>
+          <input type="url" id="url" name="url" placeholder="Add URL for the virtual meetup" /><br>
+          
+          <h4 class="ui teal image header"><label for="quantity">Group Size</label></h4><br>
+          <input type="number" id="quantity" name="group" placeholder="How many people can join your activity?" /><br><br>
+          
+          <h4 class="ui teal image header"><label for="title">Activity Type</label></h4><br>
+          <input  type="radio" value="outdoor" name="tag"> Outdoor Activity<br>
+          <input type="radio" value="virtual" name="tag"> Virtual Activity<br><br>
+
+          <input type="submit" value="Submit" class="ui fluid large teal submit button">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{!-- <div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h3 class="ui center aligned header" id="category-header">Create an activity</h3>
+
+     <div action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
+      <form action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
+        <div class="ui stacked segment">
+          <h4 class="ui teal image header"><label for="title">Title</label></h4><br>
+          <input type="text" id="title" name="title" placeholder="Name your activity for people to join..."><br>
+
+          <h4 class="ui teal image header"><label for="description">Description</label></h4><br>
+          <input type="text" id="description" name="description" placeholder="Describe your event..."><br>
+
+          <h4 class="ui teal image header"><label for="photo">Upload a photo</label></h4><br>
+           <input type="file" id="description-bar" name="photo" /><br>
+
+          <h4 class="ui teal image header"><label for="date">Choose a date for your event:</label></h4>
+          <input type="date" id="date" name="date"><br>
+
+          <h4 class="ui teal image header"><label for="time">Choose a time for your event:</label></h4>
+          <input type="time" id="time" name="time" min="08:00" max="23:00" required><br>
 
           <h4 class="ui teal image header"><label for="description">Location or Link (virtual activity)</label></h4><br>
           <input type="text" id="description-bar" name="description" placeholder="Add an address for the event or URL for the virtual meetup" /><br>
@@ -26,12 +66,14 @@
           <h4 class="ui teal image header"><label for="quantity">Group Size</label></h4><br>
           <input type="number" id="quantity" name="group" placeholder="How many people can join your activity?" /><br><br>
           
-          <h4 class="ui teal image header"><label for="title">Acticity Type</label></h4><br>
+          <h4 class="ui teal image header"><label for="title">Activity Type</label></h4><br>
           <input  type="radio" value="outdoor" name="tag"> Outdoor Activity<br>
           <input type="radio" value="virtual" name="tag"> Virtual Activity<br><br>
+          
           <input type="submit" value="Submit" class="ui fluid large teal submit button">
         </div>
       </form>
     </div>
   </div>
-</div>
+</div> --}}
+

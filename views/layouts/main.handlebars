@@ -13,78 +13,44 @@
 <body>
     <header>
         <nav class="navbar navbar-default">
-            <a class="navbar-brand" href="/"> <h3>Actively Distanced</h3></a>
+            <a class="navbar-brand" href="/"><h2>Actively Distanced </h2></a>
         </nav>
     </header>
 
 
 <section class="nav-sec">
-	  <div class="d-flex justify-content-between">
-	   <div class="p-2 nav-icon-lg mint-green">
-	   <a class="nav-icon" href="/"><em class="fa fa-home"></em>
-		<span>Home</span>
-	   </a>
-	   </div>
-       {{#if loggedIn}}
-	   <div class="p-2 nav-icon-lg clean-black">
-	   <a class="nav-icon" href="/create-post"><em class="fa fa-crosshairs"></em>
-		<span>+ Activity</span>
-	   </a>
-	   </div>
-	   <div class="p-2 nav-icon-lg dark-black">
-	   <a class="nav-icon" href="/my-activities"><em class="fab fa-instagram"></em>
-		<span>My Activity</span>
-	   </a>
-	   </div>
+	<div class="d-flex justify-content-between">
         <div class="p-2 nav-icon-lg mint-green">
-                <a class="nav-icon" href="/logout">
-                    <h3 class="ui teal image header">Logout</h3>
-                </a>
-        </div>
+	    <a class="nav-icon" href="/">
+		<h3 class="ui white image header">Home</h3>
+	    </a>
+	    </div>
+       {{#if loggedIn}}
+	<div class="p-2 nav-icon-lg clean-black">
+	    <a class="nav-icon" href="/create-post">
+	    <h3 class="ui white image header">+ Activity</h3>
+	    </a>
+	</div>
+	<div class="p-2 nav-icon-lg dark-black">
+	   <a class="nav-icon" href="/my-activities">
+	    <h3 class="ui white image header">My Activity</h3>
+	   </a>
+	</div>
+
+    <div class="p-2 nav-icon-lg dark-black">
+	   <a class="nav-icon" href="/logout">
+		<h3 class="ui white image header">Logout</h3>
+	   </a>
+	</div>
         {{else}}
-            <div class="p-2 nav-icon-lg mint-green">
-                <a class="nav-icon" href="/login">
-                    <h3 class="ui teal image header">Login</h3>
-                </a>
-            </div>
+    <div class="p-2 nav-icon-lg dark-black">
+	   <a class="nav-icon" href="/login">
+		<h3 class="ui white image header">Login</h3>
+	   </a>
+	</div>
         {{/if}}
 	</div>
 </section>	
-{{!-- 
-    <!-- Navbar Section -->
-    <section class="nav-sec" id="navi-bar">
-        <div class="d-flex justify-content-between">
-            <div class="p-2 nav-icon-lg mint-green">
-                <a class="nav-icon" href="/">
-                    <h3 class="ui teal image header">Home</h3>
-                </a>
-            </div>
-            {{#if loggedIn}}
-            <div class="p-2 nav-icon-lg">
-                <a class="nav-icon" href="/create-post"><em class="fa fa-plus"></em>
-                   <h3 class="ui teal image header">+ Activity</h3>
-                </a>
-            </div>
-            <div class="p-2 nav-icon-lg mint-green">
-                <a class="nav-icon" href="/my-activities">
-                    <h3 class="ui teal image header">My activity</h3>
-                </a>
-            </div>
-            <div class="p-2 nav-icon-lg mint-green">
-                <a class="nav-icon" href="/logout">
-                    <h3 class="ui teal image header">Logout</h3>
-                </a>
-            </div>
-            {{else}}
-            <div class="p-2 nav-icon-lg mint-green">
-                <a class="nav-icon" href="/login">
-                    <h3 class="ui teal image header">Login</h3>
-                </a>
-            </div>
-            {{/if}}
-        </div>
-    </section>
-     --}}
 
     <div class="wrapper newsfeed">
 
