@@ -1546,8 +1546,7 @@ border-radius: 20px;
   position: relative;
   display: block;
 }
-.cardbox .cardbox-item img{
-}
+
 .img-responsive{
   display: block;
   max-width: 100%;
@@ -2175,8 +2174,8 @@ color: #aaa;
 
 @media (max-width: 768px){
 .details .col-lg-3{
-  float: left !important
-    margin-bottom: 20px;   
+  float: left !important;
+  margin-bottom: 20px;   
 }
 }
 
@@ -2480,7 +2479,7 @@ margin-bottom: 10px;
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
-  color: #grey !important;
+  color: grey !important;
   background-color: rgba(0,0,0,0.7);
 }
 
