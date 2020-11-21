@@ -69,6 +69,73 @@ router.get('/homepage', (req, res) => {
         });
 });
 
+
+router.get('/outdoor', (req, res) => {
+    Post.findAll({
+        where: {
+            tag: "outdoor"
+        }, 
+        include: 
+        [
+            {
+                model: User,
+                attributes: ['username', 'id']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
+    })
+        .then((posts) => {
+            // console.log(posts);
+
+            res.render('homepage', {
+                posts,
+                loggedIn: true // tell front end that you're logged in
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+router.get('/virtual', (req, res) => {
+    Post.findAll({
+        include: [
+            {
+                model: User,
+                attributes: ['username', 'id']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
+    })
+        .then((posts) => {
+            // console.log(posts);
+
+            res.render('homepage', {
+                posts,
+                loggedIn: true // tell front end that you're logged in
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
 router.get('/create-post', withAuth, (req, res) => {
     res.render('create-post', {
         loggedIn: req.session.loggedIn
@@ -147,36 +214,10 @@ router.get('/my-activities', withAuth, (req, res) => {
 
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
-    Post.findByPk(req.params.id, {
-        attributes: [
-            'id',
-            'post_url',
-            'title',
-            'created_at'
-        ],
-        include: [
-            {
-                model: User,
-                attributes: ['username']
-            }
-        ]
-    })
-        .then(dbPostData => {
-            if (dbPostData) {
-                const post = dbPostData.get({ plain: true });
-
-                res.render('edit-activity', {
-                    post,
-                    loggedIn: true
-                });
-            } else {
-                res.status(404).end();
-            }
-        })
-        .catch(err => {
-            res.status(500).json(err);
-        });
+router.get('/edit-activity/:id', withAuth, (req, res) => {
+    res.render('edit-activity', {
+        loggedIn: req.session.loggedIn
+    });
 });
 
 module.exports = router;
