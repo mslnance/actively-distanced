@@ -48,10 +48,52 @@
                 <div>
                     <textarea name="comment-body"></textarea>
                 </div>
+            </div>
+                                                    <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
+                                                    <h4 class="ui black image header">{{dataValues.description}}</h4>
+                                                    <br>
+                                                </div>
+                                                <ul class="img-comment-list">
+                                                    <li>
+                                                        <div class="comment-text">
+                                                            <a href=" {{routes}}">
+                                                                <h4 class="ui teal image header">{{dataValues.user.dataValues.username}}
+                                                                </h4>
+                                                            </a>
+                                                            <p>{{comment_text}} placeholder comments...</p>
+                                                            <div class="date sub-text">{{dataValues.title}}</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="modal-meta-bottom">
+                                                    <ul>
+                                                        <li>
+                                                            <a class="modal-like" href="#"><i
+                                                                    class="fa fa-heart"></i></a><span class="modal-one">
+                                                                {{likes}}</span> |
+                                                            <a class="modal-comment" href="#"><i
+                                                                    class="fa fa-comments"></i></a><span>
+                                                                {{comments}}</span> </li>
 
-                <div>
-                    <button type="submit">add comment</button>
-                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+                                                        <div class="comment-body">
+                                                            <input class="form-control input-lg" type="text"
+                                                                placeholder="Write your comment...">
+                                                            <div class="button">
+                                                                <h5>
+                                                                    <center>Send</center>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
             {{!-- <button type="button" class="like-btn">like</button> --}}
@@ -134,7 +176,14 @@
                     </a>
                 </div>
 
+    {{!-- <div class="trending-box hidden-xs hidden-md">
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="photo_stories.html">
+                    <h4>Outdoor Actvities</h4>
+                </a>
             </div>
+
         </div>
         <div class="trending-box hidden-xs hidden-md">
             <div class="row">
@@ -145,7 +194,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+</div>
 </div>
 
 <div class="container">

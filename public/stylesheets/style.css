@@ -1460,7 +1460,6 @@
  }
  .cardbox .pull-right a.dropdown-item {
   display: block;
-<<<<<<< HEAD
   width: 100%;
   padding: 4px 0px 4px 10px;
   clear: both;
@@ -1500,496 +1499,7 @@
   padding: 2px;
   border: 2px solid #f4f4f4;
 } 
-=======
-}
 
-.img-responsive{
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.fw {
-  width: 100% !important;
-height: auto;
-}
-
-.cardbox-base ul{
-margin: 10px !important;
-padding: 10px !important;
-font-size: 0px; 
-text-align: center;
-}
-
-.cardbox-base li {
-list-style: none;
-display: inline-block;
-margin: 0px 0px 0px -8px !important;
-padding: 0px 0px 0px 0px !important;
-}
-.cardbox-base li a{
-margin: 10px !important;
-padding: 0px !important;
-}
-.cardbox-base li a img{
-width: 32px;
-height: 32px;
-margin: 10px !important;
-border: 2px solid #fff;
-}
-
-.cardbox-like ul{
-padding: 0px 0px 10px 20px !important;
-font-size: 0px;
-text-align: auto;
-}
-.cardbox-like li:first-child {
-display: inline-block;
-margin-right: 5px;
-padding-right: 20px;
-border-right: 2px solid #f4f4f4;
-}
-.cardbox-like li:last-child {
-display: inline-block;
-text-align: center;
-margin-left: 15px;
-}
-.cardbox-like li a {
-color: #000;
-font-size: 14px;
-float: left;
-padding-top: 6px;
-margin-right: 0px;
-}
-.cardbox-like li a:hover {
-text-decoration: none; 
-color: #ffffff !important;
-}
-.cardbox-like li span{
-font-family: 'Abhaya Libre', serif;
-float: left;
-color: red;
-font-size: 18px;
-padding-top: 6px;
-}
-.cardbox-like li span.span-last{
-color: #000000;
-}
-.cardbox-like li a.com {
-  color: #b2b2b2;
-  font-size: 14px;
-  padding-top: 6px;
-  margin-right: px;
-}
-
-
-
-/* ==========================================================================
-  Modal Styles
-  ========================================================================== */ 
-.modal-dialog{
-width: 830px;
-height: 450px !important;
-}
-.modal-image img{
-width: 600px !important; 
-height: 540px !important;
-}
-
-.img-poster{
-margin-bottom: 10px; 
-border-bottom: solid 1px #f4f4f4;
-padding-bottom: 5px; 
-}
-.modal-meta-top .img-poster img {
-height: 34px;
-width: 34px;
-float: left !important;
-margin-right: 10px;
-border: 4px solid #f4f4f4;
-}
-.modal-meta-top .img-poster a{
-font-family: 'Abhaya Libre', serif;
-font-size: 14px; 
-color: #88898a !important; 
-}
-.modal-meta-top .img-poster span {
-font-family: 'Abhaya Libre', serif;
-color: #aaa;
-font-size: 12px;
-}
-.modal-meta-top .img-poster a.kafe-btn-mint-small {
-font-family: 'Abhaya Libre', serif;  
-margin-left: 0px;
-color: #fff !important;
-border-radius: 3px; 
-}
-
-#title-bar {
-border-radius: 10px;
-background-color: rgba(192,192,192,0.3);
-width: 100%;
-}
-#description-bar {
-border-radius: 10px;
-background-color: rgba(192,192,192,0.3);
-width: 100%;
-}
-#date {
-border-radius: 10px;
-background-color: rgba(192,192,192,0.3);
-width: 100%;
-}
-
-#time {
-border-radius: 10px;
-background-color: rgba(192,192,192,0.3);
-width: 100%;
-}
-#quantity {
-border-radius: 10px;
-background-color: rgba(192,192,192,0.3);
-width: 100%;
-}
-
-.comment-area {
-border-radius: 10px;
-background-color: rgba(192,192,192,0.3);
-width: 100%;
-}
-.comment-form {
-  padding: 10px;
-}
-.img-comment-list {
-list-style: none; 
-padding: 0px 10px 30px 0px;
-height: 390px !important;
-overflow-y: scroll;
-}
-.img-comment-list li {
-  margin-top: 5px 0px 10px 0px;
-}
-.img-comment-list li > div {
-  display:table-cell;
-}
-.img-comment-list .comment-img {
-float: left !important;
-margin-right: 10px !important;
-margin-top: 5px;
-}
-.img-comment-list img {
-width: 22px;
-height: 22px;
-}
-.img-comment-list li a{
-font-family: 'Abhaya Libre', serif;
-font-size: 14px; 
-color: #88898a !important; 
-}
-.img-comment-list p {
-font-family: 'Abhaya Libre', serif;
-margin: 0;
-font-size: 13px;
-color: #848484;
-}
-.img-comment-list span {
-font-family: 'Abhaya Libre', serif;
-font-size: .8em;
-color: #aaa;
-}
-
-
-.modal-meta-bottom {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 5px;
-  border-top: solid 1px #f4f4f4;
-display: block;
-}
-.modal-meta-bottom ul{
-margin: 0px !important;
-padding: 0px !important;
-font-size: 0px !important;
-}
-.modal-meta-bottom li{
-list-style: none;
-padding: 0px !important;
-margin: 0px !important;
-font-size: 0px !important;
-}
-.modal-meta-bottom li a.modal-like i{
-font-size: 14px !important;
-color: #e16a70 !important;
-margin-right: 4px;
-margin-left: 10px;
-}
-.modal-meta-bottom li a.modal-comment i{
-font-size: 14px !important;
-color: #848484 !important;
-margin-right: 4px;
-}
-.modal-meta-bottom li span.modal-one{
-margin-right: 10px;
-color: #e16a70 !important;
-}
-.modal-meta-bottom li span{
-font-family: 'Abhaya Libre', serif;
-font-size: 14px !important;
-color: #848484;
-}
-.modal-meta-bottom li a:hover{
-color: #e16a70 !important;
-}
-.modal-meta-bottom .thumb-xs{
-display: inline-block;
-text-align: center;
-margin: 0px !important;
-padding: 0px !important;
-}
-.modal-meta-bottom .thumb-xs img{
-width: 25px;
-height: 25px; 
-}
-.modal-meta-bottom .comment-body {
-float: right !important;
-margin: 0px !important;
-padding: 0px !important;
-}
-.modal-meta-bottom .comment-body input{
-width: 200px !important;
-}
-
-
-/* ==========================================================================
-  Media Queries for Modal
-  ========================================================================== */
-
-/* Desktop */
-@media (max-width: 1024px){
-}
-
-@media (max-width: 992px){
-.modal-dialog{
-  width: 700px;
-}
-  .modal-content {
-      border-radius: 0;
-      max-height: 100%;
-      overflow-y: auto;
-  }
-.img-poster{
-  padding-top: 5px;
-}
-}
-
-/* Tablets */
-@media (max-width: 800px){
-}
-
-@media (max-width: 768px){
-.modal-dialog{
-  width: 600px;
-}
-.modal-image img{
-  height: auto !important; 
-}
-.img-poster{
-  padding-top: 5px;
-}
-}
-
-/* Mobile phones */
-@media (max-width: 600px){
-.modal-dialog{
-  width: 500px !important; 
-}
-.img-poster{
-  padding-top: 5px;
-}
-}
-
-@media (max-width: 548px){
-.modal-dialog{
-  width: 400px !important; 
-}
-.img-poster{
-  padding-top: 5px;
-}
-}
-
-@media (max-width: 480px){
-.modal-dialog{
-  width: 300px !important; 
-}
-.img-poster{
-  padding-top: 5px;
-}
-}
-
-@media (max-width: 320px){
-.modal-dialog{
-  width: 300px !important; 
-}
-.modal-image img{
-  height: auto !important; 
-}
-.img-poster{
-  padding-top: 5px;
-}
-}
-
-
-/* ==========================================================================
-  Story Box Styles
-  ========================================================================== */ 
-.storybox {
-color: #fff;
-height: 200px;
-width: 100%;
-  border-radius: 3px;
-box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
-margin-bottom: 20px;
-padding: 0px !important;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-}
-.story-body{
-padding: 5px;
-text-align: center;
-}
-.story-body img{
-width: 42px;
-height: 42px; 
-float: center !important;
-border: 2px dotted #fff;
-}
-.story-body h4{
-font-family: 'Abhaya Libre', serif;
-font-size: 14px;
-color: #fff; 
-line-height: 1;
-}
-.story-body p{
-font-family: 'Abhaya Libre', serif;
-font-size: 12px;
-color: #fff; 
-line-height: 1;
-}
-
-
-/* ==========================================================================
-  Suggestion Box Styles
-  ========================================================================== */
-.suggestion-box {
-float: left;
-width: 100%;
-background-color: #fff;
-margin-bottom: 20px;
-border-left: 1px solid #e5e5e5;
-border-right: 1px solid #e5e5e5;
-border-bottom: 1px solid #e5e5e5;
-box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
-}
-.suggestion-box .suggestions-list {
-float: left;
-width: 100%;
-padding: 17px 0 10px 0;
-}
-.suggestion-box .suggestion-body {
-float: left;
-width: 100%;
-padding: 5px 20px;
-}
-.suggestion-box .suggestion-body img {
-width: 37px;
-height: 37px;
-float: left;
-padding: 2px; 
-border: 2px solid #f4f4f4;
-}
-.suggestion-box .name-box {
-float: left;
-padding-left: 10px;
-position: relative;
-top: -12px;
-padding-top: 0px !important;
-}
-.suggestion-box .name-box h4 {
-font-family: 'Abhaya Libre', serif; 
-color: #000000;
-font-size: 14px;
-font-weight: 500;
-margin-bottom: 0px;
-}
-.suggestion-box .name-box span {
-font-family: 'Abhaya Libre', serif;
-font-size: 14px;
-color: #aaa;
-}
-.suggestion-box .suggestion-body> span {
-float: right;
-margin-top: 4px;
-position: relative;
-top: -12px;
-}
-.suggestion-box .suggestion-body > span i {
-color: #b2b2b2;
-width: 30px;
-height: 30px;
-border: 1px solid #e5e5e5;
-text-align: center;
-line-height: 30px;
-font-weight: 700;
-cursor: pointer;
-}
-
-/* ==========================================================================
-  Trending Box Styles
-  ========================================================================== */
-.trending-box {
-float: left;
-width: 100%;
-margin-bottom: 20px;
-border: 1px solid #e5e5e5;
-padding: 5px;
-}
-.trending-box .row{
-padding: 5px 15px 5px 15px!important;
-} 
-.trending-box .row .col-lg-6{
-padding: 0px 5px 0px 5px!important;
-margin: 0px 0px 0px 0px!important;
-}
-.trending-box img{
-margin-bottom: 0px; 
-}
-.trending-box h4{
-font-family: 'Abhaya Libre', serif;
-font-size: 12px;
-color: #88898a;
-font-weight: 500; 
-}
-@media (max-width: 768px){
-.trending-box img{
-  margin-bottom: 10px;
-}
-}
-
-/* ==========================================================================
-  Upload Page
-  ========================================================================== */
-.upload{
-background: #f4f4f4; 
-padding: 40px 0px;
-}
-
-.upload .row{
-margin-bottom: 30px; 
-}
->>>>>>> 7057e7c4715e64a0f2c4e945a9e20d26a45ac2d6
 
  .media img{
   width: 1080px !important;
@@ -2036,8 +1546,7 @@ margin-bottom: 30px;
     position: relative;
     display: block;
  }
- .cardbox .cardbox-item img{
- }
+
  .img-responsive{
     display: block;
     max-width: 100%;
@@ -2168,166 +1677,6 @@ width: 100%;
 border-radius: 10px;
 background-color: rgba(192,192,192,0.3);
 width: 100%;
-<<<<<<< HEAD
-=======
-margin-top: -105px;
-margin-bottom: 5px;
-z-index: 1;
-float: center !important;
-}
-.user-profile .post-content .author-post img {
-width: 200px;
-height: 200px;
-border: 7px solid #fff;
-}
-
-.details{
-background: #f4f4f4; 
-padding: 0px 0px 20px 0px;
-}
-.details .details-box{
-background: #fff;
-padding: 15px; 
-}
-.details .content-box h4{
-font-family: 'Abhaya Libre', serif;
-font-size: 32px;
-color: #000000; 
-}
-.details .content-box i{
-font-size: 15px !important;
-background: #0fc19e; 
-color: #fff !important;
-border-radius: 50% !important;
-padding: 4px; 
-}
-.details .content-box p{
-font-family: 'Abhaya Libre', serif;
-font-size: 15px;
-color: #848484; 
-}
-.details .content-box p span.hashtag{
-color: #0fc19e !important;
-}
-.details .content-box small span{
-font-family: 'Abhaya Libre', serif;
-font-size: 15px;
-color: #aaa;
-}
-
-@media (max-width: 768px){
-.details .col-lg-3{
-  float: left !important;
-  margin-bottom: 20px;   
-}
-}
-
-/* ==========================================================================
-  Home Menu
-  ========================================================================== */
-
-.home-menu{
-  background-color: #f4f4f4;
-padding: 0px 0px 10px 0px;
-}
-.home-menu .menu-category{
-background: #fff;
-padding: 15px 0;
-  display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-}
-.home-menu ul {
-padding-left: 0;
-margin-top: 0;
-margin-bottom: 0;
-padding-top: 0;
-padding-bottom: 0;
-}
-.home-menu .menu-category li {
-font-family: 'Abhaya Libre', serif;
-display: inline-block;
-padding: 2px 5px;
-margin: 3px 15px;
-}
-.home-menu .menu-category li.current-menu-item a {
-background-color: #fff;
-color: #88898a;
-font-weight: 700;
-}
-.home-menu .menu-category li span{
-background-color: #0fc19e;
-padding: 3px;
-border-radius: 50%;
-color: #fff;
-}
-.home-menu .menu-category ul li a {
-font-family: 'Abhaya Libre', serif;
-font-size: 16px;
-color: #848484;
-}
-.home-menu .menu-category ul li a:hover {
-font-size: 16px;
-color: #0fc19e !important;
-text-decoration: none;
-}
-
-
-/* ==========================================================================
-  Single Post Page
-  ========================================================================== */
-.single-post{
-background: #f4f4f4; 
-padding: 80px 0px 150px 0px;
-}
-
-/* ==========================================================================
-  Media Queries for Chat Page
-  ========================================================================== */
-
-/* Desktop */
-@media (max-width: 1024px){
-}
-
-@media (max-width: 992px){
-.messages-box .col-lg-4{
-  padding: 0px 40px !important;
-}
-.messages-box .col-lg-8{
-  padding: 0px 40px !important;
-}
-}
-
-/* Tablets */
-@media (max-width: 800px){
-.messages-box .col-lg-4{
-  padding: 0px 40px !important;
-}
-.messages-box .col-lg-8{
-  padding: 0px 40px !important;
-}
-}
-
-@media (max-width: 768px){
-.messages-box .col-lg-4{
-  padding: 0px 40px !important;
-}
-.messages-box .col-lg-8{
-  padding: 0px 40px !important;
-}
-}
-
-/* Mobile phones */
-@media (max-width: 600px){
-.messages-box .col-lg-4{
-  padding: 0px 40px !important;
-}
-.messages-box .col-lg-8{
-  padding: 0px 40px !important;
-}
->>>>>>> 7057e7c4715e64a0f2c4e945a9e20d26a45ac2d6
 }
 #date {
   border-radius: 10px;
@@ -2769,6 +2118,740 @@ padding: 80px 0px 150px 0px;
  }
  .user-profile .post-content {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 20px;
+ }
+ .user-profile .post-content .author-post {
+  width: 100%;
+  margin-top: -105px;
+  margin-bottom: 5px;
+  z-index: 1;
+  float: center !important;
+ }
+ .user-profile .post-content .author-post img {
+  width: 200px;
+  height: 200px;
+  border: 7px solid #fff;
+ }
+  
+ .details{
+  background: #f4f4f4; 
+  padding: 0px 0px 20px 0px;
+ }
+ .details .details-box{
+  background: #fff;
+  padding: 15px; 
+ }
+ .details .content-box h4{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 32px;
+  color: #000000; 
+ }
+ .details .content-box i{
+  font-size: 15px !important;
+  background: #0fc19e; 
+  color: #fff !important;
+  border-radius: 50% !important;
+  padding: 4px; 
+ }
+ .details .content-box p{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 15px;
+  color: #848484; 
+ }
+ .details .content-box p span.hashtag{
+  color: #0fc19e !important;
+ }
+ .details .content-box small span{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 15px;
+  color: #aaa;
+ }
+  
+ @media (max-width: 768px){
+  .details .col-lg-3{
+    float: left !important
+      margin-bottom: 20px;   
+  }
+ }
+  
+ /* ==========================================================================
+   Home Menu
+   ========================================================================== */
+  
+ .home-menu{
+    background-color: #f4f4f4;
+  padding: 0px 0px 10px 0px;
+ }
+ .home-menu .menu-category{
+  background: #fff;
+  padding: 15px 0;
+   display: flex;
+
+ .media img{
+  width: 1080px !important;
+  height: 480px !important;
+  padding: 2px;
+  border: 2px solid #f4f4f4;
+ }
+ .media-body {
+  -ms-flex: 1;
+  flex: 1;
+  padding: .4rem !important;
+ }
+ 
+ .media-body p{
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 700 !important;
+  font-size: 14px;
+  color: black;
+ }
+ .media-body small span{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 14px;
+  color: #000;
+ }
+
+ .cardbox {
+  border-radius: 20px;
+  background-color: #B9D6E0;
+  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
+  margin-bottom: 20px;
+  padding: 0px !important;
+}
+
+ /* .cardbox {
+  border-radius: 3px;
+  background-color: #0fc19e
+  box-shadow: 0 5px 25px 0 rgba(85, 85, 85, 0.15);
+  margin-bottom: 20px;
+  padding: 0px !important;
+  border-radius: 20px;
+ } */
+  
+ .cardbox .cardbox-item {
+    position: relative;
+    display: block;
+ }
+ .cardbox .cardbox-item img{
+ }
+ .img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+ .fw {
+    width: 100% !important;
+  height: auto;
+ }
+  
+ .cardbox-base ul{
+ margin: 10px !important;
+ padding: 10px !important;
+ font-size: 0px; 
+ text-align: center;
+ }
+  
+ .cardbox-base li {
+  list-style: none;
+  display: inline-block;
+  margin: 0px 0px 0px -8px !important;
+  padding: 0px 0px 0px 0px !important;
+ }
+ .cardbox-base li a{
+  margin: 10px !important;
+  padding: 0px !important;
+ }
+ .cardbox-base li a img{
+  width: 32px;
+  height: 32px;
+  margin: 10px !important;
+  border: 2px solid #fff;
+ }
+  
+ .cardbox-like ul{
+  padding: 0px 0px 10px 20px !important;
+  font-size: 0px;
+  text-align: auto;
+  }
+ .cardbox-like li:first-child {
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 20px;
+  border-right: 2px solid #f4f4f4;
+ }
+ .cardbox-like li:last-child {
+  display: inline-block;
+  text-align: center;
+  margin-left: 15px;
+ }
+ .cardbox-like li a {
+  color: #000;
+  font-size: 14px;
+  float: left;
+  padding-top: 6px;
+  margin-right: 0px;
+ }
+ .cardbox-like li a:hover {
+  text-decoration: none; 
+  color: #ffffff !important;
+ }
+ .cardbox-like li span{
+  font-family: 'Abhaya Libre', serif;
+  float: left;
+  color: red;
+  font-size: 18px;
+  padding-top: 6px;
+ }
+ .cardbox-like li span.span-last{
+  color: #000000;
+ }
+ .cardbox-like li a.com {
+    color: #b2b2b2;
+    font-size: 14px;
+    padding-top: 6px;
+    margin-right: px;
+ }
+  
+  
+  
+ /* ==========================================================================
+   Modal Styles
+   ========================================================================== */ 
+ .modal-dialog{
+  width: 830px;
+  height: 450px !important;
+ }
+ .modal-image img{
+  width: 600px !important; 
+  height: 540px !important;
+ }
+  
+ .img-poster{
+  margin-bottom: 10px; 
+  border-bottom: solid 1px #f4f4f4;
+  padding-bottom: 5px; 
+ }
+ .modal-meta-top .img-poster img {
+  height: 34px;
+  width: 34px;
+  float: left !important;
+  margin-right: 10px;
+  border: 4px solid #f4f4f4;
+ }
+ .modal-meta-top .img-poster a{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 14px; 
+  color: #88898a !important; 
+ }
+ .modal-meta-top .img-poster span {
+  font-family: 'Abhaya Libre', serif;
+  color: #aaa;
+  font-size: 12px;
+ }
+ .modal-meta-top .img-poster a.kafe-btn-mint-small {
+  font-family: 'Abhaya Libre', serif;  
+  margin-left: 0px;
+  color: #fff !important;
+  border-radius: 3px; 
+ }
+  
+#title-bar {
+border-radius: 10px;
+background-color: rgba(192,192,192,0.3);
+width: 100%;
+}
+#description-bar {
+border-radius: 10px;
+background-color: rgba(192,192,192,0.3);
+width: 100%;
+}
+#date {
+  border-radius: 10px;
+  background-color: rgba(192,192,192,0.3);
+  width: 100%;
+  }
+
+#time {
+  border-radius: 10px;
+  background-color: rgba(192,192,192,0.3);
+  width: 100%;
+  }
+#quantity {
+  border-radius: 10px;
+  background-color: rgba(192,192,192,0.3);
+  width: 100%;
+  }
+
+.comment-area {
+  border-radius: 10px;
+  background-color: rgba(192,192,192,0.3);
+  width: 100%;
+}
+ .comment-form {
+   padding: 10px;
+ }
+ .img-comment-list {
+  list-style: none; 
+  padding: 0px 10px 30px 0px;
+  height: 390px !important;
+  overflow-y: scroll;
+ }
+ .img-comment-list li {
+    margin-top: 5px 0px 10px 0px;
+ }
+ .img-comment-list li > div {
+    display:table-cell;
+ }
+ .img-comment-list .comment-img {
+  float: left !important;
+  margin-right: 10px !important;
+  margin-top: 5px;
+ }
+ .img-comment-list img {
+  width: 22px;
+  height: 22px;
+ }
+ .img-comment-list li a{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 14px; 
+  color: #88898a !important; 
+ }
+ .img-comment-list p {
+  font-family: 'Abhaya Libre', serif;
+  margin: 0;
+  font-size: 13px;
+  color: #848484;
+ }
+ .img-comment-list span {
+  font-family: 'Abhaya Libre', serif;
+  font-size: .8em;
+  color: #aaa;
+ }
+  
+  
+ .modal-meta-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    border-top: solid 1px #f4f4f4;
+  display: block;
+ }
+ .modal-meta-bottom ul{
+  margin: 0px !important;
+  padding: 0px !important;
+  font-size: 0px !important;
+ }
+ .modal-meta-bottom li{
+  list-style: none;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 0px !important;
+ }
+ .modal-meta-bottom li a.modal-like i{
+  font-size: 14px !important;
+  color: #e16a70 !important;
+  margin-right: 4px;
+  margin-left: 10px;
+ }
+ .modal-meta-bottom li a.modal-comment i{
+  font-size: 14px !important;
+  color: #848484 !important;
+  margin-right: 4px;
+ }
+ .modal-meta-bottom li span.modal-one{
+  margin-right: 10px;
+  color: #e16a70 !important;
+ }
+ .modal-meta-bottom li span{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 14px !important;
+  color: #848484;
+ }
+ .modal-meta-bottom li a:hover{
+  color: #e16a70 !important;
+ }
+ .modal-meta-bottom .thumb-xs{
+  display: inline-block;
+  text-align: center;
+  margin: 0px !important;
+  padding: 0px !important;
+ }
+ .modal-meta-bottom .thumb-xs img{
+  width: 25px;
+  height: 25px; 
+ }
+ .modal-meta-bottom .comment-body {
+  float: right !important;
+  margin: 0px !important;
+  padding: 0px !important;
+ }
+ .modal-meta-bottom .comment-body input{
+  width: 200px !important;
+ }
+  
+  
+ /* ==========================================================================
+   Media Queries for Modal
+   ========================================================================== */
+  
+ /* Desktop */
+ @media (max-width: 1024px){
+ }
+  
+ @media (max-width: 992px){
+  .modal-dialog{
+    width: 700px;
+  }
+    .modal-content {
+        border-radius: 0;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+  .img-poster{
+    padding-top: 5px;
+  }
+ }
+  
+ /* Tablets */
+ @media (max-width: 800px){
+ }
+  
+ @media (max-width: 768px){
+  .modal-dialog{
+    width: 600px;
+  }
+  .modal-image img{
+    height: auto !important; 
+  }
+  .img-poster{
+    padding-top: 5px;
+  }
+ }
+  
+ /* Mobile phones */
+ @media (max-width: 600px){
+  .modal-dialog{
+    width: 500px !important; 
+  }
+  .img-poster{
+    padding-top: 5px;
+  }
+ }
+  
+ @media (max-width: 548px){
+  .modal-dialog{
+    width: 400px !important; 
+  }
+  .img-poster{
+    padding-top: 5px;
+  }
+ }
+  
+ @media (max-width: 480px){
+  .modal-dialog{
+    width: 300px !important; 
+  }
+  .img-poster{
+    padding-top: 5px;
+  }
+ }
+  
+ @media (max-width: 320px){
+  .modal-dialog{
+    width: 300px !important; 
+  }
+  .modal-image img{
+    height: auto !important; 
+  }
+  .img-poster{
+    padding-top: 5px;
+  }
+ }
+  
+  
+ /* ==========================================================================
+   Story Box Styles
+   ========================================================================== */ 
+ .storybox {
+  color: #fff;
+  height: 200px;
+  width: 100%;
+   border-radius: 3px;
+  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
+  margin-bottom: 20px;
+  padding: 0px !important;
+  display: flex;
+>>>>>>> develop
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+<<<<<<< HEAD
+ .home-menu ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+ }
+ .home-menu .menu-category li {
+  font-family: 'Abhaya Libre', serif;
+  display: inline-block;
+  padding: 2px 5px;
+  margin: 3px 15px;
+ }
+ .home-menu .menu-category li.current-menu-item a {
+  background-color: #fff;
+  color: #88898a;
+  font-weight: 700;
+ }
+ .home-menu .menu-category li span{
+  background-color: #0fc19e;
+  padding: 3px;
+  border-radius: 50%;
+  color: #fff;
+ }
+ .home-menu .menu-category ul li a {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 16px;
+  color: #848484;
+ }
+ .home-menu .menu-category ul li a:hover {
+  font-size: 16px;
+  color: #0fc19e !important;
+  text-decoration: none;
+ }
+  
+  
+ /* ==========================================================================
+   Single Post Page
+   ========================================================================== */
+=======
+ .story-body{
+  padding: 5px;
+  text-align: center;
+ }
+ .story-body img{
+  width: 42px;
+  height: 42px; 
+  float: center !important;
+  border: 2px dotted #fff;
+ }
+ .story-body h4{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 14px;
+  color: #fff; 
+  line-height: 1;
+ }
+ .story-body p{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 12px;
+  color: #fff; 
+  line-height: 1;
+ }
+  
+  
+ /* ==========================================================================
+   Suggestion Box Styles
+   ========================================================================== */
+ .suggestion-box {
+  float: left;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
+ }
+ .suggestion-box .suggestions-list {
+  float: left;
+  width: 100%;
+  padding: 17px 0 10px 0;
+ }
+ .suggestion-box .suggestion-body {
+  float: left;
+  width: 100%;
+  padding: 5px 20px;
+ }
+ .suggestion-box .suggestion-body img {
+  width: 37px;
+  height: 37px;
+  float: left;
+  padding: 2px; 
+  border: 2px solid #f4f4f4;
+ }
+ .suggestion-box .name-box {
+  float: left;
+  padding-left: 10px;
+  position: relative;
+  top: -12px;
+  padding-top: 0px !important;
+ }
+ .suggestion-box .name-box h4 {
+ font-family: 'Abhaya Libre', serif; 
+ color: #000000;
+ font-size: 14px;
+ font-weight: 500;
+ margin-bottom: 0px;
+ }
+ .suggestion-box .name-box span {
+ font-family: 'Abhaya Libre', serif;
+ font-size: 14px;
+ color: #aaa;
+ }
+ .suggestion-box .suggestion-body> span {
+  float: right;
+  margin-top: 4px;
+  position: relative;
+  top: -12px;
+ }
+ .suggestion-box .suggestion-body > span i {
+  color: #b2b2b2;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 700;
+  cursor: pointer;
+ }
+  
+ /* ==========================================================================
+   Trending Box Styles
+   ========================================================================== */
+ .trending-box {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+ }
+ .trending-box .row{
+ padding: 5px 15px 5px 15px!important;
+ } 
+ .trending-box .row .col-lg-6{
+ padding: 0px 5px 0px 5px!important;
+ margin: 0px 0px 0px 0px!important;
+ }
+ .trending-box img{
+ margin-bottom: 0px; 
+ }
+ .trending-box h4{
+  font-family: 'Abhaya Libre', serif;
+  font-size: 12px;
+  color: #88898a;
+  font-weight: 500; 
+ }
+ @media (max-width: 768px){
+  .trending-box img{
+   margin-bottom: 10px;
+  }
+ }
+  
+ /* ==========================================================================
+   Upload Page
+   ========================================================================== */
+ .upload{
+  background: #f4f4f4; 
+  padding: 40px 0px;
+ }
+  
+ .upload .row{
+  margin-bottom: 30px; 
+ }
+  
+ .box{
+  background-color: #fff;
+  position: relative;
+  margin-bottom: 1.5rem;
+ }
+ .box .no-border {
+  font-family: 'Abhaya Libre', serif;
+  border-color: transparent;
+  border-width: 0;
+ }
+ .box .box-footer{
+  padding: 1rem;
+ }
+ .box .kafe-btn-mint-small{
+  font-family: 'Abhaya Libre', serif !important;
+  font-size: 14px;
+ }
+ .box .nav-sm .nav-link {
+  padding: .25rem .75rem;
+ }   
+  
+ .upload .card .card-image img{
+  border-radius: 4px;
+ }
+ .upload .card .card-header{
+  padding: 0px; 
+  border-left: 2px solid #d4d6d7;
+  border-right: 2px solid #d4d6d7; 
+  border-bottom: 2px solid #d4d6d7;
+  text-align: center !important;
+ }
+ .upload .card .card-header span{
+  font-family: 'Abhaya Libre', serif !important;
+  font-size: 16px;
+  color: #88898a;
+  font-weight: 700;
+ }
+  
+ /* ==========================================================================
+   Profile Page
+   ========================================================================== */
+ .profile{
+  background: #f4f4f4; 
+  padding: 0px 0px;
+ }
+ .profile .container-fluid{
+  padding: 0px !important;
+  margin: 0px !important; 
+ }
+ .profile .row{
+  padding: 0px !important;
+  margin: 0px !important; 
+ }
+ .profile .row .col-lg-3,.profile .row .col-lg-6{
+  padding: 0px !important;
+  margin: 0px !important; 
+ }
+ .profilebox {
+  color: #fff;
+  height: 250px;
+  width: 100%;
+  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
+  margin-bottom: 0px !important;
+  padding: 0px !important;
+ }
+ .profilebox-large {
+  color: #fff;
+  height: 500px;
+  width: 100%;
+  box-shadow: 0 5px 25px 0 rgba(123,123,123,.15);
+  margin-bottom: 0px !important;
+  padding: 0px !important;
+ }
+  
+  
+ /* ==========================================================================
+   User Profile
+   ========================================================================== */
+ .user-profile{
+  background: #f4f4f4; 
+  padding: 0px 0px 20px 0px;
+ }
+ .user-profile .post-content {
+  display: flex;
 <<<<<<< HEAD
   flex-direction: column;
   justify-content: center;
@@ -2975,6 +3058,7 @@ margin-bottom: 10px;
  /* ==========================================================================
    Single Post Page
    ========================================================================== */
+>>>>>>> develop
  .single-post{
   background: #f4f4f4; 
   padding: 80px 0px 150px 0px;
@@ -3230,4 +3314,3 @@ margin-bottom: 10px;
   }
  }
 
- 
