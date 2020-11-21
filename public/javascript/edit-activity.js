@@ -5,11 +5,10 @@ async function editFormHandler(event) {
         window.location.toString().split('/').length - 1
     ];
 
-    console.log(`id: ${id}`);
-
     const title = document.getElementsByName('post-title')[0].value;
 
     console.log("----------------------------------------------");
+    console.log(`id: ${id}`);
     console.log(title);
     console.log("----------------------------------------------");
 
@@ -24,7 +23,7 @@ async function editFormHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/my-activities');
     } else {
         console.log(response.statusText);
     }
