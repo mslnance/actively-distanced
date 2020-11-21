@@ -1,3 +1,23 @@
+<h3 class="ui center aligned header" id="category-header">Trending</h2>
+<div class="ui stackable two column divided grid container">
+  <div class="row">
+    <div class="column">
+      <div class="ui segment">
+            <a href="/outdoor">
+                <h4> #Outdoor Actvities</h4>
+            </a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+            <a href="/virtual">
+                <h4>#Virtual Actvities</h4>
+            </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="postbox">
     <div class="col-lg-12">
 
@@ -11,56 +31,24 @@
                         <span class="emoji">🐼 </span>
                         <div class="media-body">
                             <p class="m-0">{{dataValues.user.dataValues.username}}</p>
-                            <small><span>{{dataValues.date}} | {{dataValues.time}}</span></small>
-                <div class="media m-0">
-                    <div class="media-body">
-                        <div>
-                            <h3 class="ui teal image header">{{dataValues.user.dataValues.id}}</h3>
-                            <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
-                            <h4 class="ui black image header">{{dataValues.description}}</h4><br>
-                            <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
-                            <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
-                            <div class="cardbox-item">
-                                <a href="#myModal" data-toggle="modal">
-                                    <img class="img-responsive media" src="{{dataValues.image_url}}">
-                                </a>
-                            </div>
-                            <h4 class="ui teal image header">By: {{dataValues.user.dataValues.username}}</h4><br>
+                            <small><span>🕒{{dataValues.date}} | {{dataValues.time}}</span></small>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="body-container">
                 <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
-                <h4 class="ui black image header">{{dataValues.description}}</h4><br>
+                <h5 class="ui black image header">{{dataValues.description}}</h4><br>
                 <div class="cardbox-item">
-                    <a href="#myModal" data-toggle="modal">
+                    <a href="#myModal{{dataValues.id}}" data-toggle="modal">
                         <img class="img-responsive media" src="{{dataValues.image_url}}">
                     </a>
                 </div>
             </div>
-            {{!-- <div class="cardbox-like">
-                <ul>
-                    <li><a href="#"><i class="fa fa-heart"></i></a><span> {{likes}} likes 786,286</span></li>
-                    <li><a href="#myModal" data-toggle="modal" title="" class="com">
-                            <span class="span-last">{{> comments post.comments}}</span>
-                            <i class="fa fa-comments">
-                            </i></a>
-                    </li>
-                </ul>
-            </div> --}}
-
-        <br><form class="comment-form">
-        <h4 class="ui teal image header"><label for="description">Comments</label></h4><br>
-        <span class="span-last">{{> comments post.comments}}</span>
-        	<div class="comment-body">
-                <textarea id="comment" class="comment-area" placeholder="Name your activity for people to join...">
-                </textarea>
-                    <button type="submit" class="ui fluid large teal submit button">add comment</button>
-            </div>
-        </form>
+            {{!-- <a href="/edit/{{dataValues.id}}" class="edit-link">Edit activity</a> --}}
+            <a href="/edit-activity/{{dataValues.id}}">Edit Activity</a> <br></h3>
             <div class="comments">
-                <h1>Comments</h1>
+                <h4 class="ui black image header"><label for="description">Comments</label></h4>
                 {{#each comments as |comment|}}
                 <div>
                     {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
@@ -69,79 +57,79 @@
             </div>
             <form class="comment-form" data-postId={{dataValues.id}}>
                 <div>
-                    <textarea name="comment-body"></textarea>
+                      <textarea id="comment" class="comment-area" name=“comment-body” placeholder="Name your activity for people to join...">
+                </textarea>
                 </div>
 
                 <div>
-                    <button type="submit">add comment</button>
+                     <button type="submit" class="ui fluid large teal submit button">add comment</button>
                     {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
                 </div>
             </form>
+            {{!-- <button type="button" class="like-btn">like</button> --}}
         </div>
-        {{/each}}
-
-            <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal fade" id="myModal{{dataValues.id}}" role="dialog">
+            <div class="modal-dialog">
+                <h4 class="modal-title">{{dataValues.title}}</h4>
+                {{!-- </div> --}}
+                {{!-- {{#each posts as |post|}} --}}
                 <div class="modal-dialog">
-                    <h4 class="modal-title">{{dataValues.title}}</h4>
-                    {{!-- </div> --}}
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="modal-body">
-                                        <div class="col-md-8 modal-image">
-                                            <img class="img-responsive media" src="{{dataValues.image_url}}">
-                                        </div>
-                                        <div class="col-md-4 modal-meta">
-                                            <div class="modal-meta-top">
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-hidden="true">
-                                                    <span aria-hidden="true">×</span><span class="sr-only">Close</span>
-                                                </button>
-                                                <div class="img-poster clearfix">
-                                                    <h3 class="ui teal image header">{{user_id}} </h3><br>
-                                                    <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
-                                                    <h4 class="ui black image header">{{dataValues.description}}</h4>
-                                                    <br>
-                                                    <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
-                                                    <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
-                                                    <h3 class="ui teal image header">{{dataValues.date}}</h3><br>
-                                                </div>
-                                                <ul class="img-comment-list">
-                                                    <li>
-                                                        <div class="comment-text">
-                                                            <a href=" {{routes}}">
-                                                                <h4 class="ui teal image header"> user_id {{user_id}}
-                                                                </h4>
-                                                            </a>
-                                                            <p>{{comment_text}} placeholder comments...</p>
-                                                            <div class="date sub-text">{{dataValues.title}}</div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="modal-meta-bottom">
-                                                    <ul>
-                                                        <li>
-                                                            <a class="modal-like" href="#"><i
-                                                                    class="fa fa-heart"></i></a><span class="modal-one">
-                                                                {{likes}}</span> |
-                                                            <a class="modal-comment" href="#"><i
-                                                                    class="fa fa-comments"></i></a><span>
-                                                                {{comments}}</span> </li>
-
-                                                        <div class="comment-body">
-                                                            <input class="form-control input-lg" type="text"
-                                                                placeholder="Write your comment...">
-                                                            <div class="button">
-                                                                <h5>
-                                                                    <center>Send</center>
-                                                                </h5>
-                                                            </div>
-                                                        </div>
-                                                        </li>
-                                                    </ul>
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="modal-body">
+                                    <div class="col-md-8 modal-image">
+                                        <img class="img-responsive media" src="{{dataValues.image_url}}">
+                                    </div>
+                                    <div class="col-md-4 modal-meta">
+                                        <div class="modal-meta-top">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                            </button>
+                                    <div class="img-poster clearfix">
+                                        <div class="cardbox-heading">
+                                            <div class="media-profile m-0">
+                                            <div class="d-flex mr-3">
+                                                <span class="emoji">🐼 </span>
+                                                <div class="media-body">
+                                                <p class="m-0">{{dataValues.user.dataValues.username}}</p>
+                                                <small><span>🕒{{dataValues.date}} | {{dataValues.time}}</span></small>
                                                 </div>
                                             </div>
+                                            </div>
+                                         </div>
+                                    
+                                                <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
+                                                <h4 class="ui black image header">{{dataValues.description}}</h4><br>
+                                                <h4 class="ui teal image header">{{dataValues.date}}</h4><br>
+                                                <h4 class="ui teal image header">{{dataValues.time}}</h4><br>
+                                                <h4 class="ui teal image header">{{dataValues.location}}</h4><br>
+                                                <h4 class="ui teal image header">{{dataValues.group}}</h4><br>
+                                            </div>
+            <ul class="img-comment-list">
+                 <li>
+                    <div class="comment-text">
+                        <a href=" {{routes}}">
+                            <h4 class="ui teal image header"> {{dataValues.username}} </h4>
+                         </a>
+                        {{#each comments as |comment|}}
+                        <div>
+                        {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
+                        </div>
+                        {{/each}}
+                    </div>
+                         <form class="comment-form" data-postId={{dataValues.id}}>
+                <div>
+                      <textarea id="comment" class="comment-area" name=“comment-body” placeholder="Name your activity for people to join...">
+                </textarea>
+                </div>
+
+                <div>
+                     <button type="submit" class="ui fluid large teal submit button">add comment</button>
+                    {{!-- <button type="button" class="upvote-btn">upvote</button> --}}
+                </div>
+            </form>
+
                                         </div>
                                     </div>
                                 </div>
@@ -149,68 +137,24 @@
                         </div>
                     </div>
                 </div>
-                {{/each}}
             </div>
+        </div>
+        {{/each}}
+        <div class="container">
+            <!-- Trigger the modal with a button -->
+            <a href="#myModal" data-toggle="modal">
+                <img class="img-responsive media" src="{{dataValues.image_url}}">
+            </a>
         </div>
     </div>
-
-    {{!-- <div class="trending-box hidden-xs hidden-md">
-        <div class="row">
-            <div class="col-lg-12">
-                <a href="photo_stories.html">
-                    <h4>Outdoor Actvities</h4>
-                </a>
-            </div>
-
-        </div>
-    </div>
-    <div class="trending-box hidden-xs hidden-md">
-        <div class="row">
-            <div class="col-lg-12">
-                <a href="photo_stories.html">
-                    <h4>Virtual Actvities</h4>
-                </a>
-            </div>
-        </div>
-    </div> --}}
 </div>
-</div>
-
 <div class="container">
-
     <!-- Trigger the modal with a button -->
     <a href="#myModal" data-toggle="modal">
         <img class="img-responsive media" src="{{dataValues.image_url}}">
     </a>
-
     <!-- Modal -->
-
 </div>
-</div>
-
-<script>
-    $(document).ready(function () {
-        $("#myBtn").click(function () {
-            $("#myModal").modal({ keyboard: true });
-        });
-        $("#myBtn2").click(function () {
-            $("#myModal2").modal({ keyboard: false });
-        });
-    });
-</script>
-
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <script>
@@ -225,5 +169,6 @@
 </script>
 
 <script src="/javascript/comment.js"></script>
+{{!-- <script src="/javascript/likes.js"></script> --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
