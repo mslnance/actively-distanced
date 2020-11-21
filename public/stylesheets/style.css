@@ -492,8 +492,8 @@ min-height: 1em;
 outline: none;
 border: none;
 vertical-align: baseline;
-background: black none;
-color: rgba(0, 0, 0, 0.6);
+background: #B9D6E0 none;
+color: white;
 font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 margin: 0em 0.25em 0em 0em;
 padding: 0.78571429em 1.5em 0.78571429em;
@@ -717,6 +717,10 @@ font-size: 20px;
   background: linear-gradient(to right, #C15858 0%, #3C55FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.white {
+  color: white !important;
 }
 
 /*--------------

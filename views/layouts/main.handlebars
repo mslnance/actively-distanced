@@ -21,35 +21,30 @@
     <section class="nav-sec">
         <div class="d-flex justify-content-between">
             <div class="p-2 nav-icon-lg mint-green">
-                <a class="nav-icon" href="/"><em class="fa fa-home"></em>
-                    <span> 🏠 </span>
-                    <h3>Home</h3>
+                <a class="nav-icon" href="/">
+                    <h2 class="ui white image header">Home</h2>
                 </a>
             </div>
             {{#if loggedIn}}
-            <div class="p-2 nav-icon-lg dark-black">
-                <a class="nav-icon" href="/create-post"><em class="fa fa-plus"></em>
-                    <span> + </span>
-                    <h3>Add an activity</h3>
+            <div class="p-2 nav-icon-lg mint-green">
+                <a class="nav-icon" href="/create-post">
+                    <h2 class="ui white image header">+ Activity</h2>
                 </a>
             </div>
-            <div class="p-2 nav-icon-lg dark-black">
-                <a class="nav-icon" href="/my-activities"><i class="fa fa-heart"></i>
-                    <span> 💚 </span>
-                    <h3>My activities</h3>
+            <div class="p-2 nav-icon-lg mint-green">
+                <a class="nav-icon" href="/my-activities">
+                    <h2 class="ui white image header">My activities</h2>
                 </a>
             </div>
-            <div class="p-2 nav-icon-lg dark-black">
-                <a class="nav-icon" href="/logout"><i class="fa fa-minus"></i>
-                    <span> ⚪️ </span>
-                    <h3>Logout</h3>
+            <div class="p-2 nav-icon-lg mint-green">
+                <a class="nav-icon" href="/logout">
+                    <h2 class="ui white image header">Logout</h2>
                 </a>
             </div>
             {{else}}
-            <div class="p-2 nav-icon-lg dark-black">
-                <a class="nav-icon" href="/login"><i class="fa fa-minus"></i>
-                    <span> ⚪️ </span>
-                    <h3>Login</h3>
+            <div class="p-2 nav-icon-lg mint-green">
+                <a class="nav-icon" href="/login">
+                    <h2 class="ui white image header">Login</h2>
                 </a>
             </div>
             {{/if}}
