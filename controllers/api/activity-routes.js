@@ -45,12 +45,6 @@ router.put('/edit-activity/:id', withAuth, (req, res) => {
             description: req.body.description,
             date: req.body.date,
             time: req.body.time
-            // location: req.body.location,
-            // link: req.body.link,
-            // group_size: req.body.group_size,
-            // activity_type: req.body.activity_type,
-            // image_url: result.url,
-            // user_id: req.session.user_id
         },
         {
             where: {
