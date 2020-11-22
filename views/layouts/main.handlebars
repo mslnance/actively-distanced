@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actively Distanced</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://semantic-ui.com/elements/icon.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">`
 </head>
@@ -22,35 +23,39 @@
 	<div class="d-flex justify-content-between">
         <div class="p-2 nav-icon-lg mint-green">
 	    <a class="nav-icon" href="/">
-		<h3 class="ui white image header">Home</h3>
+		<h3 class="ui white image header"><i class="home icon icon-white"></i>Home</h3>
 	    </a>
 	    </div>
        {{#if loggedIn}}
 	<div class="p-2 nav-icon-lg clean-black">
 	    <a class="nav-icon" href="/create-post">
-	    <h3 class="ui white image header">+ Activity</h3>
+        
+	    <h3 class="ui white image header"> <i class="plus icon icon-white"></i> Activity</h3>
 	    </a>
 	</div>
 	<div class="p-2 nav-icon-lg dark-black">
 	   <a class="nav-icon" href="/my-activities">
-	    <h3 class="ui white image header">My Activity</h3>
+	    <h3 class="ui white image header"><i class="heart icon icon-white"></i>My Activity</h3>
 	   </a>
 	</div>
 
     <div class="p-2 nav-icon-lg dark-black">
 	   <a class="nav-icon" href="/logout">
-		<h3 class="ui white image header">Logout</h3>
+       
+		<h3 class="ui white image header">
+            <i class="arrow alternate circle right outline icon icon-white"></i>Logout</h3>
 	   </a>
 	</div>
         {{else}}
-    <div class="p-2 nav-icon-lg dark-black">
-	   <a class="nav-icon" href="/login">
-		<h3 class="ui white image header">Login</h3>
-	   </a>
-	</div>
+            <div class="p-2 nav-icon-lg mint-green">
+                <a class="nav-icon" href="/login">
+                    <h2 class="ui white image header">
+                        <i class="arrow alternate circle right outline icon icon-white"></i>Login</h2>
+                </a>
+            </div>
         {{/if}}
-	</div>
-</section>	
+    </div>
+</section>
 
     <div class="wrapper newsfeed">
 
