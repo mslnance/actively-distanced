@@ -41,7 +41,16 @@ router.get('/', (req, res) => {
 router.put('/edit-activity/:id', withAuth, (req, res) => {
     Activity.update(
         {
-            title: req.body.title
+            title: req.body.title,
+            description: req.body.description,
+            date: req.body.date,
+            time: req.body.time
+            // location: req.body.location,
+            // link: req.body.link,
+            // group_size: req.body.group_size,
+            // activity_type: req.body.activity_type,
+            // image_url: result.url,
+            // user_id: req.session.user_id
         },
         {
             where: {
@@ -63,7 +72,6 @@ router.put('/edit-activity/:id', withAuth, (req, res) => {
 });
 
 router.delete('/edit-activity/:id', withAuth, (req, res) => {
-    console.log('id', req.params.id);
     Activity.destroy({
         where: {
             id: req.params.id

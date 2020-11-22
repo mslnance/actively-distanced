@@ -5,12 +5,20 @@ async function editFormHandler(event) {
         window.location.toString().split('/').length - 1
     ];
 
-    const title = document.getElementsByName('activity-title')[0].value;
+    const title = document.getElementsByName('title')[0].value;
+    const description = document.getElementsByName('description')[0].value;
+    const date = document.getElementsByName('date')[0].value;
+    const time = document.getElementsByName('time')[0].value;
 
-    const response = await fetch('/api/activities/edit-activity/' + id, {
+    console.log(title, description, date, time);
+
+    const response = await fetch(`/api/activities/edit-activity/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
-            title: title
+            title: title,
+            description: description,
+            date: date,
+            time: time
         }),
         headers: {
             'Content-Type': 'application/json'

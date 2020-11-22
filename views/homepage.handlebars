@@ -17,7 +17,6 @@
     </div>
 </div> --}}
 
-
 <div class="ui stackable two column divided grid container">
     <div class="row">
         <div class="column">
@@ -45,14 +44,17 @@
                     </div>
                     <br>
                     <div class="body-container">
-                        <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
-                        <h5 class="ui black image header">{{dataValues.description}}</h4><br>
-                            <h5 class="ui black image header">{{dataValues.link_url}}</h4><br>
-                                <div class="cardbox-item">
-                                    <img class="img-responsive media" src="{{dataValues.image_url}}">
-                                </div>
+                        <h3 class="ui teal image header">Activity Type: {{dataValues.activity_type}}</h3><br>
+                        <h3 class="ui teal image header">Title: {{dataValues.title}}</h3><br>
+                        <h3 class="ui black image header">Description: {{dataValues.description}}</h3><br>
+                        <a href={{dataValues.link}} target="_blank">
+                            <h3 class="ui black image header">Activity Link</h3>
+                        </a><br>
+                        <div class="cardbox-item">
+                            <img class="img-responsive media" src="{{dataValues.image_url}}">
+                        </div>
+                        <h3 class="ui black image header">Group Size: {{dataValues.group_size}}</h3><br>
                     </div>
-                    <a href="/edit-activity/{{dataValues.id}}">Edit Activity</a>
                     <div class="comments">
                         <h4 class="ui black image header">Comments</h4>
                         {{#each comments as |comment|}}
@@ -76,8 +78,9 @@
                 {{/each}}
             </div>
         </div>
+    </div>
+</div>
 
-
-        <script src="/javascript/comment.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="/javascript/comment.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
