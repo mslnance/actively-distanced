@@ -7,12 +7,7 @@ async function editFormHandler(event) {
 
     const title = document.getElementsByName('activity-title')[0].value;
 
-    console.log("----------------------------------------------");
-    console.log(`id: ${id}`);
-    console.log(title);
-    console.log("----------------------------------------------");
-
-    const response = await fetch('/api/activitys/edit-activity/' + id, {
+    const response = await fetch('/api/activities/edit-activity/' + id, {
         method: 'PUT',
         body: JSON.stringify({
             title: title
