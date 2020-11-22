@@ -4,7 +4,7 @@ const upload = multer({ dest: 'uploads/' });
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({ cloud_name: 'actively-distanced', api_key: '459732884598213', api_secret: '69tQZU3yr0mFsxuNe2U2WCDR544' });
 const dataURI = require('datauri');
-const { Post, User, Comment, Vote } = require('../models');
+const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
@@ -25,26 +25,13 @@ router.get('/', (req, res) => {
         ]
     })
         .then((posts) => {
-            console.log(posts);
-            // const comments = posts.map(comment => comment.get({ plain: true }));
-            // console.log('comments: ' + comments);
-            // const comments = post.comments.map(comment => comment.get({ plain: true }));
+            // console.log(posts);
 
             res.render('homepage', {
                 posts,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
             });
         })
-        // .then(dbPostData => {
-        //     console.log('-------------');
-        //     console.log('db post data' + dbPostData);
-        //     const posts = dbPostData.map(post => post.get({ plain: true }));
-
-        //     res.render('homepage', {
-        //         posts,
-        //         loggedIn: req.session.loggedIn
-        //     });
-        // })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
@@ -56,18 +43,30 @@ router.get('/homepage', (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['username']
+                attributes: ['username', 'id']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
             }
         ]
     })
         .then((posts) => {
-            console.log(req.session.loggedIn);
+            // console.log(posts);
 
             res.render('homepage', {
                 posts,
                 loggedIn: true // tell front end that you're logged in
             });
         })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 router.get('/create-post', withAuth, (req, res) => {
@@ -121,17 +120,37 @@ router.get('/my-activities', withAuth, (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['username']
+                attributes: ['username', 'id']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
             }
         ]
     })
-        .then(posts => {
-            res.render('my-activities', {
+        .then((posts) => {
+            // console.log(posts);
+
+            res.render('homepage', {
                 posts,
-                loggedIn: req.session.loggedIn
+                loggedIn: req.session.loggedIn // tell front end that you're logged in
             });
         })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 
+});
+
+router.get('/edit-activity/:id', withAuth, (req, res) => {
+    res.render('edit-activity', {
+        loggedIn: req.session.loggedIn
+    });
 });
 
 module.exports = router;
