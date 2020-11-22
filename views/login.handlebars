@@ -1,44 +1,36 @@
-{{!-- <form class="login-form">
-  <h3 class="form-signin-heading ui teal image header">Login to your account</h3><br>
-  <div>
-    <label for="username-login">username:</label>
-    <input type="text" id="username-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-  <a class="btn btn-dark " href="/sign-up" role="button">New to Actively Distanced? Click here to
-    sign-up!</a>
-</form> --}}
 
-<section class="login">
-  <div class="container">
-    <div class="banner-content">
-
-      <form class="login-form"><br>
-        <h3 class="form-signin-heading ui teal image header">Login to your account</h3><br>
-        <div class="form-group">
-          <label for="username-login"> Username:</label>
-          <input type="text" id="username-login" type="text" class="form-control" placeholder="Username" />
+ <h3 class="ui center aligned header">
+  <div class="ui stackable two column very relaxed grid container" style="position:relative;">
+    <div class="column">
+      <div class="ui segment"><img class="img-responsive" src="/images/logview.png"/></div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <section class="login">
+			  <form class="login-form"><br>
+				<h3 class="form-signin-heading ui teal image header">Login to your account</h3><br>
+				<div class="form-group">
+					<label for="username-login"> Username:</label>
+					<input type="text" id="username-login" type="text" class="form-control" placeholder="Username" />
+				</div>
+				<div class="form-group">
+					<label for="password-login">
+						<h3>Password:</h3>
+					</label>
+					<input type="password" class="form-control" id="password-login" placeholder="Password" />
+				</div>
+				<button class="ui fluid large teal submit button" type="submit">
+					<h3> Sign in </h3>
+				</button>
+				<br />
+				<a href="/sign-up" role="button">Don't have an account yet? Register Here.</a>
+			</form>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="password-login">
-            <h3>Password:</h3>
-          </label>
-          <input type="password" class="form-control" id="password-login" placeholder="Password" />
-        </div>
-        <button class="kafe-btn mint-blue btn-block" type="submit">
-          <h3> Sign in </h3>
-        </button>
-        <br />
-        <a class="btn" href="/sign-up" role="button">Don't have an account yet? Register Here.</a>
-      </form>
+      </div>
     </div>
   </div>
-</section>
+ </div>
+</div>
 
 <script src="/javascript/login.js"></script>

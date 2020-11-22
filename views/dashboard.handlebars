@@ -1,0 +1,24 @@
+
+<template name="items">
+<div class="items">
+        {{#each items}}
+            {{> listedItem}}
+        {{/each}}
+</div>
+
+{{#if posts.length}}
+<section>
+    <h2>Posts by You: </h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/nav-createPost.js"></script>
+</template>
