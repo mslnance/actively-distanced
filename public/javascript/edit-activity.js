@@ -5,14 +5,14 @@ async function editFormHandler(event) {
         window.location.toString().split('/').length - 1
     ];
 
-    const title = document.getElementsByName('post-title')[0].value;
+    const title = document.getElementsByName('activity-title')[0].value;
 
     console.log("----------------------------------------------");
     console.log(`id: ${id}`);
     console.log(title);
     console.log("----------------------------------------------");
 
-    const response = await fetch('/api/posts/edit-activity/' + id, {
+    const response = await fetch('/api/activitys/edit-activity/' + id, {
         method: 'PUT',
         body: JSON.stringify({
             title: title

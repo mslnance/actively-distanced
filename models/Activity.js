@@ -91,12 +91,10 @@ Activity.init(
             type: DataTypes.TIME,
             allowNull: false
         },
-        activity_type_id: {
-          type: DataTypes.INTEGER,
-          references: {
-            model: 'activity_type',
-            key: 'id'
-          }
+        activity_type: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          defaultValue: 'Outdoor'
         }
         
         

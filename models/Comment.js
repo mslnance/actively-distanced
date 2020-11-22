@@ -11,53 +11,33 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true
         },
+    
         comment_text: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
+          type: DataTypes.STRING,
+          allowNull: false,
+          validate: {
+            len: [1]
+          }
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
+            onDelete: 'CASCADE',
             references: {
                 model: 'user',
                 key: 'id'
-            }
+          }
         },
-        post_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'post',
-                key: 'id'
-            }
-        }
-    },
-    comment_text: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        onDelete: 'CASCADE',
-        references: {
-            model: 'user',
+        activity_id: {
+          type: DataTypes.INTEGER,
+          onDelete: 'CASCADE',
+          references: {
+            model: 'activity',
             key: 'id'
-      }
-    },
-    activity_id: {
-      type: DataTypes.INTEGER,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'activity',
-        key: 'id'
-      }
-    }
-  },
+          }
+        }
+      },
+ 
   {
     sequelize,
     freezeTableName: true,

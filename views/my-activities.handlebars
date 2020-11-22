@@ -1,6 +1,6 @@
 <div class="postbox">
     <div class="col-lg-12">
-        {{#each posts as |post|}}
+        {{#each activities as |activity|}}
         <div class="cardbox">
             <div class="cardbox-heading">
                 <div class="media-profile m-0">
@@ -31,7 +31,7 @@
                 </div>
                 {{/each}}
             </div>
-            <form class="comment-form" data-postId={{dataValues.id}}>
+            <form class="comment-form" data-activityId={{dataValues.id}}>
                 <div>
                     <textarea name="comment-body" class="comment-area form-control" placeholder="Write your comment..."></textarea>
                 </div>
