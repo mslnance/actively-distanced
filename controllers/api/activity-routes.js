@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const Activity = require('../../models/Activity');
+//const Activity = require('../../models/Activity');
 
-router.get('/create-post', (req, res) => {
-    Activity.findAll({
-const { Post, User } = require('../../models');
+// router.get('/create-post', (req, res) => {
+//     Activity.findAll({
+const { Activity, User } = require('../../models');
 
 router.get('/', (req, res) => {
-    Post.findAll({
+    Activity.findAll({
         attributes: [
             'id',
             'title',

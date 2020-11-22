@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { User, Activity, Comment, Like, Activity_Type } = require('../../models');
-const { User, Post } = require('../../models');
+const { User, Activity, Comment, Likes, Activity_Type } = require('../../models');
+//const { User, Post } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -36,7 +36,7 @@ router.get('/:id', (req, res) => {
             {
                 model: Activity,
                 attributes: ['title'],
-                through: Like,
+                through: Likes,
                 as: 'liked_activities'
             }
         ]

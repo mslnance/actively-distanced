@@ -6,16 +6,17 @@ cloudinary.config({ cloud_name: 'actively-distanced', api_key: '459732884598213'
 const dataURI = require('datauri');
 const Activity = require('../models/Activity');
 
-router.get('/', (req, res) => {
-    Activity.findAll({})
-        .then((activity) => {
-            res.render('homepage', { activity });
-const Post = require('../models/Post');
+// router.get('/', (req, res) => {
+//     Activity.findAll({})
+//         .then((activity) => {
+//             res.render('homepage', { activity });
+
+// const Post = require('../models/Post');
 const User = require('../models/User');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-    Post.findAll({
+    Activity.findAll({
         include: [
             {
                 model: User,
@@ -23,7 +24,7 @@ router.get('/', (req, res) => {
             }
         ]
     })
-        .then((posts) => {
+        .then((activities) => {
             console.log(req.session.loggedIn);
             // console.log(posts[3].user.dataValues.username);
             // if (!posts.length) {
@@ -31,7 +32,7 @@ router.get('/', (req, res) => {
             // }
             // else {
             res.render('homepage', {
-                posts,
+                activities,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
             });
             // }
@@ -39,7 +40,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/homepage', (req, res) => {
-    Post.findAll({
+    Activity.findAll({
         include: [
             {
                 model: User,
@@ -47,7 +48,7 @@ router.get('/homepage', (req, res) => {
             }
         ]
     })
-        .then((posts) => {
+        .then((activities) => {
             console.log(req.session.loggedIn);
             // console.log(posts[3].user.dataValues.username);
             // if (!posts.length) {
@@ -55,15 +56,15 @@ router.get('/homepage', (req, res) => {
             // }
             // else {
             res.render('homepage', {
-                posts,
+                activities,
                 loggedIn: true // tell front end that you're logged in
             });
             // }
         })
 });
 
-router.get('/create-post', withAuth, (req, res) => {
-    res.render('create-post', {
+router.get('/create-activity', withAuth, (req, res) => {
+    res.render('create-activity', {
         loggedIn: req.session.loggedIn
     });
 });
@@ -107,7 +108,7 @@ router.get('/sign-up', (req, res) => {
 });
 
 router.get('/my-activities', withAuth, (req, res) => {
-    Post.findAll({
+    Activity.findAll({
         where: {
             user_id: req.session.user_id
         },
@@ -118,9 +119,9 @@ router.get('/my-activities', withAuth, (req, res) => {
             }
         ]
     })
-        .then(posts => {
+        .then(activities => {
             res.render('my-activities', {
-                posts,
+                activities,
                 loggedIn: req.session.loggedIn
             });
         })

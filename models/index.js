@@ -1,7 +1,7 @@
 // import all models
 const Activity = require('./Activity');
 const User = require('./User');
-const Like = require('./Like');
+const Likes = require('./Likes');
 const Comment = require('./Comment');
 const Activity_Type = require('./Activity_Type');
 
@@ -16,7 +16,7 @@ Activity.belongsTo(User, {
 });
 
 User.belongsToMany(Activity, {
-  through: Like,
+  through: Likes,
   as: 'liked_activities',
 
   foreignKey: 'user_id',
@@ -24,27 +24,27 @@ User.belongsToMany(Activity, {
 });
 
 Activity.belongsToMany(User, {
-  through: Like,
+  through: Likes,
   as: 'liked_activities',
   foreignKey: 'activity_id',
   onDelete: 'SET NULL'
 });
 
-Like.belongsTo(User, {
+Likes.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
 
-Like.belongsTo(Activity, {
+Likes.belongsTo(Activity, {
   foreignKey: 'activity_id',
   onDelete: 'SET NULL'
 });
 
-User.hasMany(Like, {
+User.hasMany(Likes, {
   foreignKey: 'user_id'
 });
 
-Activity.hasMany(Like, {
+Activity.hasMany(Likes, {
   foreignKey: 'activity_id'
 });
 
@@ -94,18 +94,4 @@ Activity_Type.hasMany(Activity, {
     foreignKey: 'activity_type_id'
 });
 
-module.exports = { User, Activity, Like, Comment,Activity_Type };
-const Post = require('./Post');
-const User = require('./User');
-
-// create associations
-User.hasMany(Post, {
-    foreignKey: 'user_id'
-});
-
-Post.belongsTo(User, {
-    foreignKey: 'user_id',
-    // onDelete: 'SET NULL'
-});
-
-module.exports = { User, Post };
+module.exports = { User, Activity, Likes, Comment,Activity_Type };
