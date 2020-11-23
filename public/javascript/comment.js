@@ -2,7 +2,9 @@ async function commentFormHandler(event) {
     event.preventDefault();
 
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
-    const activity_id = document.querySelector('.comment-form').getAttribute('data-activityId');
+    const activity_id = document.querySelector('.comment-form').getAttribute('data-activity-id');
+
+    console.log(activity_id);
 
     if (comment_text) {
         const response = await fetch(`/api/comments`, {

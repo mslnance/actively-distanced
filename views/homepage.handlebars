@@ -3,16 +3,16 @@
     <div class="row">
         <div class="column">
             <div class="ui-segment">
-            <a href="/outdoor">
-            <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>
-            </a>
+                <a href="/outdoor">
+                    <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>
+                </a>
             </div>
         </div>
         <div class="column">
-            <div class="ui-segment"> 
-            <a href="/virtual">
-            <h3 class="ui center aligned header" id="category-header">Virtual Activity</h3>    
-            </a>
+            <div class="ui-segment">
+                <a href="/virtual">
+                    <h3 class="ui center aligned header" id="category-header">Virtual Activity</h3>
+                </a>
             </div>
         </div>
     </div>
@@ -32,18 +32,23 @@
                                 <div class="media-body">
                                     <h3 class="m-0">{{dataValues.user.dataValues.username}}</h3>
                                     <small><span>{{dataValues.time}} | {{dataValues.date}}</span></small><br>
-                                   <small><span><h5 class="ui color image header">Activity Type:{{dataValues.activity_type}}</h5></span></small>
+                                    <small><span>
+                                            <h5 class="ui color image header">Activity Type:{{dataValues.activity_type}}
+                                            </h5>
+                                        </span></small>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <br>
                     <div class="body-container">
-                        <h4 class="ui blue image header">Title: </h4><p>{{dataValues.title}}</p>
-                        <h4 class="ui blue image header">Description: </h4><p>{{dataValues.description}}</p>
+                        <h4 class="ui blue image header">Title: </h4>
+                        <p>{{dataValues.title}}</p>
+                        <h4 class="ui blue image header">Description: </h4>
+                        <p>{{dataValues.description}}</p>
                         <a href={{dataValues.link}} target="_blank">
                             <h5 class="ui blue image header">Activity Link</h3>
-                        </a><br>
+                        </a><br><br>
                         <div class="cardbox-item">
                             <img class="img-responsive media" src="{{dataValues.image_url}}">
                         </div>
@@ -57,9 +62,9 @@
                         </div>
                         {{/each}}
                     </div>
-                    <form class="comment-form" data-activityId={{dataValues.id}}>
+                    <form class="comment-form" data-activity-id={{dataValues.id}}>
                         <div>
-                              <textarea name="comment-body" class="comment-area form-control" id="comment" 
+                            <textarea name="comment-body" class="comment-area form-control" id="comment"
                                 placeholder="Write your comment..."></textarea>
                         </div>
 
