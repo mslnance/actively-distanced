@@ -92,7 +92,7 @@
   margin-bottom: 20px;
  }
   
- @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
+ /* @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin'); */
  html,
  body {
  height: 100%;
@@ -148,6 +148,7 @@ font-family: 'Montserrat';
  .ui.fluid.buttons,
  .ui.fluid.button {
  width: 100% !important;
+ margin:5px;
  }
 
  .button-1
@@ -369,7 +370,7 @@ font-family: 'Montserrat';
  h4,
  h5 {
 font-family: 'Montserrat';
- line-height: 1 em !important;
+ line-height: 0.8 em !important;
  margin: calc(2rem -  0.14285714em ) 0em 1rem;
  font-weight: 300 !important;
  padding: 0em;
@@ -378,12 +379,19 @@ font-family: 'Montserrat';
  .nav-sec {
   margin: 10px 10px 10px 10px;
   padding: 10px;
-  height: 100px;
+  height: 80px;
   border-top: 0px solid grey;
   border-radius: 10px;
   background-color: rgb(83, 83, 83) ;
   box-shadow: 0 -5px 25px 0 #00B5AD;;
   color: #ffffff;
   }
+
+  .ui.segment {
+    position: relative;
+    background: #ffffff;
+    margin: 0rem 1em;
+    padding: 0em 1em;
+    }
 
 }
