@@ -12,12 +12,10 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
-    console.log('test post in route');
-
     Comment.create({
         comment_text: req.body.comment_text,
         user_id: req.session.user_id,
-        post_id: req.body.post_id
+        activity_id: req.body.activity_id
     })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {

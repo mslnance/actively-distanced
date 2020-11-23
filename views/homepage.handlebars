@@ -1,67 +1,83 @@
-<h3 class="ui center aligned header" id="category-header">Trending</h3>
+{{!-- <h3 class="ui center aligned header" id="category-header">Trending</h3>
 <div class="ui stackable two column divided grid container">
-  <div class="row">
-    <div class="column">
-      <div class="ui-segment">
+    <div class="row">
+        <div class="column">
+            <div class="ui-segment">
             <a href="/outdoor">
-                <h4> #Outdoor Actvities</h4>
-            </a>
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui-segment">
+    <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>            </a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui-segment"> 
             <a href="/virtual">
-                <h4>#Virtual Actvities</h4>
+            <h3 class="ui center aligned header" id="category-header">Virtual Activity</h3>    
             </a>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</div> --}}
 
-<div class="postbox">
-    <div class="col-lg-12">
-        {{#each posts as |post|}}
-        <div class="cardbox">
-            <div class="cardbox-heading">
-                <div class="media-profile m-0">
-                    <div class="d-flex mr-3">
-                        <span class="emoji">🐼 </span>
-                        <div class="media-body">
-                            <p class="m-0">{{dataValues.user.dataValues.username}}</p>
-                            <small><span>🕒{{dataValues.time}} | {{dataValues.date}}</span></small>
+<div class="ui stackable two column divided grid container">
+    <div class="row">
+        {{!-- <div class="column">
+            <div class="ui-segment">
+                <a href="/outdoor">
+                    <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>
+                </a>
+            </div>
+        </div> --}}
+        <div class="postbox">
+            <div class="col-lg-12">
+                {{#each activities as |activity|}}
+                {{!-- {{#if activity_type dataValues.activity_type activity}} --}}
+                <div class="cardbox">
+                    <div class="cardbox-heading">
+                        <div class="media-profile m-0">
+                            <div class="d-flex mr-3">
+                                <span class="emoji"><i class="user icon"></i></span>
+                                <div class="media-body">
+                                    <h3 class="m-0">{{dataValues.user.dataValues.username}}</h3>
+                                    <small><span>{{dataValues.time}} | {{dataValues.date}}</span></small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="body-container">
-                <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
-                <h5 class="ui black image header">{{dataValues.description}}</h4><br>
-                    <div class="cardbox-item">
-                        <a href="#myModal{{dataValues.id}}" data-toggle="modal">
+                    <br>
+                    <div class="body-container">
+                        <h3 class="ui teal image header">Activity Type: {{dataValues.activity_type}}</h3><br>
+                        <h3 class="ui teal image header">Title: {{dataValues.title}}</h3><br>
+                        <h3 class="ui black image header">Description: {{dataValues.description}}</h3><br>
+                        <a href={{dataValues.link}} target="_blank">
+                            <h3 class="ui black image header">Activity Link</h3>
+                        </a><br>
+                        <div class="cardbox-item">
                             <img class="img-responsive media" src="{{dataValues.image_url}}">
-                        </a>
+                        </div>
+                        <h3 class="ui black image header">Group Size: {{dataValues.group_size}}</h3><br>
                     </div>
-            </div>
-            <a href="/edit-activity/{{dataValues.id}}">Edit Activity</a>
-            <div class="comments">
-                <h1 class="ui black image header">Comments</h1>
-                {{#each comments as |comment|}}
-                <div>
-                    {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
+                    <div class="comments">
+                        <h4 class="ui black image header">Comments</h4>
+                        {{#each comments as |comment|}}
+                        <div>
+                            {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
+                        </div>
+                        {{/each}}
+                    </div>
+                    <form class="comment-form" data-activityId={{dataValues.id}}>
+                        <div>
+                            <textarea name="comment-body" class="comment-area form-control"
+                                placeholder="Write your comment..."></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="ui fluid large teal submit button">Post</button>
+                        </div>
+                    </form>
                 </div>
+                {{!-- {{/if}} --}}
                 {{/each}}
             </div>
-            <form class="comment-form" data-postId={{dataValues.id}}>
-                <div>
-                    <textarea name="comment-body" class="comment-area"></textarea>
-                </div>
-
-                <div>
-                    <button type="submit" class="ui fluid large teal submit button">add comment</button>
-                </div>
-            </form>
         </div>
-        {{/each}}
     </div>
 </div>
 
