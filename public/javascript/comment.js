@@ -1,15 +1,11 @@
 async function commentFormHandler(event) {
     event.preventDefault();
 
-    console.log('hitting front end logic');
-
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
     const activity_id = document.querySelector('.comment-form').getAttribute('data-activityId');
-    console.log(activity_id);
 
     if (comment_text) {
-
-        const response = await fetch('/api/comments', {
+        const response = await fetch(`/api/comments`, {
             method: 'POST',
             body: JSON.stringify({
                 activity_id,
@@ -22,7 +18,6 @@ async function commentFormHandler(event) {
 
         if (response.ok) {
             document.location.reload();
-            // console.log(response);
         } else {
             alert(response.statusText);
         }

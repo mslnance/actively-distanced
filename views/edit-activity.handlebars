@@ -1,18 +1,44 @@
-<div class="container">
-  <div class="banner-content">
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
     <a href="/my-activities"> &larr; Back to my activites</a>
-    <h2 class="form-signin-heading ui teal image header">
-      Edit Activity
-    </h2>
-    <form class="edit-activity-form">
-      <div class="form-group">
-        <label for="activity-title" class="ui teal header">Title</label><br>
-        <input name="activity-title" type="text" value="{{activity.title}}" />
-      </div>
-      <button type="submit" class="kafe-btn mint-blue btn-block">Save activity</button>
-      <button type="button" class="delete-activity-btn kafe-btn mint-blue btn-block">Delete activity</button>
+    <h3 class="ui center aligned header" id="category-header">Edit Activity</h3>
+
+    <form method="put" enctype="multipart/form-data" class="ui large form edit-activity-form">
+      <div class="ui stacked segment form-group">
+        <h4 class="ui teal image header"><label for="title" class="ui teal header">Title</label></h4><br>
+        <input name="title" type="text" value="{{activity.title}}" />
+
+        <h4 class="ui teal image header"><label for="description">Description</label></h4><br>
+        <input type="text" id="description" name="description" placeholder="Describe your event..."
+          value="{{activity.description}}" /><br>
+        {{!-- 
+          <h4 class="ui teal image header"><label for="image_url">Upload a photo</label></h4><br>
+          <input type="file" id="description-bar" name="image_url" value="{{activity.image_url}}" /><br> --}}
+
+        <h4 class="ui teal image header"><label for="date">Choose a date for your event:</label></h4>
+        <input type="date" id="date" name="date" value="{{activity.date}}" /><br>
+
+        <h4 class="ui teal image header"><label for="time">Choose a time for your event:</label></h4>
+        <input type="time" id="time" name="time" value="{{activity.time}}" /><br>
+        {{!-- 
+          <h4 class="ui teal image header"><label for="url">Link (virtual activity)</label></h4><br>
+          <input type="url" id="url" name="link" placeholder="Add URL for the virtual meetup"
+            value="{{activity.link}}" /><br>
+
+          <h4 class="ui teal image header"><label for="quantity">Group Size</label></h4><br>
+          <input type="number" id="quantity" name="group_size" placeholder="How many people can join your activity?"
+            value="{{activity.group_size}}" /><br><br>
+
+          <h4 class="ui teal image header"><label for="title">Activity Type</label></h4><br>
+          <input type="radio" value="Outdoor" name="activity_type" value="{{activity.activity_type}}" /> Outdoor
+          Activity<br>
+          <input type="radio" value="Virtual" name="activity_type" value="{{activity.activity_type}}" /> Virtual
+          Activity<br><br> --}}
+        <button type="submit" class="kafe-btn mint-blue btn-block">Save activity</button>
+        <button type="button" class="delete-activity-btn kafe-btn mint-blue btn-block">Delete activity</button>
     </form>
   </div>
+</div>
 </div>
 
 <script src="/javascript/edit-activity.js"></script>

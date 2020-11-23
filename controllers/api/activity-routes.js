@@ -41,7 +41,10 @@ router.get('/', (req, res) => {
 router.put('/edit-activity/:id', withAuth, (req, res) => {
     Activity.update(
         {
-            title: req.body.title
+            title: req.body.title,
+            description: req.body.description,
+            date: req.body.date,
+            time: req.body.time
         },
         {
             where: {
@@ -63,7 +66,6 @@ router.put('/edit-activity/:id', withAuth, (req, res) => {
 });
 
 router.delete('/edit-activity/:id', withAuth, (req, res) => {
-    console.log('id', req.params.id);
     Activity.destroy({
         where: {
             id: req.params.id

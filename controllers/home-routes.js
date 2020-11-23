@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
     })
         .then((activities) => {
             // console.log(activities);
-          
+
             res.render('homepage', {
                 activities,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
@@ -139,7 +139,7 @@ router.get('/my-activities', withAuth, (req, res) => {
         .then((activities) => {
             // console.log(activities);
 
-            res.render('homepage', {
+            res.render('my-activities', {
                 activities,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
             });
