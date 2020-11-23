@@ -17,32 +17,40 @@
   width: 100%;
   border-radius: 50px;
 }
+
+.m-0 {
+  color: #444444;
+}
    /* header */
  /*--- Teal ---*/
   
+ .ui.color.header {
+  font-family: 'Montserrat';
+  background: linear-gradient(to right, #C15858 0%, #3C55FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
  .ui.white.header {
+  font-family: 'Montserrat';
   color: white !important;
   }
   
  .ui.teal.header {
+  font-family: 'Montserrat';
   color: #00B5AD !important;
   }
   a.ui.teal.header:hover {
+    font-family: 'Montserrat';
   color: #009c95 !important;
   }
   .ui.teal.dividing.header {
+  font-family: 'Montserrat';
   border-bottom: 0px solid #00B5AD;
-  }
-  .ui.radiant.header {
-   font-family: 'Abhaya Libre', serif;
-   font-size: 40px;
-     background: linear-gradient(to right, #C15858 0%, #3C55FF 100%);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
   }
 
   .navbar-brand {
-    font-family: 'Abhaya Libre', serif;
+    font-family: 'Montserrat';
     font-size: 40px;
       background: linear-gradient(to left, #30CFD0 0%, #330867 100%);
       -webkit-background-clip: text;
@@ -51,7 +59,7 @@
 
   #category-header {
     padding-top:10px;
-    font-family: 'Abhaya Libre', serif;
+    font-family: 'Montserrat';
     font-size: 20px;
       /* background: linear-gradient(to right, #C15858 0%, #100%); */
       background: linear-gradient(to left, red,orange,green,blue,indigo);
@@ -63,8 +71,8 @@
   background: #f4f4f4;
   -webkit-box-shadow: 0px 0px 2px 0 rgba(34, 36, 38, 0.15);
          box-shadow: 0px 0px 2px 0 rgba(34, 36, 38, 0.15);
-  margin: 1rem 1em;
-  padding: 1em 1em;
+  margin: 0rem 0em;
+  padding: 0em 0em;
   border-radius: 0.28571429rem;
   border: 1px solid rgba(34, 36, 38, 0.15);
   width: 100%;
@@ -98,7 +106,12 @@
  overflow-x: hidden;
  min-width: 320px;
  background: #FFFFFF;
- font-family: 'monst''Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+font-family: 'Montserrat' !important;
+font-size:40px;
+ }
+
+ .w100 {
+  font-weight: 100;
  font-size: 14px;
  line-height: 1.4285em;
  color: rgba(0, 0, 0, 0.87);
@@ -109,9 +122,9 @@
  h3,
  h4,
  h5 {
- font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+font-family: 'Montserrat';
  line-height: 1.28571429em;
- margin: calc(2rem -  0.14285714em ) 0em 1rem;
+ margin: calc(1rem -  0.14285714em ) 0em 0.2rem;
  font-weight: bold;
  padding: 0em;
  }
@@ -205,7 +218,7 @@
 
  .navbar-default .navbar-nav li a{
   text-decoration: none;
-  font-family: 'Abhaya Libre', serif;
+  font-family: 'Montserrat';
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
@@ -327,16 +340,16 @@ span.emoji {
  h3,
  h4,
  h5 {
- font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+font-family: 'Montserrat';
  line-height: 1 em !important;
  margin: calc(2rem -  0.14285714em ) 0em 1rem;
- font-weight: 100 !important;
+ font-weight: 400 !important;
  padding: 0em;
  }
 
  .nav-sec {
   margin: 10px 20px 10px 20px;
-  padding: 10px;
+  padding: 35px;
   height: 100px;
   border-top: 0px solid grey;
   border-radius: 10px;
@@ -355,10 +368,10 @@ span.emoji {
  h3,
  h4,
  h5 {
- font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+font-family: 'Montserrat';
  line-height: 1 em !important;
  margin: calc(2rem -  0.14285714em ) 0em 1rem;
- font-weight: 100 !important;
+ font-weight: 300 !important;
  padding: 0em;
  }
 

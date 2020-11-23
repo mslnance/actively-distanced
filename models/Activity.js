@@ -66,7 +66,7 @@ Activity.init(
         },
         description: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
         },
         location: {
           type: DataTypes.STRING,
