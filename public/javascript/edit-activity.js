@@ -12,7 +12,7 @@ async function editFormHandler(event) {
     console.log(title);
     console.log("----------------------------------------------");
 
-    const response = await fetch('/api/activitys/edit-activity/' + id, {
+    const response = await fetch('/api/activities/edit-activity/' + id, {
         method: 'PUT',
         body: JSON.stringify({
             title: title
