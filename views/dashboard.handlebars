@@ -6,19 +6,19 @@
         {{/each}}
 </div>
 
-{{#if posts.length}}
+{{#if activities.length}}
 <section>
-    <h2>Posts by You: </h2>
+    <h2>Activities posted by You: </h2>
     <ol>
-        {{#each posts as |post|}}
+        {{#each activities as |activity|}}
         <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
+            {{> activity-info activity}}
+            <a href="/dashboard/edit/{{activity.id}}" class="edit-link">Edit Activity</a>
         </li>
         {{/each}}
     </ol>
 </section>
 {{/if}}
 
-<script src="/javascript/nav-createPost.js"></script>
+<script src="/javascript/nav-createActivity.js"></script>
 </template>

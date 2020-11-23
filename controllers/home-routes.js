@@ -4,11 +4,11 @@ const upload = multer({ dest: 'uploads/' });
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({ cloud_name: 'actively-distanced', api_key: '459732884598213', api_secret: '69tQZU3yr0mFsxuNe2U2WCDR544' });
 const dataURI = require('datauri');
-const { Post, User, Comment } = require('../models');
+const { Activity, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-    Post.findAll({
+    Activity.findAll({
         include: [
             {
                 model: User,
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+                attributes: ['id', 'comment_text', 'activity_id', 'user_id'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -24,11 +24,11 @@ router.get('/', (req, res) => {
             }
         ]
     })
-        .then((posts) => {
-            // console.log(posts);
+        .then((activities) => {
+            // console.log(activities);
 
             res.render('homepage', {
-                posts,
+                activities,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
             });
         })
@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/homepage', (req, res) => {
-    Post.findAll({
+    Activity.findAll({
         include: [
             {
                 model: User,
@@ -47,7 +47,7 @@ router.get('/homepage', (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+                attributes: ['id', 'comment_text', 'activity_id', 'user_id'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -55,11 +55,11 @@ router.get('/homepage', (req, res) => {
             }
         ]
     })
-        .then((posts) => {
-            // console.log(posts);
+        .then((activities) => {
+            // console.log(activities);
 
             res.render('homepage', {
-                posts,
+                activities,
                 loggedIn: true // tell front end that you're logged in
             });
         })
@@ -69,21 +69,25 @@ router.get('/homepage', (req, res) => {
         });
 });
 
-router.get('/create-post', withAuth, (req, res) => {
-    res.render('create-post', {
+router.get('/create-activity', withAuth, (req, res) => {
+    res.render('create-activity', {
         loggedIn: req.session.loggedIn
     });
 });
 
-router.post('/profile', upload.single('photo'), function (req, res, next) {
+router.post('/profile', upload.single('image_url'), function (req, res, next) {
     console.log(req.body);
     return cloudinary.uploader.upload(req.file.path)
         .then((result) => {
-            Post.create({
+            Activity.create({
                 title: req.body.title,
                 description: req.body.description,
                 date: req.body.date,
                 time: req.body.time,
+                location: req.body.location,
+                link: req.body.link,
+                group_size: req.body.group_size,
+                activity_type: req.body.activity_type,
                 image_url: result.url,
                 user_id: req.session.user_id
             })
@@ -113,7 +117,7 @@ router.get('/sign-up', (req, res) => {
 });
 
 router.get('/my-activities', withAuth, (req, res) => {
-    Post.findAll({
+    Activity.findAll({
         where: {
             user_id: req.session.user_id
         },
@@ -124,7 +128,7 @@ router.get('/my-activities', withAuth, (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+                attributes: ['id', 'comment_text', 'activity_id', 'user_id'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -132,11 +136,11 @@ router.get('/my-activities', withAuth, (req, res) => {
             }
         ]
     })
-        .then((posts) => {
-            // console.log(posts);
+        .then((activities) => {
+            // console.log(activities);
 
-            res.render('homepage', {
-                posts,
+            res.render('my-activities', {
+                activities,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
             });
         })
@@ -152,5 +156,74 @@ router.get('/edit-activity/:id', withAuth, (req, res) => {
         loggedIn: req.session.loggedIn
     });
 });
+
+router.get('/outdoor', (req, res) => {
+    Activity.findAll({
+        where:{
+            activity_type:"Outdoor"
+        },
+        include: [
+            {
+                model: User,
+                attributes: ['username', 'id']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'activity_id', 'user_id'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
+    })
+        .then((activities) => {
+            // console.log(activities);
+
+            res.render('homepage', {
+                activities,
+                loggedIn: req.session.loggedIn // tell front end that you're logged in
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+router.get('/virtual', (req, res) => {
+    Activity.findAll({
+        where:{
+            Activity_type:"Virtual"
+        },
+        include: [
+            {
+                model: User,
+                attributes: ['username', 'id']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'activity_id', 'user_id'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
+    })
+        .then((activities) => {
+            // console.log(activities);
+
+            res.render('homepage', {
+                activities,
+                loggedIn: req.session.loggedIn // tell front end that you're logged in
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
 
 module.exports = router;

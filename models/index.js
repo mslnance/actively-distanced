@@ -1,15 +1,76 @@
 // import all models
-const Post = require('./Post');
+const Activity = require('./Activity');
 const User = require('./User');
 const Comment = require('./Comment');
-// const Likes = require('./Likes');
+const Likes = require('./Likes');
 
 // create associations
-User.hasMany(Post, {
-    foreignKey: 'user_id'
+
+User.hasMany(Activity, {
+  foreignKey: 'user_id'
 });
 
-Post.belongsTo(User, {
+Activity.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
+
+// User.belongsToMany(Activity, {
+//   through: Likes,
+//   as: 'liked_activities',
+
+//   foreignKey: 'user_id',
+//   onDelete: 'SET NULL'
+// });
+
+// Activity.belongsToMany(User, {
+//   through: Likes,
+//   as: 'liked_activities',
+//   foreignKey: 'activity_id',
+//   onDelete: 'SET NULL'
+// });
+
+
+
+
+Likes.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
+
+Likes.belongsTo(Activity, {
+  foreignKey: 'activity_id',
+  onDelete: 'SET NULL'
+});
+
+User.hasMany(Likes, {
+  foreignKey: 'user_id'
+});
+
+Activity.hasMany(Likes, {
+  foreignKey: 'activity_id'
+});
+
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
+
+Comment.belongsTo(Activity, {
+  foreignKey: 'activity_id',
+  onDelete: 'SET NULL'
+});
+
+User.hasMany(Comment, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
+
+Activity.hasMany(Comment, {
+  foreignKey: 'activity_id'
+});
+
+Comment.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
@@ -18,8 +79,8 @@ Comment.belongsTo(User, {
     onDelete: 'SET NULL'
 });
 
-Comment.belongsTo(Post, {
-    foreignKey: 'post_id',
+Comment.belongsTo(Activity, {
+    foreignKey: 'Activity_id',
     onDelete: 'SET NULL'
 });
 
@@ -28,26 +89,5 @@ User.hasMany(Comment, {
     onDelete: 'SET NULL'
 });
 
-Post.hasMany(Comment, {
-    foreignKey: 'post_id'
-});
 
-// Likes.belongsTo(User, {
-//     foreignKey: 'user_id',
-//     onDelete: 'SET NULL'
-// });
-
-// Likes.belongsTo(Post, {
-//     foreignKey: 'post_id',
-//     onDelete: 'SET NULL'
-// });
-
-// User.hasMany(Likes, {
-//     foreignKey: 'user_id'
-// });
-
-// Post.hasMany(Likes, {
-//     foreignKey: 'post_id'
-// });
-
-module.exports = { User, Post, Comment };
+module.exports = { User, Activity, Comment };
