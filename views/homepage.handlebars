@@ -4,7 +4,8 @@
         <div class="column">
             <div class="ui-segment">
             <a href="/outdoor">
-    <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>            </a>
+            <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>
+            </a>
             </div>
         </div>
         <div class="column">
@@ -19,13 +20,6 @@
 
 <div class="ui stackable two column divided grid container">
     <div class="row">
-        {{!-- <div class="column">
-            <div class="ui-segment">
-                <a href="/outdoor">
-                    <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>
-                </a>
-            </div>
-        </div> --}}
         <div class="postbox">
             <div class="col-lg-12">
                 {{#each activities as |activity|}}
@@ -65,7 +59,7 @@
                     </div>
                     <form class="comment-form" data-activityId={{dataValues.id}}>
                         <div>
-                            <textarea name="comment-body" class="comment-area form-control"
+                              <textarea name="comment-body" class="comment-area form-control" id="comment"
                                 placeholder="Write your comment..."></textarea>
                         </div>
 

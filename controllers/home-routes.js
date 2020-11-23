@@ -157,6 +157,7 @@ router.get('/edit-activity/:id', withAuth, (req, res) => {
     });
 });
 
+//sort by outdoor activity 
 router.get('/outdoor', (req, res) => {
     Activity.findAll({
         where:{
@@ -191,6 +192,7 @@ router.get('/outdoor', (req, res) => {
         });
 });
 
+//sort by outdoor activity 
 router.get('/virtual', (req, res) => {
     Activity.findAll({
         where:{
