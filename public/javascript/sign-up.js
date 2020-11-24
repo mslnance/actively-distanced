@@ -19,7 +19,7 @@ async function signupFormHandler(event) {
             document.location.replace('/login');
         } else {
             // get all users and compare username
-            alert(response.statusText + " your username is taken");
+            alert(response.statusText + " your username is taken, please try a new username.");
         }
     }
 }
