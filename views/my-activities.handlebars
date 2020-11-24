@@ -24,7 +24,7 @@
                         <h4 class="ui blue image header">Title: </h4>
                         <p>{{dataValues.title}}</p>
                         <h4 class="ui blue image header">Description: </h4>
-                        <text>{{dataValues.description}}</text>
+                        <p>{{dataValues.description}}</p>
                         <a href={{dataValues.link}} target="_blank">
                             <h5 class="ui blue image header">Activity Link</h3>
                         </a><br><br>
@@ -33,6 +33,7 @@
                         </div>
                         <h4 class="ui blue image header">Group Size: {{dataValues.group_size}}</4><br><br>
                     </div>
+                    <a href="/edit-activity/{{dataValues.id}}">Edit Activity</a>
                     <div class="comments">
                         <h4 class="ui black image header">Comments</h4>
                         {{#each comments as |comment|}}
