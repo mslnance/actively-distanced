@@ -38,7 +38,8 @@
                         <h4 class="ui black image header">Comments</h4>
                         {{#each comments as |comment|}}
                         <div>
-                            {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
+                            <b>{{comment.dataValues.comment_text}}</b> by
+                            {{comment.dataValues.user.dataValues.username}}
                         </div>
                         {{/each}}
                     </div>
