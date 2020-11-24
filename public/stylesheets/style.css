@@ -9,7 +9,6 @@
  */
 
  #more {display: none;}
-
  
  *.icon-white {color: white}
  *.icon-silver {color: silver}
@@ -345,7 +344,7 @@ span.emoji {
 } */
 
  /* Tablets */
- @media (max-width: 1024px){
+ @media (max-width: 768px){
 
  h1,
  h2,
@@ -373,11 +372,13 @@ font-family: 'Montserrat';
 }
 
 /* Mobile phones */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
 
+  h3{
+    font-size: 15px !important;
+  }
  h1,
  h2,
- h3,
  h4,
  h5 {
 font-family: 'Montserrat';
@@ -389,8 +390,8 @@ font-family: 'Montserrat';
 
  .nav-sec {
   margin: 10px 10px 10px 10px;
-  padding: 10px;
-  height: 80px;
+  padding: 25px;
+  height: 100px !important;
   border-top: 0px solid grey;
   border-radius: 10px;
   background-color: rgb(83, 83, 83) ;
