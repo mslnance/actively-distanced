@@ -61,6 +61,7 @@
                         </div>
                         {{/each}}
                     </div>
+                    {{#if loggedIn}}
                     <form class="comment-form" data-activity-id={{dataValues.id}}>
                         <div>
                             <textarea name="comment-body" class="comment-area form-control" id={{dataValues.id}}
@@ -72,6 +73,7 @@
                                 class="ui fluid large teal submit button">Post</button>
                         </div>
                     </form>
+                    {{/if}}
                     <div id="share-buttons">
                         <a
                             href="mailto:?Subject=Join this activity&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://actively-distanced.herokuapp.com/">
