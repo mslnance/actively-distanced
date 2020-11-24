@@ -183,7 +183,7 @@ router.get('/outdoor', (req, res) => {
         });
 });
 
-//sort by outdoor activity 
+//sort by virtual activity 
 router.get('/virtual', (req, res) => {
     Activity.findAll({
         where: {
