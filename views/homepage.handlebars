@@ -1,66 +1,92 @@
-{{!-- <h3 class="ui center aligned header" id="category-header">Trending</h3>
+<h3 class="ui center aligned header" id="category-header">Filter by</h3>
 <div class="ui stackable two column divided grid container">
     <div class="row">
         <div class="column">
             <div class="ui-segment">
-            <a href="/outdoor">
-    <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>            </a>
+                <a href="/outdoor">
+                    <h3 class="ui center aligned header" id="category-header">Outdoor Activity</h3>
+                </a>
             </div>
         </div>
         <div class="column">
-            <div class="ui-segment"> 
-            <a href="/virtual">
-            <h3 class="ui center aligned header" id="category-header">Virtual Activity</h3>    
-            </a>
+            <div class="ui-segment">
+                <a href="/virtual">
+                    <h3 class="ui center aligned header" id="category-header">Virtual Activity</h3>
+                </a>
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 
-<div class="postbox">
-    <div class="col-lg-12">
-        {{#each posts as |post|}}
-        <div class="cardbox">
-            <div class="cardbox-heading">
-                <div class="media-profile m-0">
-                    <div class="d-flex mr-3">
-                        <span class="emoji"><i class="user icon"></i></span>
-                        <div class="media-body">
-                            <h3 class="m-0">{{dataValues.user.dataValues.username}}</h3>
-                            <small><span>{{dataValues.time}} | {{dataValues.date}}</span></small>
+<div class="ui stackable two column divided grid container">
+    <div class="row">
+        <div class="postbox">
+            <div class="col-lg-12">
+                {{#each activities as |activity|}}
+                <div class="cardbox">
+                    <div class="cardbox-heading">
+                        <div class="media-profile m-0">
+                            <div class="d-flex mr-3">
+                                <span class="emoji"><i class="user icon"></i></span>
+                                <div class="media-body">
+                                    <h3 class="m-0">{{dataValues.user.dataValues.username}}</h3>
+                                    <small><span>{{dataValues.time}} | {{dataValues.date}}</span></small><br>
+                                    <small><span>
+                                            <h5 class="ui color image header">Activity Type:{{dataValues.activity_type}}
+                                            </h5>
+                                        </span></small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <br>
-            <div class="body-container">
-                <h3 class="ui teal image header">{{dataValues.title}}</h3><br>
-                <h5 class="ui black image header">{{dataValues.description}}</h4><br>
-                <h5 class="ui black image header">{{dataValues.link_url}}</h4><br>
-                    <div class="cardbox-item">
+                    <br>
+                    <div class="body-container">
+                        <h4 class="ui blue image header">Title: </h4>
+                        <p>{{dataValues.title}}</p>
+                        <h4 class="ui blue image header">Description: </h4>
+                        <p>{{dataValues.description}}</p>
+                        <a href={{dataValues.link}} target="_blank">
+                            <h5 class="ui blue image header">Activity Link</h3>
+                        </a><br><br>
+                        <div class="cardbox-item">
                             <img class="img-responsive media" src="{{dataValues.image_url}}">
+                        </div>
+                        <h4 class="ui blue image header">Group Size: {{dataValues.group_size}}</4><br><br>
                     </div>
-            </div>
-            <a href="/edit-activity/{{dataValues.id}}">Edit Activity</a>
-            <div class="comments">
-                <h4 class="ui black image header">Comments</h4>
-                {{#each comments as |comment|}}
-                <div>
-                    {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
+                    <div class="comments">
+                        <h4 class="ui black image header">Comments</h4>
+                        {{#each comments as |comment|}}
+                        <div>
+                            {{comment.dataValues.comment_text}} by {{comment.dataValues.user.dataValues.username}}
+                        </div>
+                        {{/each}}
+                    </div>
+                    <form class="comment-form" data-activity-id={{dataValues.id}}>
+                        <div>
+                            <textarea name="comment-body" class="comment-area form-control" id={{dataValues.id}}
+                                placeholder="Write your comment..."></textarea>
+                        </div>
+
+                        <div>
+                            <button type="button" onclick="commentFormHandler({{dataValues.id}})"
+                                class="ui fluid large teal submit button">Post</button>
+                        </div>
+                    </form>
+                    <div id="share-buttons">
+                        <a
+                            href="mailto:?Subject=Join this activity&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://actively-distanced.herokuapp.com/{{dataValues.id}}">
+                            <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+                        </a>
+                        <!-- Share on Facebook -->
+                        <a href="http://www.facebook.com/sharer.php?u=https://actively-distanced.herokuapp.com/{{dataValues.id}}"
+                            target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                        </a>
+                    </div>
                 </div>
                 {{/each}}
             </div>
-            <form class="comment-form" data-postId={{dataValues.id}}>
-                <div>
-                    <textarea name="comment-body" class="comment-area form-control" placeholder="Write your comment..."></textarea>
-                </div>
-
-                <div>
-                    <button type="submit" class="ui fluid large teal submit button">Post</button>
-                </div>
-            </form>
         </div>
-        {{/each}}
     </div>
 </div>
 
