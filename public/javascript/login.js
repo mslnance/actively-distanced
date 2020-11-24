@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
         if (response.ok) {
             document.location.replace('/homepage');
         } else {
-            alert(response.statusText);
+            alert(response.statusText + " we could not find your username, please create an account.");
         }
     }
 }
