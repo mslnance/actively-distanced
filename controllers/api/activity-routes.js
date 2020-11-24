@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
             'time',
             'image_url',
             'link',
-            'activity_type'
+            'activity_type',
             [sequelize.literal('(')]
         ],
         include: [
@@ -37,6 +37,7 @@ router.get('/', (req, res) => {
             res.status(500).json(err);
         })
 });
+
 
 router.put('/edit-activity/:id', withAuth, (req, res) => {
     Activity.update(

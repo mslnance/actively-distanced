@@ -157,4 +157,75 @@ router.get('/edit-activity/:id', withAuth, (req, res) => {
     });
 });
 
+//sort by outdoor activity 
+router.get('/outdoor', (req, res) => {
+    Activity.findAll({
+        where:{
+            activity_type:"Outdoor"
+        },
+        include: [
+            {
+                model: User,
+                attributes: ['username', 'id']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'activity_id', 'user_id'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
+    })
+        .then((activities) => {
+            // console.log(activities);
+
+            res.render('homepage', {
+                activities,
+                loggedIn: req.session.loggedIn // tell front end that you're logged in
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+//sort by outdoor activity 
+router.get('/virtual', (req, res) => {
+    Activity.findAll({
+        where:{
+            Activity_type:"Virtual"
+        },
+        include: [
+            {
+                model: User,
+                attributes: ['username', 'id']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'activity_id', 'user_id'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
+    })
+        .then((activities) => {
+            // console.log(activities);
+
+            res.render('homepage', {
+                activities,
+                loggedIn: req.session.loggedIn // tell front end that you're logged in
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+
 module.exports = router;
