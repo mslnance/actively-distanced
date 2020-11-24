@@ -16,21 +16,10 @@ async function signupFormHandler(event) {
         });
 
         if (response.ok) {
-            //   takenUsername.classList.add('hide');
             document.location.replace('/login');
         } else {
             // get all users and compare username
-            const getUsers = await fetch('/api/users').then(
-                function (response) {
-                    response.json().then(function (data) {
-                        for (let i = 0; i < data.length; i++) {
-                            if (username === data[i].username) {
-                                takenUsername.classList.remove('hide');
-                                return;
-                            }
-                        }
-                    })
-                });
+            alert(response.statusText + " your username is taken");
         }
     }
 }
