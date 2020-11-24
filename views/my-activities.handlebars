@@ -53,6 +53,17 @@
                             <button type="submit" class="ui fluid large teal submit button">Post</button>
                         </div>
                     </form>
+                {{!-- share on social media  --}}
+                <div id="share-buttons">
+                    <!-- Share via Email -->
+                    <a href="mailto:?Subject=Join this activity&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://actively-distanced.herokuapp.com/{{dataValues.id}}">
+                    <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+                    </a>
+                    <!-- Share on Facebook -->
+                    <a href="http://www.facebook.com/sharer.php?u=https://actively-distanced.herokuapp.com/{{dataValues.id}}" target="_blank">
+                    <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                    </a>
+                    </div>
                 </div>
                 {{!-- {{/if}} --}}
                 {{/each}}

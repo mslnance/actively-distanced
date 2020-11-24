@@ -328,6 +328,14 @@ span.emoji {
   background-color: #B9D6E0;
 }
 
+#share-buttons img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline;
+  }
 
  /* Desktop */
  /* @media (max-width: 1024px){
