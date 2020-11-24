@@ -5,8 +5,8 @@
 
     <form method="put" enctype="multipart/form-data" class="ui large form edit-activity-form">
       <div class="ui stacked segment form-group">
-        <h4 class="ui teal image header"><label for="title" class="ui teal header">Title</label></h4><br>
-        <input name="title" type="text" value="{{activity.title}}" />
+        <h4 class="ui teal image header"><label for="title">Title</label></h4><br>
+        <input name="title" type="text" placeholder="edit the title..." value="{{activity.title}}" />
 
         <h4 class="ui teal image header"><label for="description">Description</label></h4><br>
         <input type="text" id="description" name="description" placeholder="Describe your event..."
@@ -34,8 +34,8 @@
           Activity<br>
           <input type="radio" value="Virtual" name="activity_type" value="{{activity.activity_type}}" /> Virtual
           Activity<br><br> --}}
-        <button type="submit" class="ui fluid large teal submit button">Save activity</button>
-        <button type="button" class="delete-activity-btn ui fluid large teal submit button">Delete activity</button>
+        <button type="submit" class="ui teal submit button"> <i class="save outline icon"></i>Save activity</button>
+        <button type="button" class="delete-activity-btn ui read submit button"><i class="trash alternate outline icon"></i>Delete activity</button>
     </form>
   </div>
 </div>
