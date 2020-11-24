@@ -1,0 +1,30 @@
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h1 class="ui teal image header">Create an activity</h1>
+
+    <div action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
+      <form action="/profile" method="post" enctype="multipart/form-data" class="ui large form">
+        <div class="ui stacked segment">
+          <label for="title">Title</label><br>
+          <input type="text" id="title" name="title" placeholder="Name your activity for people to join..."><br>
+
+          <label for="description">Description</label><br>
+          <input type="text" id="description" name="description" placeholder="Describe your event..."><br>
+
+          <label for="photo">Upload a photo</label><br>
+          <input type="file" id="description-bar" name="photo" /><br>
+
+          <label for="date">Choose a date for your event:</label>
+          <input type="date" id="date" name="date"><br>
+
+          <label for="time">Choose a time for your event:</label>
+          <input type="time" id="time" name="time" min="08:00" max="20:00" required><br>
+          <label for="title">Acticity Type</label><br>
+          <input  type="radio" value="outdoor" name="tag"> Outdoor Activity<br>
+          <input type="radio" value="virtual" name="tag"> Virtual Activity<br>
+          <input type="submit" value="Submit" class="ui fluid large teal submit button">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

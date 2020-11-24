@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Activity,
-                attributes: ['id', 'title', 'image_url', 'link', 'activity_type,','created_at']
+                attributes: ['id', 'title', 'image_url', 'link', 'activity_type,', 'created_at']
             },
             {
                 model: Comment,
@@ -31,12 +31,6 @@ router.get('/:id', (req, res) => {
                     model: Activity,
                     attributes: ['title']
                 }
-            },
-            {
-                model: Activity,
-                attributes: ['title'],
-                through: Likes,
-                as: 'liked_activities'
             }
         ]
     })
