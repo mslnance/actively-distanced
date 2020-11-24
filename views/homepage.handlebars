@@ -23,7 +23,6 @@
         <div class="postbox">
             <div class="col-lg-12">
                 {{#each activities as |activity|}}
-                {{!-- {{#if activity_type dataValues.activity_type activity}} --}}
                 <div class="cardbox">
                     <div class="cardbox-heading">
                         <div class="media-profile m-0">
@@ -74,7 +73,6 @@
                         </div>
                     </form>
                     <div id="share-buttons">
-                        <!-- Share via Email -->
                         <a
                             href="mailto:?Subject=Join this activity&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://actively-distanced.herokuapp.com/{{dataValues.id}}">
                             <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
@@ -86,7 +84,6 @@
                         </a>
                     </div>
                 </div>
-                {{!-- {{/if}} --}}
                 {{/each}}
             </div>
         </div>

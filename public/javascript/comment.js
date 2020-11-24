@@ -1,12 +1,7 @@
 async function commentFormHandler(id) {
 
     const comment_text = document.getElementById(id).value;
-    // const activity_id = document.querySelector('.comment-form').getAttribute('data-activity-id');
     const activity_id = id;
-
-    console.log("hello");
-    console.log(activity_id);
-    console.log(comment_text);
 
     if (comment_text) {
         const response = await fetch(`/api/comments`, {
