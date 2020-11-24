@@ -10,8 +10,6 @@ async function editFormHandler(event) {
     const date = document.getElementsByName('date')[0].value;
     const time = document.getElementsByName('time')[0].value;
 
-    console.log(title, description, date, time);
-
     const response = await fetch(`/api/activities/edit-activity/${id}`, {
         method: 'PUT',
         body: JSON.stringify({

@@ -25,7 +25,6 @@ router.get('/', (req, res) => {
         ]
     })
         .then((activities) => {
-            // console.log(activities);
 
             res.render('homepage', {
                 activities,
@@ -56,8 +55,6 @@ router.get('/homepage', (req, res) => {
         ]
     })
         .then((activities) => {
-            // console.log(activities);
-
             res.render('homepage', {
                 activities,
                 loggedIn: true // tell front end that you're logged in
@@ -76,7 +73,6 @@ router.get('/create-activity', withAuth, (req, res) => {
 });
 
 router.post('/profile', upload.single('image_url'), function (req, res, next) {
-    console.log(req.body);
     return cloudinary.uploader.upload(req.file.path)
         .then((result) => {
             Activity.create({
@@ -98,7 +94,6 @@ router.post('/profile', upload.single('image_url'), function (req, res, next) {
 });
 
 router.get('/login', (req, res) => {
-    console.log("hello");
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
@@ -137,8 +132,6 @@ router.get('/my-activities', withAuth, (req, res) => {
         ]
     })
         .then((activities) => {
-            // console.log(activities);
-
             res.render('my-activities', {
                 activities,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
@@ -160,8 +153,8 @@ router.get('/edit-activity/:id', withAuth, (req, res) => {
 //sort by outdoor activity 
 router.get('/outdoor', (req, res) => {
     Activity.findAll({
-        where:{
-            activity_type:"Outdoor"
+        where: {
+            activity_type: "Outdoor"
         },
         include: [
             {
@@ -179,8 +172,6 @@ router.get('/outdoor', (req, res) => {
         ]
     })
         .then((activities) => {
-            // console.log(activities);
-
             res.render('homepage', {
                 activities,
                 loggedIn: req.session.loggedIn // tell front end that you're logged in
@@ -195,8 +186,8 @@ router.get('/outdoor', (req, res) => {
 //sort by outdoor activity 
 router.get('/virtual', (req, res) => {
     Activity.findAll({
-        where:{
-            Activity_type:"Virtual"
+        where: {
+            Activity_type: "Virtual"
         },
         include: [
             {
@@ -214,7 +205,6 @@ router.get('/virtual', (req, res) => {
         ]
     })
         .then((activities) => {
-            // console.log(activities);
 
             res.render('homepage', {
                 activities,
