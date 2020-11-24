@@ -3,6 +3,7 @@ async function loginFormHandler(event) {
 
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
+    const notFound = document.querySelector('#not-found');
 
     if (username && password) {
         const response = await fetch('/api/users/login', {
@@ -17,7 +18,20 @@ async function loginFormHandler(event) {
         if (response.ok) {
             document.location.replace('/homepage');
         } else {
-            alert(response.statusText + " we could not find your username, please create an account.");
+            const getUsers = await fetch('/api/users').then(
+                function (response) {
+                    response.json().then(function (data) {
+                        for (let i = 0; i < data.length; i++) {
+                            if (username != data[i].username) {
+                                notFound.classList.remove('hide');
+                                return;
+                            } else {
+                                console.log('you are now logged in!')
+                            }
+                        }
+                    })
+                }
+            );
         }
     }
 }
