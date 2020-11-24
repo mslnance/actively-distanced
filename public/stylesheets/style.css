@@ -328,6 +328,10 @@ span.emoji {
   background-color: #B9D6E0;
 }
 
+.hide {
+  display: none;
+}
+
 #share-buttons img {
   width: 30px;
   height: 30px;
