@@ -68,7 +68,6 @@ a.ui.teal.header:hover {
 	padding-top: 10px;
 	font-family: 'Montserrat';
 	font-size: 20px;
-	/* background: linear-gradient(to right, #C15858 0%, #100%); */
 	background: linear-gradient(to left, red, orange, green, blue, indigo);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -99,7 +98,6 @@ a.ui.teal.header:hover {
 	margin-bottom: 20px;
 }
 
-/* @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin'); */
 html,
 body { 
 	height: 100%;
@@ -117,13 +115,6 @@ body {
 	background: #ffffff;
 	font-family: 'Montserrat' !important;
 	font-size: 40px;
-}
-
-.w100 {
-	font-weight: 100;
-	font-size: 14px;
-	line-height: 1.4285em;
-	color: rgba(0, 0, 0, 0.87);
 }
 
 h1,
