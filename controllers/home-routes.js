@@ -1,12 +1,13 @@
+// imports and cloudinary
 const router = require('express').Router();
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({ cloud_name: 'actively-distanced', api_key: '459732884598213', api_secret: '69tQZU3yr0mFsxuNe2U2WCDR544' });
-const dataURI = require('datauri');
 const { Activity, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// get route for homepage
 router.get('/', (req, res) => {
     Activity.findAll({
         include: [
@@ -37,6 +38,7 @@ router.get('/', (req, res) => {
         });
 });
 
+// loads this route when the user first logs in to set loggedIn = true
 router.get('/homepage', (req, res) => {
     Activity.findAll({
         include: [
@@ -66,12 +68,14 @@ router.get('/homepage', (req, res) => {
         });
 });
 
+// get route for creating an activity
 router.get('/create-activity', withAuth, (req, res) => {
     res.render('create-activity', {
         loggedIn: req.session.loggedIn
     });
 });
 
+// post route for an activity. this uses cloudinary and multer to store the image as a URL in cloudinary
 router.post('/profile', upload.single('image_url'), function (req, res, next) {
     return cloudinary.uploader.upload(req.file.path)
         .then((result) => {
@@ -93,6 +97,7 @@ router.post('/profile', upload.single('image_url'), function (req, res, next) {
         .catch((err) => console.log(err))
 });
 
+// get route for login
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -102,15 +107,18 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// get route for logout. updates loggedIn to false to update components
 router.get('/logout', withAuth, (req, res) => {
     req.session.loggedIn = false;
     res.render('login');
 });
 
+// get route for sign up
 router.get('/sign-up', (req, res) => {
     res.render('sign-up');
 });
 
+// get route for my activities
 router.get('/my-activities', withAuth, (req, res) => {
     Activity.findAll({
         where: {
@@ -144,6 +152,7 @@ router.get('/my-activities', withAuth, (req, res) => {
 
 });
 
+// edit each activity by their id
 router.get('/edit-activity/:id', withAuth, (req, res) => {
     res.render('edit-activity', {
         loggedIn: req.session.loggedIn

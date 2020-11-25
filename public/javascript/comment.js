@@ -1,3 +1,4 @@
+// passes in activity id for comments
 async function commentFormHandler(id) {
 
     const comment_text = document.getElementById(id).value;
@@ -22,5 +23,3 @@ async function commentFormHandler(id) {
         }
     }
 }
-
-// document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);

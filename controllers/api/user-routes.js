@@ -1,3 +1,4 @@
+// imports
 const router = require('express').Router();
 const { User, Activity, Comment } = require('../../models');
 
@@ -13,6 +14,7 @@ router.get('/', (req, res) => {
         });
 });
 
+// get user by id
 router.get('/:id', (req, res) => {
     User.findOne({
         attributes: { exclude: ['password'] },
@@ -47,6 +49,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
+// post request for users
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
@@ -67,6 +70,7 @@ router.post('/', (req, res) => {
         });
 });
 
+// login request
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
@@ -95,6 +99,7 @@ router.post('/login', (req, res) => {
     });
 });
 
+// user logout
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {

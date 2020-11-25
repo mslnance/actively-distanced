@@ -1,8 +1,10 @@
+// imports
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Activity, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// get route for activity
 router.get('/', (req, res) => {
     Activity.findAll({
         attributes: [
@@ -38,7 +40,7 @@ router.get('/', (req, res) => {
         })
 });
 
-
+// update acitivty
 router.put('/edit-activity/:id', withAuth, (req, res) => {
     Activity.update(
         {
@@ -66,6 +68,7 @@ router.put('/edit-activity/:id', withAuth, (req, res) => {
         });
 });
 
+// delete activity
 router.delete('/edit-activity/:id', withAuth, (req, res) => {
     Activity.destroy({
         where: {
