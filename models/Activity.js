@@ -1,3 +1,4 @@
+// imports
 const { Model, DataTypes, Sequelize } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -37,8 +38,7 @@ class Activity extends Model {
   }
 }
 
-
-// create fields/columns for Post model
+// create fields/columns for Activity model
 Activity.init(
   {
     id: {
@@ -83,12 +83,10 @@ Activity.init(
       allowNull: true
     },
     date: {
-      //type: DataTypes.STRING,
       type: DataTypes.DATEONLY,
       allowNull: false
     },
     time: {
-      //type: DataTypes.STRING,
       type: DataTypes.TIME,
       allowNull: false
     },

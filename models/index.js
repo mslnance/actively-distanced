@@ -4,7 +4,6 @@ const User = require('./User');
 const Comment = require('./Comment');
 
 // create associations
-
 User.hasMany(Activity, {
   foreignKey: 'user_id'
 });
