@@ -1,3 +1,4 @@
+// function to login that checks if the username is in the db, if not then show user the message username is not in db
 async function loginFormHandler(event) {
     event.preventDefault();
 

@@ -1,3 +1,4 @@
+// function to login that checks if the username is in the db, if so then show user message that duplicate username exists
 async function signupFormHandler(event) {
     event.preventDefault();
 

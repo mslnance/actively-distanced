@@ -1,7 +1,9 @@
+// imports
 const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// get route for comments
 router.get('/', (req, res) => {
     Comment.findAll()
         .then(dbCommentData => res.json(dbCommentData))
@@ -11,6 +13,7 @@ router.get('/', (req, res) => {
         });
 });
 
+// post route for comments
 router.post('/', withAuth, (req, res) => {
     Comment.create({
         comment_text: req.body.comment_text,

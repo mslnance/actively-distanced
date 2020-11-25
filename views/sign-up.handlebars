@@ -5,8 +5,10 @@
   <div class="column">
     <div class="ui segment">
       <section class="signup">
+        {{!-- signup form --}}
         <form class="signup-form"> <br>
           <h3 class="form-signin-heading ui teal image header">Register your account</h3><br>
+          {{!-- if username is taken, show message --}}
           <p class="hide" id="taken">That username is already taken! Try again.</p>
           <div class="form-group">
             <label for="username-login">

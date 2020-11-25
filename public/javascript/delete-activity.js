@@ -1,3 +1,4 @@
+// function to delete activity
 async function deleteFormHandler(event) {
     event.preventDefault();
 

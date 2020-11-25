@@ -1,3 +1,4 @@
+// edit activity function
 async function editFormHandler(event) {
     event.preventDefault();
 
