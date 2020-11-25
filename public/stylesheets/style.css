@@ -68,11 +68,11 @@ a.ui.teal.header:hover {
 	padding-top: 10px;
 	font-family: 'Montserrat';
 	font-size: 20px;
-	/* background: linear-gradient(to right, #C15858 0%, #100%); */
 	background: linear-gradient(to left, red, orange, green, blue, indigo);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
 .ui-segment {
 	position: relative;
 	background: #f4f4f4;
@@ -98,14 +98,15 @@ a.ui.teal.header:hover {
 	margin-bottom: 20px;
 }
 
-/* @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin'); */
 html,
-body {
+body { 
 	height: 100%;
 }
+
 html {
 	font-size: 14px;
 }
+
 body {
 	margin: 0px;
 	padding: 0px;
@@ -114,13 +115,6 @@ body {
 	background: #ffffff;
 	font-family: 'Montserrat' !important;
 	font-size: 40px;
-}
-
-.w100 {
-	font-weight: 100;
-	font-size: 14px;
-	line-height: 1.4285em;
-	color: rgba(0, 0, 0, 0.87);
 }
 
 h1,
@@ -144,6 +138,7 @@ a {
 	color: #4183c4;
 	text-decoration: none;
 }
+
 a:hover {
 	color: #1e70bf;
 	text-decoration: none;
@@ -185,9 +180,11 @@ a:hover {
 	margin: 1rem 1em;
 	padding: 1em 1em;
 }
+
 .ui.segment:first-child {
 	margin-top: 1em;
 }
+
 .ui.segment:last-child {
 	margin-bottom: 0em;
 }
@@ -231,6 +228,7 @@ a:hover {
 .nav-user {
 	padding: 0 12px !important;
 }
+
 .nav-user img {
 	height: 32px;
 	width: 32px;
@@ -241,10 +239,12 @@ a:hover {
 	-ms-flex-pack: justify !important;
 	justify-content: space-between !important;
 }
+
 .d-flex {
 	display: -ms-flexbox !important;
 	display: flex !important;
 }
+
 .nav-sec {
 	margin: 30px;
 	padding: 40px;
@@ -268,12 +268,14 @@ a:hover {
 	position: relative;
 	display: block;
 }
+
 .img-responsive {
 	display: block;
 	max-width: 100%;
 	height: auto;
 	border-radius: 50px;
 }
+
 .fw {
 	width: 100% !important;
 	height: auto;
@@ -292,10 +294,12 @@ a:hover {
 	margin: 0px 0px 0px -8px !important;
 	padding: 0px 0px 0px 0px !important;
 }
+
 .cardbox-base li a {
 	margin: 10px !important;
 	padding: 0px !important;
 }
+
 .cardbox-base li a img {
 	width: 32px;
 	height: 32px;
